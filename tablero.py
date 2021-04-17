@@ -5,13 +5,13 @@ while n_players <3 or n_players >4:
 
 cards=["duke","duke","duke","murderer","murderer","murderer","captain","captain","captain","ambassador","ambassador","ambassador","countess","countess","countess"]
 random.shuffle(cards)
-print (cards)
+cards_player_1= []
+cards_player_2= []
+cards_player_3= []
+cards_player_4=[]
+decks_cards=[]
 def give_cards (x):
     if n_players==3:
-        cards_player_1= []
-        cards_player_2= []
-        cards_player_3= []
-        decks_cards=[]
         cards_player_1.append(cards[0])
         cards_player_1.append(cards[1])
         cards_player_2.append(cards[2])
@@ -29,11 +29,6 @@ def give_cards (x):
         decks_cards.append(cards[13])
         decks_cards.append(cards[14])
     else: 
-        cards_player_1= []
-        cards_player_2= []
-        cards_player_3= []
-        cards_player_4=[]
-        decks_cards=[]
         cards_player_1.append(cards[0])
         cards_player_1.append(cards[1])
         cards_player_2.append(cards[2])
@@ -50,4 +45,3 @@ def give_cards (x):
         decks_cards.append(cards[12])
         decks_cards.append(cards[13])
         decks_cards.append(cards[14])
-
