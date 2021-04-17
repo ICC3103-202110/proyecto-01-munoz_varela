@@ -84,14 +84,15 @@ def main():
         cards_player_4 = [cards[6],cards[7]]
 
 
-    player_1 = Player_1(names[0],cards_player_1,2)
-    player_2 = Player_2(names[1],cards_player_2,2)
-    player_3 = Player_3(names[2],cards_player_3,2)
+    player_1 = Player_1(names[0] ,cards_player_1 ,2)
+    player_2 = Player_2(names[1] ,cards_player_2 ,2)
+    player_3 = Player_3(names[2] ,cards_player_3 ,2)
     if n_players == 4:
         player_4 = Player_4(names[3],cards_player_4,2)
 
     print("\n")
     board.showboard()
+
 
 if __name__ == "__main__":
     main()
