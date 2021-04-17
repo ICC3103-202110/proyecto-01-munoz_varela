@@ -59,11 +59,12 @@ def main():
     player_3 = Player_3(names[2],cards_player_3,True)
     if n_players == 4:
         player_4 = Player_4(names[3],cards_player_4,True)
-
+    hiden_cards=["*","*"]
     print("\n")
     print(player_1.names)
     print(player_1.cards)
     print(player_1.coins)
+
 
 if __name__ == "__main__":
     main()
