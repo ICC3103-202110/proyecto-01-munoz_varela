@@ -2,6 +2,8 @@ import random
 class Influences:
     def __init__(self):
         ...
+
+"""
 #ME ACABO DE DAR CUENTA QUE PUDE HABER HECHO 4 FUNCIONES Y TERMINABA LOS CHALLENGE EN 10 MIN Y EN MUCHO MENOS LINEAS :)
 # DEF challenge_a... DEF challenge_b y asi... corregir mañana    
     def play(self,board,player_1,player_2,player_3,player_4):
@@ -744,7 +746,7 @@ class Influences:
                                         else:
                                             print(d.name,"I´m sorry but you lose, your last card was", d.cards[0])
                                             d.vcards[0]=True
-                                else: 
+                                else:
                                     print(d.name, "I´m sorry but you lose a card")
                                     print(d.cards, "this is(are) you(r) card(s)")
                                     if len(d.cards==2):
@@ -1707,3 +1709,4 @@ class Influences:
                     player_1.coins +=3
                 else: 
                     ...
+"""
