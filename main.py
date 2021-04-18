@@ -27,15 +27,22 @@ def main():
         cards_player_4 = [cards[6],cards[7]]
 
     player_1 = Player_1(names[0] ,cards_player_1, [False,False], 2)
-    player_2 = Player_2(names[1] ,cards_player_2, [False,False], 2)
-    player_3 = Player_3(names[2] ,cards_player_3, [False,False], 2)
+    player_2 = Player_2(names[1] ,cards_player_2, [True,False], 2)
+    player_3 = Player_3(names[2] ,cards_player_3, [True,True], 2)
     if n_players == 4:
-        player_4 = Player_4(names[3],cards_player_4, [False,False], 2)
+        player_4 = Player_4(names[3],cards_player_4, [False,True], 2)
     else:
         player_4 = Player_4(0,0,0,0)
+        
     board = Board(n_players,0,1)
     print("\n")
     board.showboard(player_1,player_2,player_3,player_4)
+    print("\n")
+    board.evaluator(player_1,player_2,player_3,player_4)
+    print("\n")
+    board.showboard(player_1,player_2,player_3,player_4)
+    print("\n")
 
+    print(player_1.vcards)
 if __name__ == "__main__":
     main()
