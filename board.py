@@ -1,7 +1,6 @@
 
 
 class Board:
-    
     def __init__(self, n_players, cards, turn):
         self.n_players = n_players
         self.cards = cards
@@ -432,16 +431,19 @@ class Board:
         p4 = player_4.vcards
         if p1 == value:
             self.showboard(player_1,player_2,player_3,player_4)
-            player_1 = player_4
             self.n_players -= 1
+            return 1
         elif p2 == value:
             self.showboard(player_1,player_2,player_3,player_4)
-            player_2 = player_4
             self.n_players -= 1
+            return 2
         elif p3 == value:
             self.showboard(player_1,player_2,player_3,player_4)
-            player_3 = player_4
             self.n_players -= 1
+            return 3
         elif p4 == value:
             self.showboard(player_1,player_2,player_3,player_4)
             self.n_players -= 1
+            return 4
+        else:
+            return 0
