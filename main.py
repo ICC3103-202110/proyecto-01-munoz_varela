@@ -1,5 +1,5 @@
 import random
-import copy
+from copy import copy
 from board import Board
 from player_1 import Player_1
 from player_2 import Player_2
@@ -44,25 +44,11 @@ def main():
     print("Las monedas del Jugador 1 son: "+str(player_1.coins))
     influences.play(board,player_1,player_2,player_3,player_4)
     print("Ahora.. las monedas del Jugador 1 son: "+str(player_1.coins))
-    
     """
     print("\n")
     board.showboard(player_1,player_2,player_3,player_4)
     print("\n")
-    value = board.evaluator(player_1,player_2,player_3,player_4)
-    if value == 1:
-        player_1 = player_2.copy()
-        player_2 = player_3.copy()
-        player_3 = player_4.copy()
-    elif value == 2:
-        player_2 = copy.deepcopy(player_3)
-        Player_3 = copy.deepcopy(player_4)
-    elif value == 3:
-        player_3 is player_4
-    else:
-        ...
-
-    player_2 = player_4
+    board.evaluator(player_1,player_2,player_3,player_4)
     print("\n")
     board.showboard(player_1,player_2,player_3,player_4)
     print("\n")
