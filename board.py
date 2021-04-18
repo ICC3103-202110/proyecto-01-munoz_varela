@@ -184,16 +184,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You need wait          │                        │You need wait          │║")
                 print("║│Name : "+name_4+      "│                        │Name : "+name_3+      "│║")
-                print("║│Coins: "+c4+          "│           ◄◄           │Coins: "+c3+          "│║")
+                print("║│Coins: "+c4+          "│ ◄══════════════════════│Coins: "+c3+          "│║")
                 print("║│"+ca4+                "│                        │"+ca3+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
+                print("║│            ║                                                           │║")
                 print("║│            ▼                     COUP                       ▲          │║")
-                print("║│                                                                        │║")
+                print("║│                                                             ║          │║")
                 print("║├───────────────────────┐                        ┌───────────────────────┤║")
                 print("║│Your turn              │                        │You are the next       │║")
                 print("║│Name : "+name_1+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c1+          "│           ►►           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c1+          "│══════════════════════► │Coins: "+c2+          "│║")
                 print("║│"+ca1+                "│                        │"+ca2+                "│║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -203,16 +203,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You need wait          │                        │You are the next       │║")
                 print("║│Name : "+name_4+      "│                        │Name : "+name_3+      "│║")
-                print("║│Coins: "+c4+          "│           ◄◄           │Coins: "+c3+          "│║")
+                print("║│Coins: "+c4+          "│ ◄══════════════════════│Coins: "+c3+          "│║")
                 print("║│"+ca4+                "│                        │"+ca3+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
+                print("║│            ║                                                           │║")
                 print("║│            ▼                     COUP                       ▲          │║")
-                print("║│                                                                        │║")
+                print("║│                                                             ║          │║")
                 print("║├───────────────────────┐                        ┌───────────────────────┤║")
                 print("║│You need wait          │                        │You turn               │║")
                 print("║│Name : "+name_1+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c1+          "│           ►►           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c1+          "│══════════════════════► │Coins: "+c2+          "│║")
                 print("║│"+ca1+                "│                        │"+ca2+                "│║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -222,16 +222,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You are the next       │                        │You turn               │║")
                 print("║│Name : "+name_4+      "│                        │Name : "+name_3+      "│║")
-                print("║│Coins: "+c4+          "│           ◄◄           │Coins: "+c3+          "│║")
+                print("║│Coins: "+c4+          "│ ◄══════════════════════│Coins: "+c3+          "│║")
                 print("║│"+ca4+                "│                        │"+ca3+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
+                print("║│            ║                                                           │║")
                 print("║│            ▼                     COUP                       ▲          │║")
-                print("║│                                                                        │║")
+                print("║│                                                             ║          │║")
                 print("║├───────────────────────┐                        ┌───────────────────────┤║")
                 print("║│You need wait          │                        │You need wait          │║")
                 print("║│Name : "+name_1+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c1+          "│           ►►           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c1+          "│══════════════════════► │Coins: "+c2+          "│║")
                 print("║│"+ca1+                "│                        │"+ca2+                "│║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -241,16 +241,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You turn               │                        │You need wait          │║")
                 print("║│Name : "+name_4+      "│                        │Name : "+name_3+      "│║")
-                print("║│Coins: "+c4+          "│           ◄◄           │Coins: "+c3+          "│║")
+                print("║│Coins: "+c4+          "│ ◄══════════════════════│Coins: "+c3+          "│║")
                 print("║│"+ca4+                "│                        │"+ca3+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
+                print("║│            ║                                                           │║")
                 print("║│            ▼                     COUP                       ▲          │║")
-                print("║│                                                                        │║")
+                print("║│                                                             ║          │║")
                 print("║├───────────────────────┐                        ┌───────────────────────┤║")
                 print("║│You are the next       │                        │You need wait          │║")
                 print("║│Name : "+name_1+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c1+          "│           ►►           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c1+          "│══════════════════════► │Coins: "+c2+          "│║")
                 print("║│"+ca1+                "│                        │"+ca2+                "│║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -368,17 +368,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You need wait          │                        │You are the next       │║")
                 print("║│Name : "+name_3+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c3+          "│           ◄◄           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c3+          "│   ◄════════════════════│Coins: "+c2+          "│║")
                 print("║│"+ca3+                "│                        │"+ca2+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
-                print("║│                                  COUP                                  │║")
-                print("║│            ▼                                                 ▲         │║")
-                print("║│                                                                        │║")
-                print("║│                       ┌────────────────────────┐                       │║")
-                print("║│                       │Your turn               │                       │║")
-                print("║│                       │Name : "+name_1+       "│                       │║")
-                print("║│            ►    ►     │Coins: "+c1+           "│       ►     ▲         │║")
+                print("║│           ║                                                            │║")
+                print("║│           ║                      COUP                      ▲           │║")
+                print("║│           ║                                                ║           │║")
+                print("║│           ║           ┌────────────────────────┐           ║           │║")
+                print("║│           ║           │Your turn               │           ║           │║")
+                print("║│           ║           │Name : "+name_1+       "│           ║           │║")
+                print("║│           ╚═══════►   │Coins: "+c1+           "│═══════════╝           │║")
                 print("║│                       │"+ca1+                 "│                       │║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -388,17 +387,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You are the next       │                        │Your turn              │║")
                 print("║│Name : "+name_3+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c3+          "│           ◄◄           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c3+          "│   ◄════════════════════│Coins: "+c2+          "│║")
                 print("║│"+ca3+                "│                        │"+ca2+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
-                print("║│                                  COUP                                  │║")
-                print("║│            ▼                                                 ▲         │║")
-                print("║│                                                                        │║")
-                print("║│                       ┌────────────────────────┐                       │║")
-                print("║│                       │You need wait           │                       │║")
-                print("║│                       │Name : "+name_1+       "│                       │║")
-                print("║│            ►    ►     │Coins: "+c1+           "│       ►     ▲         │║")
+                print("║│           ║                                                            │║")
+                print("║│           ║                      COUP                      ▲           │║")
+                print("║│           ║                                                ║           │║")
+                print("║│           ║           ┌────────────────────────┐           ║           │║")
+                print("║│           ║           │You need wait           │           ║           │║")
+                print("║│           ║           │Name : "+name_1+       "│           ║           │║")
+                print("║│           ╚═══════►   │Coins: "+c1+           "│═══════════╝           │║")
                 print("║│                       │"+ca1+                 "│                       │║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -408,17 +406,16 @@ class Board:
                 print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
                 print("║│You are the next       │                        │Your turn              │║")
                 print("║│Name : "+name_3+      "│                        │Name : "+name_2+      "│║")
-                print("║│Coins: "+c3+          "│           ◄◄           │Coins: "+c2+          "│║")
+                print("║│Coins: "+c3+          "│   ◄════════════════════│Coins: "+c2+          "│║")
                 print("║│"+ca3+                "│                        │"+ca2+                "│║")
                 print("║├───────────────────────┘                        └───────────────────────┤║")
-                print("║│                                                                        │║")
-                print("║│                                  COUP                                  │║")
-                print("║│            ▼                                                 ▲         │║")
-                print("║│                                                                        │║")
-                print("║│                       ┌────────────────────────┐                       │║")
-                print("║│                       │You need wait           │                       │║")
-                print("║│                       │Name : "+name_1+       "│                       │║")
-                print("║│            ►    ►     │Coins: "+c1+           "│       ►     ▲         │║")
+                print("║│           ║                                                            │║")
+                print("║│           ║                      COUP                      ▲           │║")
+                print("║│           ║                                                ║           │║")
+                print("║│           ║           ┌────────────────────────┐           ║           │║")
+                print("║│           ║           │You need wait           │           ║           │║")
+                print("║│           ║           │Name : "+name_1+       "│           ║           │║")
+                print("║│           ╚═══════►   │Coins: "+c1+           "│═══════════╝           │║")
                 print("║│                       │"+ca1+                 "│                       │║")
                 print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
                 print("╚══════════════════════════════════════════════════════════════════════════╝")
@@ -431,7 +428,7 @@ class Board:
 
             name_2 = player_2.name #Name player 2
             x = 16-len(name_2)
-            for i in range(x):
+            for i in range(x+1):
                 name_2 += " "
 
             coins_1 = player_1.coins #Coins of player 1
@@ -442,9 +439,9 @@ class Board:
 
             coins_2 = player_2.coins #Coins of player 2
             if coins_2 >= 10:
-                c2 = str(coins_2)+"              "
-            else:
                 c2 = str(coins_2)+"               "
+            else:
+                c2 = str(coins_2)+"                "
 
             
 
@@ -486,38 +483,55 @@ class Board:
                 y2 += " "
 
             if v2 == [False,False]: #True: the card is reveled; False: the card is censored
-                ca2 = "********** - **********"
+                ca2 = "********** -- **********"
             elif v1 == [True,False]: #True: the card is reveled; False: the card is censored
-                ca2 = y1+" - **********"
+                ca2 = y1+" -- **********"
 
             elif v2 == [False,True]: #True: the card is reveled; False: the card is censored
-                ca2 = "********** - "+y2
+                ca2 = "********** -- "+y2
             else: #Both cards are True
-                ca2 = y1+" - "+y2
+                ca2 = y1+" -- "+y2
+            if turn == 1:
+                ca1 = x1+" -- "+x2
+                print("╔══════════════════════════════════════════════════════════════════════════╗")
+                print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
+                print("║│                       │You are the next        │                       │║")
+                print("║│          ╔════════════│Name : "+name_2+       "│    ◄═══════╗          │║")
+                print("║│          ║            │Coins: "+c2+           "│            ║          │║")
+                print("║│          ║            │"+ca2+                 "│            ║          │║")
+                print("║├          ║            └────────────────────────┘            ║          │║")
+                print("║│          ║                                                  ║          │║")
+                print("║│          ║                       COUP                       ║          │║")
+                print("║│          ║                                                  ║          │║")
+                print("║│          ║                                                  ║          │║")
+                print("║│          ║            ┌────────────────────────┐            ║          │║")
+                print("║│          ║            │Your turn               │            ║          │║")
+                print("║│          ║            │Name : "+name_1+       "│            ║          │║")
+                print("║│          ╚═══════►    │Coins: "+c1+           "│════════════╝          │║")
+                print("║│                       │"+ca1+                 "│                       │║")
+                print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
+                print("╚══════════════════════════════════════════════════════════════════════════╝")
+            else:
+                ca2 = y1+" -- "+y2
+                print("╔══════════════════════════════════════════════════════════════════════════╗")
+                print("║┌───────────────────────┬────────────────────────┬───────────────────────┐║")
+                print("║│                       │Your turn               │                       │║")
+                print("║│          ╔════════════│Name : "+name_2+       "│    ◄═══════╗          │║")
+                print("║│          ║            │Coins: "+c2+           "│            ║          │║")
+                print("║│          ║            │"+ca2+                 "│            ║          │║")
+                print("║├          ║            └────────────────────────┘            ║          │║")
+                print("║│          ║                                                  ║          │║")
+                print("║│          ║                       COUP                       ║          │║")
+                print("║│          ║                                                  ║          │║")
+                print("║│          ║                                                  ║          │║")
+                print("║│          ║            ┌────────────────────────┐            ║          │║")
+                print("║│          ║            │You are the nex         │            ║          │║")
+                print("║│          ║            │Name : "+name_1+       "│            ║          │║")
+                print("║│          ╚═══════►    │Coins: "+c1+           "│════════════╝          │║")
+                print("║│                       │"+ca1+                 "│                       │║")
+                print("║└───────────────────────┴────────────────────────┴───────────────────────┘║")
+                print("╚══════════════════════════════════════════════════════════════════════════╝")
 
-
-            cards_3 = player_3.cards
-            v3 = player_3.vcards
-            z1 = cards_3[0]
-            z2 = cards_3[1]
-
-            x = 10-len(z1)
-            for i in range(x):
-                z1 += " "
-
-            x = 10-len(z2)
-            for i in range(x):
-                z2 += " "
-
-            if v3 == [False,False]: #True: the card is reveled; False: the card is censored
-                ca3 = "********** - **********"
-            elif v3 == [True,False]: #True: the card is reveled; False: the card is censored
-                ca3 = z1+" - **********"
-
-            elif v3 == [False,True]: #True: the card is reveled; False: the card is censored
-                ca3 = "********** - "+z2
-            else: #Both cards are True
-                ca3 = z1+" - "+z2
 
 
     def evaluator(self,player_1,player_2,player_3,player_4):
@@ -526,28 +540,61 @@ class Board:
         p2 = player_2.vcards
         p3 = player_3.vcards
         p4 = player_4.vcards
-        if p1 == value:
-            self.showboard(player_1,player_2,player_3,player_4)
-            self.n_players -= 1
-            nombre1 = player_2.name[:]
-            player_1.name = nombre1
-            nombre2 = player_3.name[:]
-            player_2.name = nombre2
-            nombre3 = player_4.name[:]
-            player_3.name = nombre3
 
-        elif p2 == value:
-            self.showboard(player_1,player_2,player_3,player_4)
-            self.n_players -= 1
-            nombre1 = player_3.name[:]
-            player_2.name = nombre1
-            nombre2 = player_4.name[:]
-            player_3.name = nombre2
-        elif p3 == value:
-            self.showboard(player_1,player_2,player_3,player_4)
-            self.n_players -= 1
-            nombre1 = player_4.name[:]
-            player_3.name = nombre1
-        elif p4 == value:
-            self.showboard(player_1,player_2,player_3,player_4)
-            self.n_players -= 1
+        nombre1 = player_1.name[:]
+        nombre2 = player_2.name[:]
+        nombre3 = player_3.name[:]
+        nombre4 = player_4.name[:]
+
+        n_players = self.n_players #Players
+        if n_players == 4:
+            if p1 == value:
+                self.n_players -= 1
+                player_1.name = nombre2
+                player_2.name = nombre3
+                player_3.name = nombre4
+                self.showboard(player_1,player_2,player_3,player_4)
+
+            elif p2 == value:
+                self.n_players -= 1
+                player_2.name = nombre3
+                player_3.name = nombre4
+                self.showboard(player_1,player_2,player_3,player_4)
+
+            elif p3 == value:
+                self.n_players -= 1
+                player_3.name = nombre4
+                self.showboard(player_1,player_2,player_3,player_4)
+            elif p4 == value:
+                self.n_players -= 1
+                self.showboard(player_1,player_2,player_3,player_4)
+
+        elif n_players == 3:
+            if p1 == value:
+                self.n_players -= 1
+                player_1.name = nombre2
+                player_2.name = nombre3
+                self.showboard(player_1,player_2,player_3,player_4)
+
+            elif p2 == value:
+                self.n_players -= 1
+                player_2.name = nombre3
+                self.showboard(player_1,player_2,player_3,player_4)
+
+            elif p3 == value:
+                self.n_players -= 1
+                self.showboard(player_1,player_2,player_3,player_4)
+
+        elif n_players == 2:
+            if p1 == value:
+                self.n_players -= 1
+                player_1.name = nombre2
+                self.showboard(player_1,player_2,player_3,player_4)
+
+            elif p2 == value:
+                self.n_players -= 1
+                self.showboard(player_1,player_2,player_3,player_4)
+
+        else:
+            print("HOLAAAAAAAA")
+            return 0
