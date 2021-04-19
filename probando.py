@@ -1,3 +1,4 @@
+"""
 if p_2==1 and p_3==1 and p_4==1:
                         list_challenge.append(b.name)
                         list_challenge.append(c.name)
@@ -1352,3 +1353,4 @@ if p_2==1 and p_3==1 and p_4==1:
                                         else:
                                             print(a.name,"I´m sorry but you lose, your last card was", a.cards[0])
                                             a.vcards[0]=True 
+"""
