@@ -1,10 +1,11 @@
 class Player_4:
 
-    def __init__(self, name, cards, vcards, coins):
+    def __init__(self, name, cards, vcards, coins, color):
         self.__name = name
         self.__cards = cards
         self.__vcards = vcards
         self.__coins = coins
+        self.__color = color
 
     @property
     def name(self):
@@ -37,3 +38,11 @@ class Player_4:
     @coins.setter
     def coins(self, value):
         self.__coins = value  
+
+    @property
+    def color(self):
+        return self.__color
+
+    @color.setter
+    def color(self, value):
+        self.__color = value  
