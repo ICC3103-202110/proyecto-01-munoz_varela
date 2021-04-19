@@ -3,6 +3,7 @@ class Influences:
     def __init__(self):
         ...
     """
+    
     def challenge_b1(self,b,a):
         if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
             (list_challenge[0], "you lose the challenge")
@@ -47,6 +48,7 @@ class Influences:
                 else:
                     print(a.name,"I´m sorry but you lose, your last card was", a.cards[0])
                     a.vcards[0]=True
+
     def challenge_b2(self,b,a):
         if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
             (list_challenge[0], "you lose the challenge")

@@ -1,5 +1,3 @@
-
-
 class Board:
     def __init__(self, n_players, cards, turn):
         self.n_players = n_players
@@ -179,8 +177,10 @@ class Board:
 
 
             if turn == 1:
-                ca1 = x1+" - "+x2    
-                print("╔════════════════════════════════════════════════════════════════════════════╗")
+                ca1 = x1+" - "+x2   
+                print("") 
+                print("\x1b[;33m"+"╔═════════════════════"
+                "═══════════════════════════════════════════════════════╗"'\033[0;m')
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │You need wait          │                        │You need wait          │ ║")
                 print("║ │Name : "+name_4+      "│                        │Name : "+name_3+      "│ ║")
@@ -199,6 +199,7 @@ class Board:
                 print("╚════════════════════════════════════════════════════════════════════════════╝")
             elif turn == 2:
                 ca2 = y1+" - "+y2
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │You need wait          │                        │You are the next       │ ║")
@@ -218,6 +219,7 @@ class Board:
                 print("╚════════════════════════════════════════════════════════════════════════════╝")
             elif turn ==3:
                 ca3 = z1+" - "+z2
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │You are the next       │                        │You turn               │ ║")
@@ -237,6 +239,7 @@ class Board:
                 print("╚════════════════════════════════════════════════════════════════════════════╝")
             else:
                 ca4 = w1+" - "+w2
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │You turn               │                        │You need wait          │ ║")
@@ -362,8 +365,22 @@ class Board:
             else: #Both cards are True
                 ca3 = z1+" - "+z2
 
+            cards_4 = player_4.cards###
+            v4 = player_4.vcards
+            w1 = cards_4[0]
+            w2 = cards_4[1]
+
+            x = 10-len(w1)
+            for i in range(x):
+                w1 += " "
+
+            x = 10-len(w2)
+            for i in range(x):
+                w2 += " " ###
+
             if turn == 1:
                 ca1 = x1+" -- "+x2 
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │You need wait          │                        │You are the next       │ ║")
@@ -380,9 +397,17 @@ class Board:
                 print("║             ╚═══════►   │Coins: "+c1+           "│═══════════╝             ║")
                 print("║                         │"+ca1+                 "│                         ║")
                 print("║                         └────────────────────────┘                         ║")
-                print("╚════════════════════════════════════════════════════════════════════════════╝")
+                if(v4  == [True,True]):
+                    ca4 = w1+" -- "+w2
+                    print("╚══════╗ Played Cards             ╔══════════════════════════════════════════╝")
+                    print("       ║ "+ca4+                 " ║                                           ")
+                    print("       ╚══════════════════════════╝                                           ")
+                else:
+                    print("╚════════════════════════════════════════════════════════════════════════════╝")
+
             elif turn == 2:
                 ca2 = y1+" - "+y2 
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │You are the next       │                        │Your turn              │ ║")
@@ -399,9 +424,16 @@ class Board:
                 print("║             ╚═══════►   │Coins: "+c1+           "│═══════════╝             ║")
                 print("║                         │"+ca1+                 "│                         ║")
                 print("║                         └────────────────────────┘                         ║")
-                print("╚════════════════════════════════════════════════════════════════════════════╝")
+                if(v4  == [True,True]):
+                    ca4 = w1+" -- "+w2
+                    print("╚══════╗ Played Cards             ╔══════════════════════════════════════════╝")
+                    print("       ║ "+ca4+                 " ║                                           ")
+                    print("       ╚══════════════════════════╝                                           ")
+                else:
+                    print("╚════════════════════════════════════════════════════════════════════════════╝")
             else:
                 ca3 = z1+" - "+z2 
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║ ┌───────────────────────┐                        ┌───────────────────────┐ ║")
                 print("║ │Your turn              │                        │You need wait          │ ║")
@@ -418,7 +450,13 @@ class Board:
                 print("║             ╚═══════►   │Coins: "+c1+           "│═══════════╝             ║")
                 print("║                         │"+ca1+                 "│                         ║")
                 print("║                         └────────────────────────┘                         ║")
-                print("╚════════════════════════════════════════════════════════════════════════════╝")
+                if(v4  == [True,True]):
+                    ca4 = w1+" -- "+w2
+                    print("╚══════╗ Played Cards             ╔══════════════════════════════════════════╝")
+                    print("       ║ "+ca4+                 " ║                                           ")
+                    print("       ╚══════════════════════════╝                                           ")
+                else:
+                    print("╚════════════════════════════════════════════════════════════════════════════╝")
         elif n_players == 2:
 
             name_1 = player_1.name #Name player 1
@@ -491,8 +529,36 @@ class Board:
                 ca2 = "********** -- "+y2
             else: #Both cards are True
                 ca2 = y1+" -- "+y2
+
+            cards_3 = player_3.cards###
+            v3 = player_3.vcards
+            z1 = cards_3[0]
+            z2 = cards_3[1]
+
+            x = 10-len(z1)
+            for i in range(x):
+                z1 += " "
+
+            x = 10-len(z2)
+            for i in range(x):
+                z2 += " " ###
+
+            cards_4 = player_4.cards###
+            v4 = player_4.vcards
+            w1 = cards_4[0]
+            w2 = cards_4[1]
+
+            x = 10-len(w1)
+            for i in range(x):
+                w1 += " "
+
+            x = 10-len(w2)
+            for i in range(x):
+                w2 += " " ###
+
             if turn == 1:
                 ca1 = x1+" -- "+x2
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║                         ┌────────────────────────┐                         ║")
                 print("║                         │You are the next        │                         ║")
@@ -509,9 +575,21 @@ class Board:
                 print("║            ╚═══════►    │Coins: "+c1+           "│════════════╝            ║")
                 print("║                         │"+ca1+                 "│                         ║")
                 print("║                         └────────────────────────┘                         ║")
-                print("╚════════════════════════════════════════════════════════════════════════════╝")
+                if (v3 == [True,True]) and (v4  == [True,True]):
+                    ca3 = z1+" -- "+z2
+                    ca4 = w1+" -- "+w2
+                    print("╚══════╗ Played Cards             ╔════════╗             Played Cards ╔══════╝")
+                    print("       ║ "+ca3+                 " ║        ║ "+ca4+                 " ║       ")
+                    print("       ╚══════════════════════════╝        ╚══════════════════════════╝       ")
+                elif(v3  == [True,True]):
+                    ca3 = z1+" -- "+z2
+                    print("╚══════╗ Played Cards             ╔══════════════════════════════════════════╝")
+                    print("       ║ "+ca3+                 " ║                                           ")
+                    print("       ╚══════════════════════════╝                                           ")
+
             else:
                 ca2 = y1+" -- "+y2
+                print("")
                 print("╔════════════════════════════════════════════════════════════════════════════╗")
                 print("║                         ┌────────────────────────┐                         ║")
                 print("║                         │Your turn               │                         ║")
@@ -523,12 +601,23 @@ class Board:
                 print("║            ║                    The Coup                      ║            ║")
                 print("║            ║                                                  ║            ║")
                 print("║            ║            ┌────────────────────────┐            ║            ║")
-                print("║            ║            │You are the nex         │            ║            ║")
+                print("║            ║            │You are the next        │            ║            ║")
                 print("║            ║            │Name : "+name_1+       "│            ║            ║")
                 print("║            ╚═══════►    │Coins: "+c1+           "│════════════╝            ║")
                 print("║                         │"+ca1+                 "│                         ║")
                 print("║                         └────────────────────────┘                         ║")
-                print("╚════════════════════════════════════════════════════════════════════════════╝")
+                if (v3 == [True,True]) and (v4  == [True,True]):
+                    ca3 = z1+" -- "+z2
+                    ca4 = w1+" -- "+w2
+                    print("╚══════╗ Played Cards             ╔════════╗             Played Cards ╔══════╝")
+                    print("       ║ "+ca3+                 " ║        ║ "+ca4+                 " ║       ")
+                    print("       ╚══════════════════════════╝        ╚══════════════════════════╝       ")
+                elif(v3  == [True,True]):
+                    ca3 = z1+" -- "+z2
+                    print("╚══════╗ Played Cards             ╔══════════════════════════════════════════╝")
+                    print("       ║ "+ca3+                 " ║                                           ")
+                    print("       ╚══════════════════════════╝                                           ")
+
         elif n_players == 1:
 
             name_1 = player_1.name #Name player 1
@@ -557,7 +646,7 @@ class Board:
                 x2 += " "
 
             ca1 = x1+" -- "+x2
-
+            print("")
             print("╔════════════════════════════════════════════════════════════════════════════╗")
             print("║ ┌────────────────────────────────────────────────────────────────────────┐ ║")
             print("║ │ *       *                                                  *       ✶   │ ║")
@@ -601,8 +690,11 @@ class Board:
         co4 = (str(player_4.coins))[:]
 
         n_players = self.n_players #Players
+        turn = self.turn
+        x = -1
         if n_players == 4:
             if vc1 == value:
+                x = 1
                 self.n_players -= 1
                 player_1.name = nombre2
                 player_2.name = nombre3
@@ -620,9 +712,9 @@ class Board:
                 player_2.coins = int(co3)
                 player_3.coins = int(co4)
                 player_4.coins = int(co1)
-                self.showboard(player_1,player_2,player_3,player_4)
 
             elif vc2 == value:
+                x = 2
                 self.n_players -= 1
                 player_2.name = nombre3
                 player_3.name = nombre4
@@ -636,9 +728,9 @@ class Board:
                 player_2.coins = int(co3)
                 player_3.coins = int(co4)
                 player_4.coins = int(co2)
-                self.showboard(player_1,player_2,player_3,player_4)
 
             elif vc3 == value:
+                x = 3
                 self.n_players -= 1
                 player_3.name = nombre4
                 player_4.name = nombre3
@@ -648,17 +740,25 @@ class Board:
                 player_4.vcards = vc3
                 player_3.coins = int(co4)
                 player_4.coins = int(co3)
-                self.showboard(player_1,player_2,player_3,player_4)
 
             elif vc4 == value:
+                x = 4
                 self.n_players -= 1
-                self.showboard(player_1,player_2,player_3,player_4)
 
             else:
-                self.showboard(player_1,player_2,player_3,player_4)
+                self.turn += 1
+                if self.turn >= 5:
+                    self.turn = 1
+
+
+            if turn < x:
+                self.turn += 1
+            if self.turn >= 5:
+                self.turn = 1
 
         elif n_players == 3:
             if vc1 == value:
+                x = 1
                 self.n_players -= 1
                 player_1.name = nombre2
                 player_2.name = nombre3
@@ -672,9 +772,9 @@ class Board:
                 player_1.coins = int(co2)
                 player_2.coins = int(co3)
                 player_3.coins = int(co1)
-                self.showboard(player_1,player_2,player_3,player_4)
 
             elif vc2 == value:
+                x = 2
                 self.n_players -= 1
                 player_2.name = nombre3
                 player_3.name = nombre2
@@ -684,17 +784,25 @@ class Board:
                 player_3.vcards = vc2
                 player_2.coins = int(co3)
                 player_3.coins = int(co2)
-                self.showboard(player_1,player_2,player_3,player_4)
 
             elif vc3 == value:
+                x = 3
                 self.n_players -= 1
-                self.showboard(player_1,player_2,player_3,player_4)
 
             else:
-                self.showboard(player_1,player_2,player_3,player_4)
+                self.turn += 1
+                if self.turn >= 4:
+                    self.turn = 1
+
+
+            if turn < x:
+                self.turn += 1
+            if self.turn >= 4:
+                self.turn = 1
 
         elif n_players == 2:
             if vc1 == value:
+                x = 1
                 self.n_players -= 1
                 player_1.name = nombre2
                 player_2.name = nombre1
@@ -704,11 +812,22 @@ class Board:
                 player_2.vcards = vc1
                 player_1.coins = int(co2)
                 player_2.coins = int(co1)
-                self.showboard(player_1,player_2,player_3,player_4)
 
             elif vc2 == value:
+                x = 2
                 self.n_players -= 1
-                self.showboard(player_1,player_2,player_3,player_4)
 
             else:
-                self.showboard(player_1,player_2,player_3,player_4)
+                self.turn += 1
+                if self.turn >= 3:
+                    self.turn = 1
+
+
+            if turn < x:
+                self.turn += 1
+            if self.turn >= 3:
+                self.turn = 1
+        
+    
+        self.showboard(player_1,player_2,player_3,player_4)
+
