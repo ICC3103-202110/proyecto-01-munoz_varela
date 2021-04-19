@@ -2,6 +2,7 @@ import random
 class Influences:
     def __init__(self):
         ...
+    """
     def challenge_b1(self,b,a):
         if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
             (list_challenge[0], "you lose the challenge")
@@ -982,3 +983,4 @@ class Influences:
                         ...
                 else: 
                     ...
+"""
