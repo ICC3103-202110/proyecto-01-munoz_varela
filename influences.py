@@ -1743,11 +1743,11 @@ class Influences:
                     list_challenge.append(""+E+"no challenge")
             elif p_1==5:
                 a.coins-=7
-                k_o=input("+E+""wich player lose 1 influence :")
+                k_o=input(""+E+"wich player lose 1 influence :")
                 #hacer elegir al jugador atacado que carta pierde
                 if k_o==b.name:
-                    print(B+b.name, "+E+""I´m sorry but you lose a card")
-                    print(B+b.cards, "+E+""this is(are) you(r) card(s)")
+                    print(B+b.name, ""+E+"I´m sorry but you lose a card")
+                    print(B+b.cards, ""+E+"this is(are) you(r) card(s)")
                     if b.vcards[0]==False and b.vcards[1]==False:
                         delete=int(input(""+E+"Do you whant to lose card 1 or card 2? :"))
                         if delete==1:

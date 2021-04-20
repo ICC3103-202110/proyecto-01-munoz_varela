@@ -1,3 +1,9 @@
+import time
+import os
+
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
+
 class Board:
     def __init__(self, n_players, cards, turn, color):
         self.n_players = n_players
@@ -37,6 +43,169 @@ class Board:
     def turn(self, value):
         self.__turn = value
  
+
+    def waiter(self,player):
+        color = player.color[1]
+        print(color)
+        cls()
+        print(" ░░███╗░░░░░░░░ ")
+        print(" ░████║░░░░░░░░ ")
+        print(" ██╔██║░░░░░░░░ ")
+        print(" ╚═╝██║░░░░░░░░ ")
+        print(" ███████╗██╗██╗ ")
+        print(" ╚══════╝╚═╝╚═╝ ")
+        time.sleep(1)
+        cls()
+        print(" ░░███╗░░░░░░░░  ██████╗░░░░░░░ ")
+        print(" ░████║░░░░░░░░  ╚════██╗░░░░░░ ")
+        print(" ██╔██║░░░░░░░░  ░░███╔═╝░░░░░░ ")
+        print(" ╚═╝██║░░░░░░░░  ██╔══╝░░░░░░░░ ")
+        print(" ███████╗██╗██╗  ███████╗██╗██╗ ")
+        print(" ╚══════╝╚═╝╚═╝  ╚══════╝╚═╝╚═╝ ")
+        time.sleep(1)
+        cls()
+        print(" ░░███╗░░░░░░░░  ██████╗░░░░░░░  ██████╗░░░░░░░ ")
+        print(" ░████║░░░░░░░░  ╚════██╗░░░░░░  ╚════██╗░░░░░░ ")
+        print(" ██╔██║░░░░░░░░  ░░███╔═╝░░░░░░  ░█████╔╝░░░░░░ ")
+        print(" ╚═╝██║░░░░░░░░  ██╔══╝░░░░░░░░  ░╚═══██╗░░░░░░ ")
+        print(" ███████╗██╗██╗  ███████╗██╗██╗  ██████╔╝██╗██╗ ")
+        print(" ╚══════╝╚═╝╚═╝  ╚══════╝╚═╝╚═╝  ╚═════╝░╚═╝╚═╝ ")
+        time.sleep(1)
+        cls()
+        print(" ░░███╗░░░░░░░░  ██████╗░░░░░░░  ██████╗░░░░░░░  ░░██╗██╗░░░░░░ ")
+        print(" ░████║░░░░░░░░  ╚════██╗░░░░░░  ╚════██╗░░░░░░  ░██╔╝██║░░░░░░ ")
+        print(" ██╔██║░░░░░░░░  ░░███╔═╝░░░░░░  ░█████╔╝░░░░░░  ██╔╝░██║░░░░░░ ")
+        print(" ╚═╝██║░░░░░░░░  ██╔══╝░░░░░░░░  ░╚═══██╗░░░░░░  ███████║░░░░░░ ")
+        print(" ███████╗██╗██╗  ███████╗██╗██╗  ██████╔╝██╗██╗  ╚════██║██╗██╗ ")
+        print(" ╚══════╝╚═╝╚═╝  ╚══════╝╚═╝╚═╝  ╚═════╝░╚═╝╚═╝  ░░░░░╚═╝╚═╝╚═╝ ")
+        time.sleep(1)
+        cls()
+        print(" ░░███╗░░░░░░░░  ██████╗░░░░░░░  ██████╗░░░░░░░  ░░██╗██╗░░░░░░  ███████╗░░░░░░")
+        print(" ░████║░░░░░░░░  ╚════██╗░░░░░░  ╚════██╗░░░░░░  ░██╔╝██║░░░░░░  ██╔════╝░░░░░░")
+        print(" ██╔██║░░░░░░░░  ░░███╔═╝░░░░░░  ░█████╔╝░░░░░░  ██╔╝░██║░░░░░░  ██████╗░░░░░░░")
+        print(" ╚═╝██║░░░░░░░░  ██╔══╝░░░░░░░░  ░╚═══██╗░░░░░░  ███████║░░░░░░  ╚════██╗░░░░░░")
+        print(" ███████╗██╗██╗  ███████╗██╗██╗  ██████╔╝██╗██╗  ╚════██║██╗██╗  ██████╔╝██╗██╗")
+        print(" ╚══════╝╚═╝╚═╝  ╚══════╝╚═╝╚═╝  ╚═════╝░╚═╝╚═╝  ░░░░░╚═╝╚═╝╚═╝  ╚═════╝░╚═╝╚═╝")
+        time.sleep(1)
+        cls()
+
+    def welcome(self,player_1,player_2,player_3,player_4):
+        n_players = self.n_players
+        print("It's time for players to see their cards")
+        print("you have 3 seconds for memorize the cards")
+        print("REMEMBER.. you only have 5 secs for change")
+        print("the place with the other player.")
+        if n_players == 4:
+            print("so.. the first one will be "+player_1.name+" and the last "+player_4.name)
+        else:
+            print("so.. the first one will be "+player_1.name+" and the last "+player_3.name)
+        time.sleep(8)
+        name_1 = player_1.name #Name player 1
+        x = 17-len(name_1)
+        for i in range(x):
+            name_1 += " "
+        cards_1 = player_1.cards
+        x1 = cards_1[0]
+        x2 = cards_1[1]
+        x = 10-len(x1)
+        for i in range(x):
+            x1 += " "
+
+        x = 10-len(x2)
+        for i in range(x):
+            x2 += " "
+        ca1 = x1+" -- "+x2 #Cards player 1
+        self.waiter(player_1)
+        cls()
+        print("╔════════════════════════════════════════════════════════════════════════════╗")
+        print("║                         ┌────────────────────────┐                         ║")
+        print("║                         │Name : "+name_1+       "│                         ║")
+        print("║                         │       The Coup         │                         ║")
+        print("║                         │"+ca1+                 "│                         ║")
+        print("║                         └────────────────────────┘                         ║")
+        print("╚════════════════════════════════════════════════════════════════════════════╝")
+        time.sleep(3)
+        name_2 = player_2.name #Name player 2
+        x = 17-len(name_2)
+        for i in range(x):
+            name_2 += " "
+        cards_2 = player_2.cards
+        x1 = cards_2[0]
+        x2 = cards_2[1]
+        x = 10-len(x1)
+        for i in range(x):
+            x1 += " "
+
+        x = 10-len(x2)
+        for i in range(x):
+            x2 += " "
+        ca2 = x1+" -- "+x2 #Cards player 2
+        self.waiter(player_2)
+        cls()
+        print("╔════════════════════════════════════════════════════════════════════════════╗")
+        print("║                         ┌────────────────────────┐                         ║")
+        print("║                         │Name : "+name_2+       "│                         ║")
+        print("║                         │       The Coup         │                         ║")
+        print("║                         │"+ca2+                 "│                         ║")
+        print("║                         └────────────────────────┘                         ║")
+        print("╚════════════════════════════════════════════════════════════════════════════╝")
+        time.sleep(3)
+        name_3 = player_3.name #Name player 3
+        x = 17-len(name_3)
+        for i in range(x):
+            name_3 += " "
+        cards_3 = player_3.cards
+        x1 = cards_3[0]
+        x2 = cards_3[1]
+        x = 10-len(x1)
+        for i in range(x):
+            x1 += " "
+
+        x = 10-len(x2)
+        for i in range(x):
+            x2 += " "
+        ca3 = x1+" -- "+x2 #Cards player 3
+        self.waiter(player_3)
+        cls()
+        print("╔════════════════════════════════════════════════════════════════════════════╗")
+        print("║                         ┌────────────────────────┐                         ║")
+        print("║                         │Name : "+name_3+       "│                         ║")
+        print("║                         │       The Coup         │                         ║")
+        print("║                         │"+ca3+                 "│                         ║")
+        print("║                         └────────────────────────┘                         ║")
+        print("╚════════════════════════════════════════════════════════════════════════════╝")
+        time.sleep(3)
+        if n_players == 4:
+            name_4 = player_4.name #Name player 4
+            x = 17-len(name_4)
+            for i in range(x):
+                name_4 += " "
+            cards_4 = player_4.cards
+            x1 = cards_4[0]
+            x2 = cards_4[1]
+            x = 10-len(x1)
+            for i in range(x):
+                x1 += " "
+
+            x = 10-len(x2)
+            for i in range(x):
+                x2 += " "
+            ca4 = x1+" -- "+x2 #Cards player 4
+            self.waiter(player_4)
+            cls()
+            print("╔════════════════════════════════════════════════════════════════════════════╗")
+            print("║                         ┌────────────────────────┐                         ║")
+            print("║                         │Name : "+name_4+       "│                         ║")
+            print("║                         │       The Coup         │                         ║")
+            print("║                         │"+ca4+                 "│                         ║")
+            print("║                         └────────────────────────┘                         ║")
+            print("╚════════════════════════════════════════════════════════════════════════════╝")
+            time.sleep(3)
+        cls()
+        print("\n")
+        print("\033[1;37m"+"So lets begin the game :D!")
+        time.sleep(2)
+        cls()
 
     def showboard(self,player_1,player_2,player_3,player_4):
         n_players = self.n_players
@@ -893,15 +1062,3 @@ class Board:
 
 
 
-
-"""
-borrar
-esto
-en caso
-de que 
-no funque 
-mi codigo
-desde ahora
-en adelante
-con crtl z
-"""
