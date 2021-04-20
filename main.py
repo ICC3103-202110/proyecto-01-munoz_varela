@@ -26,19 +26,19 @@ def main():
     cards_player_2= [cards[2],cards[3]]
     cards_player_3= [cards[4],cards[5]]
 
-    player_1 = Player_1(names[0] ,cards_player_1, [True,False], 1)
-    player_2 = Player_2(names[1] ,cards_player_2, [False,True], 2)
-    player_3 = Player_3(names[2] ,cards_player_3, [False,True], 3)
-
+    player_1 = Player_1(names[0] ,cards_player_1, [True,False], 1, ["\033[;34m","\033[1;34m"] )#Azul
+    player_2 = Player_2(names[1] ,cards_player_2, [False,True], 2, ["\x1b[;33m","\033[1;33m"])#Amarillo
+    player_3 = Player_3(names[2] ,cards_player_3, [False,True], 3, ["\033[;31m","\033[1;31m"] )#Rojo
+ 
     if n_players == 4:
         cards_player_4 = [cards[6],cards[7]]
-        player_4 = Player_4(names[3],cards_player_4, [False,True], 4)
+        player_4 = Player_4(names[3],cards_player_4, [False,True], 4, ["\033[;32m","\033[1;32m"]) #Verde
         desk_cards = [cards[8],cards[9],cards[10],cards[11],cards[12],cards[13],cards[14]]
     else:
-        player_4 = Player_4("Null","Null","Null",0)
+        player_4 = Player_4("Null","Null","Null",0, "Null")
         desk_cards = [cards[6],cards[7],cards[8],cards[9],cards[10],cards[11],cards[12],cards[13],cards[14]]
         
-    board = Board(n_players,desk_cards,0)
+    board = Board(n_players,desk_cards,0,"\033[1;37m")
     influences = Influences()
    
     board.evaluator(player_1,player_2,player_3,player_4)
@@ -47,13 +47,10 @@ def main():
     player_1.vcards = [True,True]
     board.evaluator(player_1,player_2,player_3,player_4)
     board.evaluator(player_1,player_2,player_3,player_4)
-    board.evaluator(player_1,player_2,player_3,player_4)
-    player_3.vcards = [True,True]
-    board.evaluator(player_1,player_2,player_3,player_4)
-    board.evaluator(player_1,player_2,player_3,player_4)
     player_1.vcards = [True,True]
     board.evaluator(player_1,player_2,player_3,player_4)
-    
+
+
 
 if __name__ == "__main__":
     main()
