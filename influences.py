@@ -1316,6 +1316,7 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...
+##########################  AMBASSADOR   ##########################################
     def challenge_4(self,board,a,b,c,d):
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
