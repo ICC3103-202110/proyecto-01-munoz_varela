@@ -1717,6 +1717,26 @@ class Influences:
         n_players = board.n_players
         if n_players==4:
             A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+
+            nombre1 = a.name[:]
+            nombre2 = b.name[:]
+            nombre3 = c.name[:]
+            nombre4 = d.name[:]
+
+            ca1 = a.cards[:]
+            ca2 = b.cards[:]
+            ca3 = c.cards[:]
+            ca4 = d.cards[:]
+
+            vc1 = a.vcards[:]
+            vc2 = b.vcards[:]
+            vc3 = c.vcards[:]
+            vc4 = d.vcards[:]
+
+            col1 = a.color
+            col2 = b.color
+            col3 = c.color
+            col4 = d.color
             print(A+a.name)
             if a.coins>=10:
                 while True:
@@ -1945,7 +1965,7 @@ class Influences:
                 if ask2==2 and ask3==2 and ask4==2:
                     a.coins+=2
                 else:
-######################## CORREGIR ###########################################################3
+                    ####### CORREGIR #####
                     if ask2==1:
                         list_challenge=[]
                         print(A+a.name)
@@ -1955,8 +1975,22 @@ class Influences:
                         print(D+d.name)
                         p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         if p_2==2 and p_3==2 and p_4==2:
-                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
                         else:
+                            #a = b
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+
                             print(""+E+"we have a challenge!")
                             if p_2==1 and p_3==1 and p_4==1:
                                 list_challenge.append(b.name)
@@ -1965,6 +1999,19 @@ class Influences:
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
+
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2030,7 +2077,11 @@ class Influences:
                                 else: 
                                     a.coins+=2 
                                     print( A+a.name, ""+E+" you can have the two coins")       
-                    elif ask3==1: 
+                    elif ask3==1:
+                        ###### CORREGIR ####### 
+                        e = a
+                        a = c
+                        c = e
                         print(A+a.name)
                         p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         print(B+b.name)
@@ -2042,6 +2093,9 @@ class Influences:
                         else:
                             print(""+E+"we have a challenge!")
                     elif ask4==1: 
+                        e = a
+                        a = c
+                        c = e
                         print(A+a.name)
                         p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         print(B+b.name)
@@ -2068,6 +2122,7 @@ class Influences:
                                     else: 
                                         a.coins+=2 
                                         print( A+a.name, ""+E+" you can have the two coins")
+
                                 elif p_2==1 and p_3==1:
                                     list_challenge.append(b.name)
                                     list_challenge.append(c.name)
@@ -2130,7 +2185,6 @@ class Influences:
                                         print( A+a.name, ""+E+" you can have the two coins")
                     else: #si se hacen los challenge y gana el challenge player 1
                         a.coins+=2
-###################################################################################################################3                        
             if p_1==2: 
                 a.coins -=3
                 print(""+E+"To defense this attack you will need the Countess")
@@ -2192,7 +2246,6 @@ class Influences:
                                 print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
                 else:
-##################################################################################################################                    
                     if attack==b.name:
                         print(B+b.name,""+E+"use the defense")
                         print(A+a.name)
@@ -2229,7 +2282,6 @@ class Influences:
                             print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t do your attack ")
                         else:
                             print(""+E+"we have a challenge!")
-#######################################################################################################################                            
             elif p_1==3:
                 print (""+E+"To defense this attack you will need the ambassador or the captain")
                 print (attack)                
@@ -2268,7 +2320,6 @@ class Influences:
                             print(""+E+"sorry",D+d.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
                         else:
                             print(A+a.name,""+E+"bad call...", D+d.name,""+E+"don´t have coins...")
-##################################################################################################################                            
                 else:
                     if attack==b.name:
                         print(B+b.name,""+E+"use the defense")
