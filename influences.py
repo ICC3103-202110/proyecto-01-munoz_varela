@@ -1947,9 +1947,6 @@ class Influences:
                 else:
                     ####### CORREGIR #####
                     if ask2==1:
-                        e = a
-                        a = b
-                        b = e
                         list_challenge=[]
                         print(A+a.name)
                         p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
@@ -1957,7 +1954,13 @@ class Influences:
                         p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         print(D+d.name)
                         p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        e = a
+                        a = b
+                        b = e
                         if p_2==2 and p_3==2 and p_4==2:
+                            e = b
+                            b = a
+                            b = e
                             print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
                         else:
                             print(""+E+"we have a challenge!")
@@ -1968,6 +1971,9 @@ class Influences:
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                e = b
+                                b = a
+                                b = e
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
