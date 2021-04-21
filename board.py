@@ -42,7 +42,6 @@ class Board:
     @turn.setter
     def turn(self, value):
         self.__turn = value
- 
 
     def waiter(self,player):
         color = player.color[1]

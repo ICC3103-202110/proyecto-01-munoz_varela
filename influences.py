@@ -43,7 +43,7 @@ def cond(board,player_1,player_2,player_3,player_4):
 
 class Influences:
 #################################  MURDERER   #################################
-    def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4):
+    def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
@@ -432,7 +432,7 @@ class Influences:
         else:
             ...
 #################################  COUNTESS   #################################
-    def challenge_COUNTESS(self,board,player_1,player_2,player_3,player_4):
+    def challenge_COUNTESS(self,board,player_1,player_2,player_3,player_4,list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
@@ -725,7 +725,7 @@ class Influences:
         else:
             ...
 #################################    DUKE     #################################
-    def challenge_DUKE(self,board,player_1,player_2,player_3,player_4):
+    def challenge_DUKE(self,board,player_1,player_2,player_3,player_4,list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
@@ -1054,7 +1054,7 @@ class Influences:
         else:
             ...
 #################################   CAPTAIN   #################################
-    def challenge_CAPTAIN(self,board,player_1,player_2,player_3,player_4):
+    def challenge_CAPTAIN(self,board,player_1,player_2,player_3,player_4,list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
@@ -1384,7 +1384,7 @@ class Influences:
         else:
             ...
 ################################# AMBASSADOR  #################################  
-    def challenge_AMBASSADOR(self,board,player_1,player_2,player_3,player_4):
+    def challenge_AMBASSADOR(self,board,player_1,player_2,player_3,player_4,list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
@@ -1719,7 +1719,16 @@ class Influences:
             A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
             print(A+a.name)
             if a.coins>=10:
-                p_1=int(input(""+E+"I´m sorry but you need to use your coins... yo have to use the Coup(=5) or the Murderer(=2) wich one do you choose?"))
+                while True:
+                    try:
+                        p_1=int(input(""+E+"I´m sorry but you need to use your coins... yo have to use the Coup(=5) or the Murderer(=2) wich one do you choose?"))
+                        if (p_1 == 5) or (p_1 == 2):
+                            break
+                        else:
+                            print("Pls, type ´5´ or ´2´ number")
+                    except:
+                        print("Pls, type ´5´ or ´2´ number")
+
                 if p_1== 5:
                     print (A+a.name, ""+E+"choose to play Coup")
                 else:
@@ -1732,6 +1741,16 @@ class Influences:
                     if a.coins>=3:
                         print (A+a.name, ""+E+"choose to play Murderer") 
                     else:
+                        while True:
+                            try:
+                                print(""+E+"I´m sorry but you dont have enought coins... pls, chose other number")
+                                p_1=int(input(""+E+"wich card do you whant to play; 1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, 5=Coup, 6=Income, 7=Foreing aid :"))
+                                if p_1 != 2:
+                                    break
+                                else:
+                                    print(""+E+"Pls,don´t type ´5´ or ´2´ number")
+                            except:
+                                print(""+E+"Pls,don´t type ´5´ or ´2´ number")
                         print(A+a.name, ""+E+"you don´t have money to play Murderer")
                 elif p_1==3:
                     print(A+a.name ,""+E+"choose to play Captain")
@@ -1741,6 +1760,16 @@ class Influences:
                     if a.coins>=7:
                         print (A+a.name, ""+E+"choose to play Coup")
                     else:
+                        while True:
+                            try:
+                                print(""+E+"I´m sorry but you dont have enought coins... pls, chose other number")
+                                p_1=int(input(""+E+"wich card do you whant to play; 1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, 5=Coup, 6=Income, 7=Foreing aid :"))
+                                if p_1 != 5:
+                                    break
+                                else:
+                                    print(""+E+"Pls,don´t type ´5´")
+                            except:
+                                print(""+E+"Pls,don´t type ´5´")
                         print(A+a.name, ""+E+"you don´t have money to play Coup")
                 elif p_1==6:
                     print (A+a.name, ""+E+"choose to play Income")
@@ -1767,85 +1796,85 @@ class Influences:
                     random.shuffle(list_challenge)
                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 elif p_2==1 and p_3==1:
                     list_challenge.append(b.name)
                     list_challenge.append(c.name)
                     random.shuffle(list_challenge)
                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 elif p_2==1 and p_4==1:
                     list_challenge.append(b.name)
                     list_challenge.append(d.name)
                     random.shuffle(list_challenge)
                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 elif p_3==1 and p_4==1:
                     list_challenge.append(c.name)
                     list_challenge.append(d.name)
                     random.shuffle(list_challenge)
                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 elif p_2==1:
                     list_challenge.append(b.name)
                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 elif p_3==1:
                     list_challenge.append(d.name)
                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 elif p_4==1:
                     list_challenge.append(player_4.name)
                     print(D+player_4.name, ""+E+"you do the challenge, good luck")
                     if p_1==1:
-                        self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==2:
-                        self.challenge_MURDERER(player_1,player_2,player_3,player_4)
+                        self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                     elif p_1==3:
-                        self.challenge_CAPTAIN(player_1,player_2,player_3,player_4)
+                        self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                     else:
-                        self.challenge_AMBASSADOR(player_1,player_2,player_3,player_4)
+                        self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
                 else:
                     print(""+E+"no challenge")
             elif p_1==5:
@@ -1864,10 +1893,10 @@ class Influences:
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif k_o==c.name:
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
@@ -1918,6 +1947,9 @@ class Influences:
                 if ask2==2 and ask3==2 and ask4==2:
                     player_1.coins+=2
                 else:
+                    e = a[:]
+                    a = c[:]
+                    c = e[:]
                     ####### CORREGIR #####
                     if ask2==1:
                         list_challenge=[]
@@ -1937,7 +1969,7 @@ class Influences:
                                 list_challenge.append(d.name)
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -1948,7 +1980,7 @@ class Influences:
                                 list_challenge.append(c.name)
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -1959,7 +1991,7 @@ class Influences:
                                 list_challenge.append(d.name)
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -1970,7 +2002,7 @@ class Influences:
                                 list_challenge.append(d.name)
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -1979,7 +2011,7 @@ class Influences:
                             elif p_2==1:
                                 list_challenge.append(b.name)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -1988,7 +2020,7 @@ class Influences:
                             elif p_3==1:
                                 list_challenge.append(d.name)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -1997,7 +2029,7 @@ class Influences:
                             elif p_4==1:
                                 list_challenge.append(player_4.name)
                                 print(D+player_4.name, ""+E+"you do the challenge, good luck")
-                                self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2005,6 +2037,9 @@ class Influences:
                                     print( A+a.name, ""+E+" you can have the two coins")       
                     elif ask3==1:
                         ###### CORREGIR ####### 
+                        e = a[:]
+                        a = c[:]
+                        c = e[:]
                         print(A+a.name)
                         p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         print(B+b.name)
@@ -2036,7 +2071,7 @@ class Influences:
                                     list_challenge.append(d.name)
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2048,7 +2083,7 @@ class Influences:
                                     list_challenge.append(c.name)
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2059,7 +2094,7 @@ class Influences:
                                     list_challenge.append(d.name)
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2070,7 +2105,7 @@ class Influences:
                                     list_challenge.append(d.name)
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2079,7 +2114,7 @@ class Influences:
                                 elif p_2==1:
                                     list_challenge.append(b.name)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2088,7 +2123,7 @@ class Influences:
                                 elif p_3==1:
                                     list_challenge.append(d.name)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2097,7 +2132,7 @@ class Influences:
                                 elif p_4==1:
                                     list_challenge.append(player_4.name)
                                     print(D+player_4.name, ""+E+"you do the challenge, good luck")
-                                    self.challenge_DUKE(player_1,player_2,player_3,player_4)
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 

@@ -32,9 +32,9 @@ def main():
         names.append(x)
         cls()
 
-    cards=["Duke","Duke","Duke","Murderer","Murderer","Murderer"
-    "","Captain","Captain","Captain","Ambassador","Ambassador"
-    "","Ambassador","Countess","Countess","Countess"]
+    cards=["DUKE","DUKE","DUKE","MURDERER","MURDERER","MURDERER"
+    "","CAPTAIN","CAPTAIN","CAPTAIN","AMBASSADOR","AMBASSADOR"
+    "","AMBASSADOR","COUNTESS","COUNTESS","COUNTESS"]
     random.shuffle(cards) #Randomizer
 
     cards_player_1= [cards[0],cards[1]]
@@ -57,16 +57,16 @@ def main():
     board = Board(n_players,desk_cards,0,"\033[1;37m")
     influences = Influences()
     
-    board.welcome(player_1,player_2,player_3,player_4)
+    #board.welcome(player_1,player_2,player_3,player_4)
     while True:
         cls()
         turn = board.turn 
-        board.waiter(ref[turn])
+        #board.waiter(ref[turn])
         board.evaluator(player_1,player_2,player_3,player_4)
         if board.n_players == 3:
             break
         influences.play(board,player_1,player_2,player_3,player_4)
-        time.sleep(3)
+        time.sleep(2)
 
 
 
