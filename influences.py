@@ -2,8 +2,8 @@ import random
 class Influences:
     def __init__(self):
         ...
-##############################  MURDERER ##############################################
-    def challenge_2(self,board,a,b,c,d,attack):
+################################  MURDERER   ################################
+    def challenge_MURDERER(self,board,a,b,c,d,attack):
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
                 print(a.name,"you didn´t lie, you have MURDERER!")
@@ -384,7 +384,7 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...
-############################# COUNTESS ##################################################
+################################  COUNTESS   ################################
     def challenge_COUNTESS(self,board,a,b,c,d):
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
@@ -670,8 +670,8 @@ class Influences:
                 a.vcards[1]=True
         else:
             ...
-    ##################################  DUKE  ###############################################
-    def challenge_1(self,board,a,b,c,d):
+################################    DUKE     ################################
+    def challenge_DUKE(self,board,a,b,c,d):
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
                 if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
@@ -993,8 +993,8 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...
-    ##################################  CAPTAIN   ##################################################
-    def challenge_3(self,board,a,b,c,d):
+################################   CAPTAIN   ################################
+    def challenge_CAPTAIN(self,board,a,b,c,d):
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
@@ -1316,8 +1316,8 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...
-##########################  AMBASSADOR   ##########################################
-    def challenge_4(self,board,a,b,c,d):
+################################ AMBASSADOR  ################################  
+    def challenge_AMBASSADOR(self,board,a,b,c,d):
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
                 print(a.name,"you didn´t lie, you have the AMBASSADOR!")
@@ -1638,6 +1638,7 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...
+################################  PLAY GAME  ################################    
     def play(self,board,player_1,player_2,player_3,player_4):
         n_players = board.n_players
         turn = board.turn
@@ -1662,6 +1663,8 @@ class Influences:
                 b = player_1
                 c = player_2
                 d = player_3
+            
+            turn = 1
             if turn==1:
                 print(a.name)
                 p_1=int(input ("wich card do you whant to play; 1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, 5=Coup, 6=Income, 7=Foreing aid :"))
