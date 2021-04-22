@@ -2930,10 +2930,13 @@ class Influences:
                         ask4=0
                         ask_a_c=0
                         ask2=0
+                    if after_challenge==before_challenge:
+                        ask2=0
+                        ask3=0
+                        ask4=0
                     if after_challenge!=before_challenge:
                         ask_a_c=0
                         ask=0
-                        ask2=0
                     if ask2==1 or ask==1 or ask_a_c==1:
                         if ask_a_c==1:
                             print("perfect, yo choose to defense")
