@@ -1742,6 +1742,13 @@ class Influences:
                 before_challenge=2
             else:
                 before_challenge=1
+            if a.vcards[0]==False and a.vcards[1]==False:
+                after_challenge=2
+            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                after_challenge=1
+            else:
+                after_challenge=0
+            ########################################################
             if a.coins>=10:
                 while True:
                     try:
@@ -2930,13 +2937,12 @@ class Influences:
                         ask4=0
                         ask_a_c=0
                         ask2=0
-                    if after_challenge==before_challenge:
-                        ask2=0
-                        ask3=0
-                        ask4=0
                     if after_challenge!=before_challenge:
                         ask_a_c=0
                         ask=0
+                        ask2=0
+                        ask3=0
+                        ask4=0
                     if ask2==1 or ask==1 or ask_a_c==1:
                         if ask_a_c==1:
                             print("perfect, yo choose to defense")
