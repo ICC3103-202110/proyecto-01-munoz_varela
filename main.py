@@ -63,8 +63,6 @@ def main():
         turn = board.turn 
         #board.waiter(ref[turn])
         board.evaluator(player_1,player_2,player_3,player_4)
-        if board.n_players == 3:
-            break
         influences.play(board,player_1,player_2,player_3,player_4)
         time.sleep(2)
 
