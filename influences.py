@@ -1713,7 +1713,6 @@ class Influences:
             ...
 #################################  PLAY GAME  #################################    
     def play(self,board,player_1,player_2,player_3,player_4):
-        
         n_players = board.n_players
         if n_players==4 or n_players==3 or n_players==2:
             A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
@@ -1738,6 +1737,11 @@ class Influences:
             col3 = c.color
             col4 = d.color
             print(A+a.name)
+            ##This is use to know if the player win or lose the challenge
+            if a.vcards[0]==False and a.vcards[1]==False:
+                before_challenge=2
+            else:
+                before_challenge=1
             if a.coins>=10:
                 while True:
                     try:
@@ -1833,6 +1837,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -1858,6 +1866,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -1883,6 +1895,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -1908,6 +1924,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -1931,6 +1951,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -1954,6 +1978,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -1977,6 +2005,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -2011,6 +2043,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -2034,6 +2070,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -2057,6 +2097,10 @@ class Influences:
                                 before_challenge=1
                             self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
                         elif p_1==3:
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                before_challenge=2
+                            else:
+                                before_challenge=1
                             self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -2824,43 +2868,54 @@ class Influences:
                                         print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
                                         d.vcards[0]=True
                 elif p_1==3:
-                    print (""+E+"To defense this attack you will need the ambassador or the captain")
-                    print (attack)                
-                    ask_a_c=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
-                    if ask_a_c==2:
-                        if attack==b.name:
-                            if b.coins>=2:
-                                b.coins-=2
-                                a.coins+=2
-                                print(""+E+"sorry",B+b.name,""+E+"but",A+a.name,""+E+"take 2 of your coins")
-                            elif b.coins==1:
-                                b.coins-=1
-                                a.coins+=1
-                                print(""+E+"sorry",B+b.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
+#############################################################################################################3
+                    if a.vcards[0]==False and a.vcards[1]==False:
+                        after_challenge=2
+                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                        after_challenge=1
+                    else:
+                        after_challenge=0
+                    if after_challenge != before_challenge:
+                        print (""+E+" you can´t do the attack")
+                    else: 
+                        print (""+E+"To defense this attack you will need the ambassador or the captain")
+                        print (attack)                
+                        ask_a_c=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
+                        if ask_a_c==2:
+
+                            if attack==b.name:
+                                if b.coins>=2:
+                                    b.coins-=2
+                                    a.coins+=2
+                                    print(""+E+"sorry",B+b.name,""+E+"but",A+a.name,""+E+"take 2 of your coins")
+                                elif b.coins==1:
+                                    b.coins-=1
+                                    a.coins+=1
+                                    print(""+E+"sorry",B+b.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
+                                else:
+                                    print(A+a.name,""+E+"bad call...", B+b.name,""+E+"don´t have coins...")
+                            elif attack==c.name:
+                                if c.coins>=2:
+                                    c.coins-=2
+                                    a.coins+=2
+                                    print(""+E+"sorry",C+c.name,""+E+"but",A+a.name,""+E+"take 2 of your coins")
+                                elif c.coins==1:
+                                    c.coins-=1
+                                    a.coins+=1
+                                    print(""+E+"sorry",C+c.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
+                                else:
+                                    print(A+a.name,""+E+"bad call...", C+c.name,""+E+"don´t have coins...")
                             else:
-                                print(A+a.name,""+E+"bad call...", B+b.name,""+E+"don´t have coins...")
-                        elif attack==c.name:
-                            if c.coins>=2:
-                                c.coins-=2
-                                a.coins+=2
-                                print(""+E+"sorry",C+c.name,""+E+"but",A+a.name,""+E+"take 2 of your coins")
-                            elif c.coins==1:
-                                c.coins-=1
-                                a.coins+=1
-                                print(""+E+"sorry",C+c.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
-                            else:
-                                print(A+a.name,""+E+"bad call...", C+c.name,""+E+"don´t have coins...")
-                        else:
-                            if d.coins>=2:
-                                d.coins-=2
-                                a.coins+=2
-                                print(""+E+"sorry",D+d.name,""+E+"but",A+a.name,""+E+"take 2 of your coins")
-                            elif d.coins==1:
-                                d.coins-=1
-                                a.coins+=1
-                                print(""+E+"sorry",D+d.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
-                            else:
-                                print(A+a.name,""+E+"bad call...", D+d.name,""+E+"don´t have coins...")                          
+                                if d.coins>=2:
+                                    d.coins-=2
+                                    a.coins+=2
+                                    print(""+E+"sorry",D+d.name,""+E+"but",A+a.name,""+E+"take 2 of your coins")
+                                elif d.coins==1:
+                                    d.coins-=1
+                                    a.coins+=1
+                                    print(""+E+"sorry",D+d.name,""+E+"but",A+a.name,""+E+"take the last coin you have")
+                                else:
+                                    print(A+a.name,""+E+"bad call...", D+d.name,""+E+"don´t have coins...")                          
                 if p_1==7 or p_1==3 or p_1==2:
                     if p_1==7:
                         ask=0
@@ -2874,6 +2929,10 @@ class Influences:
                         ask3=0
                         ask4=0
                         ask_a_c=0
+                        ask2=0
+                    if after_challenge!=before_challenge:
+                        ask_a_c=0
+                        ask=0
                         ask2=0
                     if ask2==1 or ask==1 or ask_a_c==1:
                         if ask_a_c==1:
@@ -2953,10 +3012,10 @@ class Influences:
                                 b.color = col2
                                 B = col2
                                 if after_challenge == before_challenge:
-                                    print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    print ( ""+E+"but you can´t have the two coins")
                                 else: 
                                     a.coins+=2 
-                                    print( A+a.name, ""+E+" you can have the two coins")
+                                    print( ""+E+" you can have the two coins")
                             elif p_2==1 and p_3==1:
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     before_challenge=2
@@ -2994,10 +3053,10 @@ class Influences:
                                 b.color = col2
                                 B = col2
                                 if after_challenge == before_challenge:
-                                    print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    print ( ""+E+"you can´t have the two coins")
                                 else: 
                                     a.coins+=2 
-                                    print( A+a.name, ""+E+" you can have the two coins")
+                                    print( ""+E+" you can have the two coins")
                             elif p_2==1 and p_4==1:
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     before_challenge=2
@@ -3035,10 +3094,10 @@ class Influences:
                                 b.color = col2
                                 B = col2
                                 if after_challenge == before_challenge:
-                                    print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    print (""+E+" you can´t have the two coins")
                                 else: 
                                     a.coins+=2 
-                                    print( A+a.name, ""+E+" you can have the two coins")
+                                    print( ""+E+" you can have the two coins")
                             elif p_3==1 and p_4==1:
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     before_challenge=2
@@ -3076,10 +3135,10 @@ class Influences:
                                 b.color = col2
                                 B = col2
                                 if after_challenge == before_challenge:
-                                    print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    print (""+E+"you can´t have the two coins")
                                 else: 
                                     a.coins+=2 
-                                    print( A+a.name, ""+E+" you can have the two coins")
+                                    print( ""+E+" you can have the two coins")
                             elif p_2==1:
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     before_challenge=2
@@ -3154,10 +3213,10 @@ class Influences:
                                 b.color = col2
                                 B = col2
                                 if after_challenge == before_challenge:
-                                    print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    print (""+E+" you can´t have the two coins")
                                 else: 
                                     a.coins+=2 
-                                    print( A+a.name, ""+E+" you can have the two coins")
+                                    print(""+E+" you can have the two coins")
                             elif p_4==1:
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     before_challenge=2
@@ -3193,10 +3252,10 @@ class Influences:
                                 b.color = col2
                                 B = col2
                                 if after_challenge == before_challenge:
-                                    print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    print (""+E+"you can´t have the two coins")
                                 else: 
                                     a.coins+=2 
-                                    print( A+a.name, ""+E+" you can have the two coins")       
+                                    print( ""+E+" you can have the two coins")       
                     elif ask3==1:
                         ###### CORREGIR ####### 
                         #a = c
@@ -3218,7 +3277,7 @@ class Influences:
                             print(D+d.name)
                             p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                             if p_2==2 and p_3==2 and p_4==2:
-                                print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                                print (""+E+" you can´t have the two coins")
                             else:
                                 print(""+E+"we have a challenge!")
                                 if a.vcards[0]==False and a.vcards[1]==False:
@@ -3461,7 +3520,7 @@ class Influences:
                         print(C+c.name)
                         p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         if p_2==2 and p_3==2 and p_4==2:
-                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                            print ( ""+E+"you can´t have the two coins")
                         else:
                             print(""+E+"we have a challenge!")
                             if p_2==2 and p_3==2 and p_4==2:
@@ -3469,7 +3528,7 @@ class Influences:
                                     before_challenge=2
                                 else:
                                     before_challenge=1
-                                print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                                print (""+E+" you can´t have the two coins")
                             else:
                                 a.cards = ca4
                                 a.vcards = vc4
@@ -3842,21 +3901,54 @@ class Influences:
                             else:
                                 ...
             elif p_1==1:
-                if p_2==2 and p_3==2 and p_4==2:
-                    print(A+a.name,""+E+"good for you! you earn 3 coins")
-                    a.coins +=3
-                else:
-                    if a.vcards[0]==False and a.vcards[1]==False:
-                        after_challenge=2
-                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
-                        after_challenge=1
-                    else:
-                        after_challenge=0
-                    if after_challenge == before_challenge:
+                if n_players==4:
+                    if p_2==2 and p_3==2 and p_4==2:
                         print(A+a.name,""+E+"good for you! you earn 3 coins")
                         a.coins +=3
-                    else: 
-                        print("sorry, you don´t get the coins")
+                    else:
+                        if a.vcards[0]==False and a.vcards[1]==False:
+                            after_challenge=2
+                        elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            after_challenge=1
+                        else:
+                            after_challenge=0
+                        if after_challenge == before_challenge:
+                            print(A+a.name,""+E+"good for you! you earn 3 coins")
+                            a.coins +=3
+                        else: 
+                            print("sorry, you don´t get the coins")
+                elif n_players==3:
+                    if p_2==2 and p_3==2:
+                        print(A+a.name,""+E+"good for you! you earn 3 coins")
+                        a.coins +=3
+                    else:
+                        if a.vcards[0]==False and a.vcards[1]==False:
+                            after_challenge=2
+                        elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            after_challenge=1
+                        else:
+                            after_challenge=0
+                        if after_challenge == before_challenge:
+                            print(A+a.name,""+E+"good for you! you earn 3 coins")
+                            a.coins +=3
+                        else: 
+                            print("sorry, you don´t get the coins")
+                else:
+                    if p2==2:
+                        print(A+a.name,""+E+"good for you! you earn 3 coins")
+                        a.coins +=3
+                    else:
+                        if a.vcards[0]==False and a.vcards[1]==False:
+                            after_challenge=2
+                        elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            after_challenge=1
+                        else:
+                            after_challenge=0
+                        if after_challenge == before_challenge:
+                            print(A+a.name,""+E+"good for you! you earn 3 coins")
+                            a.coins +=3
+                        else: 
+                            print("sorry, you don´t get the coins")
             else: 
                 ...
     
