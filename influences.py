@@ -1983,14 +1983,12 @@ class Influences:
                             a.name = nombre2
                             a.color = col2
                             A = col2
-
                             #b = a
                             b.cards = ca1
                             b.vcards = vc1
                             b.name = nombre1
                             b.color = col1
                             B = col1
-
                             print(""+E+"we have a challenge!")
                             if p_2==1 and p_3==1 and p_4==1:
                                 list_challenge.append(b.name)
@@ -2011,7 +2009,6 @@ class Influences:
                                 b.name = nombre2
                                 b.color = col2
                                 B = col2
-
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2034,6 +2031,18 @@ class Influences:
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2045,6 +2054,18 @@ class Influences:
                                 random.shuffle(list_challenge)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2053,6 +2074,18 @@ class Influences:
                             elif p_2==1:
                                 list_challenge.append(b.name)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
@@ -2063,6 +2096,18 @@ class Influences:
                                 list_challenge.append(d.name)
                                 print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2072,6 +2117,18 @@ class Influences:
                                 list_challenge.append(d)
                                 print(D+d.name, ""+E+"you do the challenge, good luck")
                                 self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
                                 if win_challenge==1:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                 else: 
@@ -2079,33 +2136,24 @@ class Influences:
                                     print( A+a.name, ""+E+" you can have the two coins")       
                     elif ask3==1:
                         ###### CORREGIR ####### 
-                        e = a
-                        a = c
-                        c = e
-                        print(A+a.name)
-                        p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
-                        print(B+b.name)
-                        p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
-                        print(D+d.name)
-                        p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
-                        if p_2==2 and p_3==2 and p_4==2:
-                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
-                        else:
-                            print(""+E+"we have a challenge!")
-                    elif ask4==1: 
-                        e = a
-                        a = c
-                        c = e
-                        print(A+a.name)
-                        p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
-                        print(B+b.name)
-                        p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
-                        print(C+c.name)
-                        p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
-                        if p_2==2 and p_3==2 and p_4==2:
-                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
-                        else:
-                            print(""+E+"we have a challenge!")
+                        #a = c
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #c = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            print(A+a.name)
+                            p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                            print(B+b.name)
+                            p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                            print(D+d.name)
+                            p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                             if p_2==2 and p_3==2 and p_4==2:
                                 print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
                             else:
@@ -2117,12 +2165,23 @@ class Influences:
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
                                         a.coins+=2 
                                         print( A+a.name, ""+E+" you can have the two coins")
-
                                 elif p_2==1 and p_3==1:
                                     list_challenge.append(b.name)
                                     list_challenge.append(c.name)
@@ -2140,6 +2199,18 @@ class Influences:
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2151,6 +2222,18 @@ class Influences:
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2159,6 +2242,18 @@ class Influences:
                                 elif p_2==1:
                                     list_challenge.append(b.name)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
                                     self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
@@ -2169,6 +2264,195 @@ class Influences:
                                     list_challenge.append(d.name)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_4==1:
+                                    list_challenge.append(d)
+                                    print(D+d.name, ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                    elif ask4==1: 
+                        print(A+a.name)
+                        p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        print(B+b.name)
+                        p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        print(C+c.name)
+                        p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        if p_2==2 and p_3==2 and p_4==2:
+                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                        else:
+                            print(""+E+"we have a challenge!")
+                            if p_2==2 and p_3==2 and p_4==2:
+                                print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                            else:
+                                a.cards = ca4
+                                a.vcards = vc4
+                                a.name = nombre4
+                                a.color = col4
+                                A = col4
+                                #Back
+                                d.cards = ca1
+                                d.vcards = vc1
+                                d.name = nombre1
+                                d.color = col1
+                                D = col1
+                                print(""+E+"we have a challenge!")
+                                if p_2==1 and p_3==1 and p_4==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(c.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+
+                                elif p_2==1 and p_3==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(c.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1 and p_4==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_3==1 and p_4==1:
+                                    list_challenge.append(c.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1:
+                                    list_challenge.append(b.name)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_3==1:
+                                    list_challenge.append(d.name)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
@@ -2178,13 +2462,24 @@ class Influences:
                                     list_challenge.append(d.name)
                                     print(D+d.name, ""+E+"you do the challenge, good luck")
                                     self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
                                     if win_challenge==1:
                                         print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                     else: 
                                         a.coins+=2 
                                         print( A+a.name, ""+E+" you can have the two coins")
-                    else: #si se hacen los challenge y gana el challenge player 1
-                        a.coins+=2
+                    else: 
+                        ...
             if p_1==2: 
                 a.coins -=3
                 print(""+E+"To defense this attack you will need the Countess")
@@ -2254,8 +2549,327 @@ class Influences:
                         p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         print(D+d.name)
                         p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        if p_2==1 and p_3==1 and p_4==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(c.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1 and p_3==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(c.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1 and p_4==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_3==1 and p_4==1:
+                                    list_challenge.append(c.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1:
+                                    list_challenge.append(b.name)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_3==1:
+                                    list_challenge.append(d.name)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_4==1:
+                                    list_challenge.append(d)
+                                    print(D+d.name, ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    #Back
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    c.cards = ca3
+                                    c.vcards = vc3
+                                    c.name = nombre3
+                                    c.color = col3
+                                    C = col3
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                    elif ask4==1: 
+                        print(A+a.name)
+                        p_2=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        print(B+b.name)
+                        p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+                        print(C+c.name)
+                        p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         if p_2==2 and p_3==2 and p_4==2:
-                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t do your attack")
+                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                        else:
+                            print(""+E+"we have a challenge!")
+                            if p_2==2 and p_3==2 and p_4==2:
+                                print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
+                            else:
+                                a.cards = ca4
+                                a.vcards = vc4
+                                a.name = nombre4
+                                a.color = col4
+                                A = col4
+                                #Back
+                                d.cards = ca1
+                                d.vcards = vc1
+                                d.name = nombre1
+                                d.color = col1
+                                D = col1
+                                print(""+E+"we have a challenge!")
+                                if p_2==1 and p_3==1 and p_4==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(c.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+
+                                elif p_2==1 and p_3==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(c.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1 and p_4==1:
+                                    list_challenge.append(b.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_3==1 and p_4==1:
+                                    list_challenge.append(c.name)
+                                    list_challenge.append(d.name)
+                                    random.shuffle(list_challenge)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_2==1:
+                                    list_challenge.append(b.name)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_3==1:
+                                    list_challenge.append(d.name)
+                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+                                elif p_4==1:
+                                    list_challenge.append(d.name)
+                                    print(D+d.name, ""+E+"you do the challenge, good luck")
+                                    self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    a.cards = ca1
+                                    a.vcards = vc1
+                                    a.name = nombre1
+                                    a.color = col1
+                                    A = col1
+                                    #Back
+                                    d.cards = ca4
+                                    d.vcards = vc4
+                                    d.name = nombre4
+                                    d.color = col4
+                                    D = col4
+                                    if win_challenge==1:
+                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
+                                    else: 
+                                        a.coins+=2 
+                                        print( A+a.name, ""+E+" you can have the two coins")
+############################################################################################################
                         else:
                             print(""+E+"we have a challenge!")
                     elif attack==c.name:
@@ -2267,6 +2881,7 @@ class Influences:
                         print(D+d.name)
                         p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         if p_2==2 and p_3==2 and p_4==2:
+    ###########################################################################################################                        
                             print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t do your attack")
                         else:
                             print(""+E+"we have a challenge!")
@@ -2278,6 +2893,7 @@ class Influences:
                         p_3=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
                         print(C+c.name)
                         p_4=int(input(""+E+"Do you whant to do a challenge; 1 yes 2 no :"))
+###############################################################################################################
                         if p_2==2 and p_3==2 and p_4==2:
                             print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t do your attack ")
                         else:
