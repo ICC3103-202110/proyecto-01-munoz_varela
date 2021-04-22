@@ -1,6 +1,6 @@
 import random
 import time
-import os
+from os import system, name
 from copy import copy
 from board import Board
 from player_1 import Player_1
@@ -9,28 +9,33 @@ from player_3 import Player_3
 from player_4 import Player_4
 from influences import Influences
 
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
 
 def main():
+    clear()
     n_players = int(input( "How many players are playing today: ")) #Nunber of players #ELIMINAR POSIBILIDAD DE CRASH CON STRS
     while (n_players < 3) or (n_players > 4):
         n_players = int(input( "How many players are playing today: "))
 
     names = []
-    a = ["\033[;34m","\033[1;34m"]
-    b = ["\x1b[;33m","\033[1;33m"]
-    c = ["\033[;31m","\033[1;31m"]
-    d = ["\033[;32m","\033[1;32m"]
+    a = ["\033[0;34m","\033[1;34m","\033[6;30m"]
+    b = ["\x1b[0;33m","\033[1;33m","\x1b[6;30m"]
+    c = ["\033[0;31m","\033[1;31m","\033[6;30m"]
+    d = ["\033[0;32m","\033[1;32m","\033[6;30m"]
     index = [a,b,c,d]
     for i in range(0,n_players):
+        clear()
         print("\n")
         print(""+index[i][0]+"╔════════════════════════════════════════╗    ~This will be the max leight of")
         print("║                                        ▼     your name showed in the game. ")
         x = input("Tell me you name player "+str(i+1)+": "+"\033[1;37m") #Set the names
         x = x[0:15]
         names.append(x)
-        cls()
 
     cards=["DUKE","DUKE","DUKE","MURDERER","MURDERER","MURDERER"
     "","CAPTAIN","CAPTAIN","CAPTAIN","AMBASSADOR","AMBASSADOR"
@@ -59,13 +64,12 @@ def main():
     
     #board.welcome(player_1,player_2,player_3,player_4)
     while True:
-        cls()
+        clear()
         turn = board.turn 
         #board.waiter(ref[turn])
         board.evaluator(player_1,player_2,player_3,player_4)
         influences.play(board,player_1,player_2,player_3,player_4)
         time.sleep(2)
-
 
 
 if __name__ == "__main__":
