@@ -91,11 +91,10 @@ def cond3(board,player_1,player_2):
         return A,B,E,a,b
 class Influences:
 #################################  MURDERER   #################################
-    def challenge_MURDERER_3(self,board,player_1,player_2,player_3,list_challenge):
+    def challenge_MURDERER_3(self,board,player_1,player_2,player_3,list_challenge,attack):
         A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
-                win_challenge=1
                 print(A+a.name,""+E+"you didn´t lie, you have MURDERER!")
                 if a.cards[0]=="MURDERER":
                     a.cards[0]=board.cards[0]
@@ -111,7 +110,7 @@ class Influences:
                         if attack==b.name:
                             print(B+b.name,""+E+"you are out of the game")
                             b.vcards[0]=True
-                            b.vcareds[1]=True
+                            b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
                                 print(B+b.cards[0], b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -135,7 +134,7 @@ class Influences:
                         if attack==c.name:
                             print(C+c.name,""+E+"you are out of the game")
                             c.vcards[0]=True
-                            c.vcareds[1]=True
+                            c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
                                 print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -167,7 +166,7 @@ class Influences:
                         if attack==b.name:
                             print(B+b.name,""+E+"you are out of the game")
                             b.vcards[0]=True
-                            b.vcareds[1]=True
+                            b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
                                 print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -191,7 +190,7 @@ class Influences:
                         if attack==c.name:
                             print(C+c.name,""+E+"you are out of the game")
                             c.vcards[0]=True
-                            c.vcareds[1]=True
+                            c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
                                 print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -242,7 +241,7 @@ class Influences:
                     if attack==b.name:
                         print(B+b.name,""+E+"you are out of the game")
                         b.vcards[0]=True
-                        b.vcareds[1]=True
+                        b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
                             print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -266,7 +265,7 @@ class Influences:
                     if attack==c.name:
                         print(C+c.name,""+E+"you are out of the game")
                         c.vcards[0]=True
-                        c.vcareds[1]=True
+                        c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
                             print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -319,7 +318,7 @@ class Influences:
                     if attack==b.name:
                         print(B+b.name,""+E+"you are out of the game")
                         b.vcards[0]=True
-                        b.vcareds[1]=True
+                        b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
                             print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -343,7 +342,7 @@ class Influences:
                     if attack==c.name:
                         print(C+c.name,""+E+"you are out of the game")
                         c.vcards[0]=True
-                        c.vcareds[1]=True
+                        c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
                             print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -380,7 +379,7 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...
-    def challenge_MURDERER_2(self,board,player_1,player_2,list_challenge):
+    def challenge_MURDERER_2(self,board,player_1,player_2,list_challenge,attack):
         A,B,E,a,b = cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
@@ -400,7 +399,7 @@ class Influences:
                         if attack==b.name:
                             print(B+b.name,""+E+"you are out of the game")
                             b.vcards[0]=True
-                            b.vcareds[1]=True
+                            b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
                                 print(B+b.cards[0], b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -432,7 +431,7 @@ class Influences:
                         if attack==b.name:
                             print(B+b.name,""+E+"you are out of the game")
                             b.vcards[0]=True
-                            b.vcareds[1]=True
+                            b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
                                 print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -483,7 +482,7 @@ class Influences:
                     if attack==b.name:
                         print(B+b.name,""+E+"you are out of the game")
                         b.vcards[0]=True
-                        b.vcareds[1]=True
+                        b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
                             print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -536,7 +535,7 @@ class Influences:
                     if attack==b.name:
                         print(B+b.name,""+E+"you are out of the game")
                         b.vcards[0]=True
-                        b.vcareds[1]=True
+                        b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
                             print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -573,7 +572,7 @@ class Influences:
                         a.vcards[0]=True
         else:
             ...              
-    def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge):
+    def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge,attack):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
@@ -593,7 +592,7 @@ class Influences:
                         if attack==b.name:
                             print(B+b.name,""+E+"you are out of the game")
                             b.vcards[0]=True
-                            b.vcareds[1]=True
+                            b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
                                 print(B+b.cards[0], b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -617,7 +616,7 @@ class Influences:
                         if attack==c.name:
                             print(C+c.name,""+E+"you are out of the game")
                             c.vcards[0]=True
-                            c.vcareds[1]=True
+                            c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
                                 print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -641,7 +640,7 @@ class Influences:
                         if attack==d.name:
                             print(D+d.name,""+E+"you are out of the game")
                             d.vcards[0]=True
-                            d.vcareds[1]=True
+                            d.vcards[1]=True
                         else:
                             if d.vcards[0]==False and d.vcards[1]==False:
                                 print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -673,7 +672,7 @@ class Influences:
                         if attack==b.name:
                             print(B+b.name,""+E+"you are out of the game")
                             b.vcards[0]=True
-                            b.vcareds[1]=True
+                            b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
                                 print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -697,7 +696,7 @@ class Influences:
                         if attack==c.name:
                             print(C+c.name,""+E+"you are out of the game")
                             c.vcards[0]=True
-                            c.vcareds[1]=True
+                            c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
                                 print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -721,7 +720,7 @@ class Influences:
                         if attack==d.name:
                             print(D+d.name,""+E+"you are out of the game")
                             d.vcards[0]=True
-                            d.vcareds[1]=True
+                            d.vcards[1]=True
                         else:
                             if d.vcards[0]==False and d.vcards[1]==False:
                                 print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -759,7 +758,6 @@ class Influences:
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="MURDERER":
-                win_challenge=1
                 print(A+a.name,""+E+"you didn´t lie, you have the MURDERER!")
                 a.cards[1]=board.cards[0]
                 i=6
@@ -774,7 +772,7 @@ class Influences:
                     if attack==b.name:
                         print(B+b.name,""+E+"you are out of the game")
                         b.vcards[0]=True
-                        b.vcareds[1]=True
+                        b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
                             print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -798,7 +796,7 @@ class Influences:
                     if attack==c.name:
                         print(C+c.name,""+E+"you are out of the game")
                         c.vcards[0]=True
-                        c.vcareds[1]=True
+                        c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
                             print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -823,7 +821,7 @@ class Influences:
                     if attack==d.name:
                         print(D+d.name,""+E+"you are out of the game")
                         d.vcards[0]=True
-                        d.vcareds[1]=True
+                        d.vcards[1]=True
                     else:
                         if d.vcards[0]==False and d.vcards[1]==False:
                             delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
@@ -842,7 +840,6 @@ class Influences:
                                 d.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
                 if a.vcards[0]==False and a.vcards[1]==False:
                     delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
                     if delete==1:
@@ -860,7 +857,6 @@ class Influences:
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="MURDERER":
-                win_challenge=1
                 print(A+a.name,""+E+"you didn´t lie, you have the MURDERER!")
                 a.cards[0]=board.cards[0]
                 i=6
@@ -875,7 +871,7 @@ class Influences:
                     if attack==b.name:
                         print(B+b.name,""+E+"you are out of the game")
                         b.vcards[0]=True
-                        b.vcareds[1]=True
+                        b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
                             print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -899,7 +895,7 @@ class Influences:
                     if attack==c.name:
                         print(C+c.name,""+E+"you are out of the game")
                         c.vcards[0]=True
-                        c.vcareds[1]=True
+                        c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
                             print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -923,7 +919,7 @@ class Influences:
                     if attack==d.name:
                         print(D+d.name,""+E+"you are out of the game")
                         d.vcards[0]=True
-                        d.vcareds[1]=True
+                        d.vcards[1]=True
                     else:
                         if d.vcards[0]==False and d.vcards[1]==False:
                             print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
@@ -943,7 +939,6 @@ class Influences:
                                 d.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
                 if a.vcards[0]==False and a.vcards[1]==False:
                     delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
                     if delete==1:
@@ -966,7 +961,6 @@ class Influences:
         A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
-                win_challenge=1
                 print(A+a.name,""+E+"you didn´t lie, you have the COUNTESS!")
                 if a.cards[0]=="COUNTESS":
                     a.cards[0]=board.cards[0]
@@ -1062,7 +1056,6 @@ class Influences:
                                 c.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie :(")
-                win_challenge=2
                 print (A+a.name, ""+E+"you are out of the game :(")
                 a.vcards[0]=True 
                 a.vcards[1]=True
@@ -3875,7 +3868,6 @@ class Influences:
 #################################  PLAY GAME  #################################    
     def play(self,board,player_1,player_2,player_3,player_4):
         n_players = board.n_players
-        list_attack_issue=[]
         list_challenge=[]
         ask2=0
         ask3=0
@@ -4014,7 +4006,6 @@ class Influences:
             if p_1==2 or p_1==3:
                 print (A+a.name)
                 attack=input (""+E+"wich player do you want to attack? :")
-                list_attack_issue.append(attack)
                 print (attack)
             else:
                 ...
@@ -4044,7 +4035,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4073,7 +4064,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4102,7 +4093,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4131,7 +4122,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4158,7 +4149,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4185,7 +4176,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4212,7 +4203,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
@@ -4250,7 +4241,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
                             elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4283,7 +4274,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
                             elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4316,7 +4307,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
                             elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4342,8 +4333,6 @@ class Influences:
                                 print (""+E+" you can´t do the attack")
                             else: 
                                 print(""+E+"To defense this attack you will need the Countess")
-                                print(attack)
-                                list_attack_issue.append(attack)
                                 ask=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
                                 if ask==2:
                                     if attack==b.name:
@@ -4408,7 +4397,6 @@ class Influences:
                         else: 
                             print(""+E+"To defense this attack you will need the Countess")
                             print(attack)
-                            list_attack_issue.append(attack)
                             ask=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
                             if ask==2:
                                 if attack==b.name:
@@ -4906,7 +4894,7 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_2(board,player_1,player_2,list_challenge)
+                            self.challenge_MURDERER_2(board,player_1,player_2,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
                             elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -6598,21 +6586,21 @@ class Influences:
                             value_2=int (input("now enter the second card that you want :"))
                         if value_1==2:
                             a.cards[0]=a.cards[1]
-                        elif value_1==3:
+                        if value_1==3:
                             help_issue=a.cards[0]
                             a.cards[0]=board.cards[0]
                             board.cards[6]=help_issue
-                        elif value_1==4:
+                        if value_1==4:
                             help_issue=a.cards[0]
                             a.cards[0]=board.cards[1]
                             board.cards[6]=help_issue
-                        elif value_2==1:
+                        if value_2==1:
                             a.cards[1]=a.cards[0]
-                        elif value_2==3:
+                        if value_2==3:
                             help_issue=a.cards[1]
                             a.cards[1]=board.cards[0]
                             board.cards[6]=help_issue
-                        elif value_2==4:
+                        if value_2==4:
                             help_issue=a.cards[1]
                             a.cards[1]=board.cards[1]
                             board.cards[6]=help_issue
