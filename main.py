@@ -67,7 +67,7 @@ def main():
     ref = [player_1,player_2,player_3,player_4]  
     board = Board(n_players,desk_cards,0,"\033[1;37m")
     influences = Influences()
-    
+    log=[]
     #board.welcome(player_1,player_2,player_3,player_4)
     turn = 0
     n = board.n_players
@@ -77,7 +77,7 @@ def main():
         board.evaluator(player_1,player_2,player_3,player_4)
         if n == 1:
             break
-        influences.play(board,player_1,player_2,player_3,player_4)
+        influences.play(board,player_1,player_2,player_3,player_4,log)
         time.sleep(2)
         turn = board.turn 
         n = board.n_players
