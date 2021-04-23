@@ -18,7 +18,8 @@ def clear():
 
 def main():
     clear()
-    n_players = int(input( "How many players are playing today: ")) #Nunber of players #ELIMINAR POSIBILIDAD DE CRASH CON STRS
+    #Nunber of players #ELIMINAR POSIBILIDAD DE CRASH CON STRS
+    n_players = int(input( "How many players are playing today: ")) 
     while (n_players < 3) or (n_players > 4):
         n_players = int(input( "How many players are playing today: "))
 
@@ -31,9 +32,12 @@ def main():
     for i in range(0,n_players):
         clear()
         print("\n")
-        print(""+index[i][0]+"╔════════════════════════════════════════╗    ~This will be the max leight of")
-        print("║                                        ▼     your name showed in the game. ")
-        x = input("Tell me you name player "+str(i+1)+": "+"\033[1;37m") #Set the names
+        print(""+index[i][0]+"╔════════════════════════════════════════╗    ~"
+        "This will be the max leight of")
+        print("║                                        ▼     your name showed"
+        " in the game. ")
+        x = input("Tell me you name player "+str(i+1)+": "+"\033[1;37m")  
+        #Set the names
         x = x[0:15]
         names.append(x)
 
@@ -53,24 +57,36 @@ def main():
     if n_players == 4:
         cards_player_4 = [cards[6],cards[7]]
         player_4 = Player_4(names[3],cards_player_4, [False,False], 2, d)#Verde
-        desk_cards = [cards[8],cards[9],cards[10],cards[11],cards[12],cards[13],cards[14]]
+        desk_cards = [cards[8],cards[9],cards[10],cards[11],cards[12],
+        cards[13],cards[14]]
     else:
         player_4 = Player_4("Null","Null","Null",0, "Null")
-        desk_cards = [cards[6],cards[7],cards[8],cards[9],cards[10],cards[11],cards[12],cards[13],cards[14]]
+        desk_cards = [cards[6],cards[7],cards[8],cards[9],cards[10],
+        cards[11],cards[12],cards[13],cards[14]]
 
     ref = [player_1,player_2,player_3,player_4]  
     board = Board(n_players,desk_cards,0,"\033[1;37m")
     influences = Influences()
     
     #board.welcome(player_1,player_2,player_3,player_4)
+    turn = 0
+    n = board.n_players
     while True:
         clear()
-        turn = board.turn 
-        #board.waiter(ref[turn])
+        #board.waiter(ref[turn]) #Fix index for board.players_n
         board.evaluator(player_1,player_2,player_3,player_4)
+        if n == 1:
+            break
         influences.play(board,player_1,player_2,player_3,player_4)
         time.sleep(2)
-
+        turn = board.turn 
+        n = board.n_players
+        if n == 4 and turn == 4:
+            turn = 0
+        elif n == 3 and turn ==3:
+            turn = 0
+        elif n == 2 and turn == 2:
+            turn = 0
 
 if __name__ == "__main__":
     main()
