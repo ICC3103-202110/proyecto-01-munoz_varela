@@ -3930,7 +3930,7 @@ class Influences:
                 col2 = b.color
 
             print(A+a.name)
-            log_=int(input("Do you whant to see the log? (1=yes; 2=no):"))
+            log_=int(input(""+E+"Do you whant to see the log? (1=yes; 2=no):"))
             if log_==1:
                 print(log)
             else:
