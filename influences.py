@@ -6759,5 +6759,242 @@ class Influences:
                             a.coins +=3
                         else: 
                             print("sorry, you don´t get the coins")
+            if p_1==2:
+                if ask==1:
+                    if n_players==2:
+                        print(a.name)
+                        p_1=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        if p_1==2:
+                            print("You can use your defense")
+                        else:
+                            print (b.name,"," ,a.name,"don´t belive you, you go to challenge")
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            list_challenge.append(b.name)
+                            self.challenge_COUNTESS_2(board,player_1,player_2,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else: 
+                                a.coins+=2 
+                                print(  ""+E+" you can´t use the defense")
+                    elif n_players==3:
+                        print(a.name)
+                        p_1=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        if attack==c.name:
+                            print(b.name)
+                            p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        else: 
+                            print(c.name)
+                            p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        if p_1==2 and p_2==2:
+                            print("You can use your defense")
+                        elif p_1==1 and p_2==2:
+                            print (b.name,"," ,a.name,"don´t belive you, you go to challenge")
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            if attack==b.name:
+                                list_challenge.append(b.name)
+                            self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else: 
+                                a.coins+=2 
+                                print(  ""+E+" you can´t use the defense")
+                        elif p_1==2 and p_2==1:
+                            print (b.name,"," ,c.name,"don´t belive you, you go to challenge")
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #b = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            list_challenge.append(c.name)
+                            self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            c.cards = ca3
+                            c.vcards = vc3
+                            c.name = nombre3
+                            c.color = col3
+                            C = col3
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else: 
+                                a.coins+=2 
+                                print(  ""+E+" you can´t use the defense")
+                        else: 
+                            list_challenge.append(a.name)
+                            list_challenge.append(c.name)
+                            random.shuffle(list_challenge)
+                            print (b.name,"," ,a.name, "and",c.name,"don´t belive you, you go to challenge")
+                            if list_challenge[0]==a.name:
+                                print(a.name,"you go to the challenge too")
+                                a.cards = ca2
+                                a.vcards = vc2
+                                a.name = nombre2
+                                a.color = col2
+                                A = col2
+                                #b = a
+                                b.cards = ca1
+                                b.vcards = vc1
+                                b.name = nombre1
+                                b.color = col1
+                                B = col1
+                                if attack==b.name:
+                                    list_challenge.append(b.name)
+                                self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
+                                if after_challenge == before_challenge:
+                                    print (""+E+" you can´t do the attack")
+                                else: 
+                                    a.coins+=2 
+                                    print(  ""+E+" you can´t use the defense")
+                            else:
+                                print (c.name,"you go to the challenge too")
+                                a.cards = ca3
+                                a.vcards = vc3
+                                a.name = nombre3
+                                a.color = col3
+                                A = col3
+                                #b = a
+                                c.cards = ca1
+                                c.vcards = vc1
+                                c.name = nombre1
+                                c.color = col1
+                                C = col1
+                                list_challenge.append(c.name)
+                                self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                #Back
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #Back
+                                c.cards = ca3
+                                c.vcards = vc3
+                                c.name = nombre3
+                                c.color = col3
+                                C = col3
+                                if after_challenge == before_challenge:
+                                    print (""+E+" you can´t do the attack")
+                                else: 
+                                    a.coins+=2 
+                                    print(  ""+E+" you can´t use the defense")
+                    else:
+                        print(a.name)
+                        p_1=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        if attack==c.name:
+                            print(b.name)
+                            p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                            print(d.name)
+                            p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        elif attack==d.name: 
+                            print(b.name)
+                            p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                            print(c.name)
+                            p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        else:
+                            print(c.name)
+                            p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                            print(d.name)
+                            p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        if p_1==1 and p_2==2 and p_3==2:
+                            print(a.name,"you do the challenge")
+                        elif p_1==1 and p_2==1 and p_3==2:
+                            print ("...")
             else:
                 ...
