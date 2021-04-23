@@ -78,6 +78,7 @@ def cond(board,player_1,player_2,player_3,player_4):
             B = player_1.color[1]
             a = player_2
             b = player_1
+        return A,B,E,a,b
     else:
         A = player_1.color[1]
         a = player_1
@@ -86,7 +87,24 @@ def cond(board,player_1,player_2,player_3,player_4):
 class Influences:
 #################################  MURDERER   #################################
     def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge):
+<<<<<<< HEAD
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+=======
+        n_players = board.n_players
+        if n_players == 4:
+            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        elif n_players == 3:
+            A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+            d = player_4
+            D = ""
+        else:
+            A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+            c = player_3
+            C = ""
+            d = player_4
+            D = ""
+
+>>>>>>> 59f58b3b0a2acbe0e200206b146ff67882b14722
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
                 win_challenge=1
@@ -475,7 +493,20 @@ class Influences:
             ...
 #################################  COUNTESS   #################################
     def challenge_COUNTESS(self,board,player_1,player_2,player_3,player_4,list_challenge):
-        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        n_players = board.n_players
+        if n_players == 4:
+            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        elif n_players == 3:
+            A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+            d = player_4
+            D = ""
+        else:
+            A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+            c = player_3
+            C = ""
+            d = player_4
+            D = ""
+
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
                 win_challenge=1
@@ -768,7 +799,20 @@ class Influences:
             ...
 #################################    DUKE     #################################
     def challenge_DUKE(self,board,player_1,player_2,player_3,player_4,list_challenge):
-        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        n_players = board.n_players
+        if n_players == 4:
+            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        elif n_players == 3:
+            A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+            d = player_4
+            D = ""
+        else:
+            A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+            c = player_3
+            C = ""
+            d = player_4
+            D = ""
+
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
                 win_challenge=1
@@ -1097,7 +1141,20 @@ class Influences:
             ...
 #################################   CAPTAIN   #################################
     def challenge_CAPTAIN(self,board,player_1,player_2,player_3,player_4,list_challenge):
-        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        n_players = board.n_players
+        if n_players == 4:
+            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        elif n_players == 3:
+            A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+            d = player_4
+            D = ""
+        else:
+            A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+            c = player_3
+            C = ""
+            d = player_4
+            D = ""
+
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
@@ -1427,7 +1484,20 @@ class Influences:
             ...
 ################################# AMBASSADOR  #################################  
     def challenge_AMBASSADOR(self,board,player_1,player_2,player_3,player_4,list_challenge):
-        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        n_players = board.n_players
+        if n_players == 4:
+            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        elif n_players == 3:
+            A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+            d = player_4
+            D = ""
+        else:
+            A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+            c = player_3
+            C = ""
+            d = player_4
+            D = ""
+            
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
                 win_challenge=1

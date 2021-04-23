@@ -42,7 +42,11 @@ def cond(board,player_1,player_2,player_3,player_4):
             c = player_2
             d = player_3
         return A,B,C,D,E,a,b,c,d
-    elif n_players == 3:
+def cond2(board,player_1,player_2,player_3):
+    turn = board.turn
+    n_players = board.n_players
+    E = "\033[0;37m"
+    if n_players == 3:
         if turn == 1:
             A = player_1.color[1]
             B = player_2.color[1]
@@ -65,7 +69,11 @@ def cond(board,player_1,player_2,player_3,player_4):
             b = player_1
             c = player_2
         return A,B,C,E,a,b,c
-    elif n_players == 2:
+def cond3(board,player_1,player_2):
+    turn = board.turn
+    n_players = board.n_players
+    E = "\033[0;37m"
+    if n_players == 2:
         if turn == 1:
             A = player_1.color[1]
             B = player_2.color[1]
@@ -76,16 +84,15 @@ def cond(board,player_1,player_2,player_3,player_4):
             B = player_1.color[1]
             a = player_2
             b = player_1
+        return A,B,E,a,b
     else:
         A = player_1.color[1]
         a = player_1
         return A,B,E,a,b
-
-
-
 class Influences:
 #################################  MURDERER   #################################
     def challenge_MURDERER_3(self,board,player_1,player_2,player_3,list_challenge):
+        A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
                 win_challenge=1
@@ -374,6 +381,7 @@ class Influences:
         else:
             ...
     def challenge_MURDERER_2(self,board,player_1,player_2,list_challenge):
+        cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
                 win_challenge=1
@@ -566,6 +574,7 @@ class Influences:
         else:
             ...              
     def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge):
+        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
                 win_challenge=1
@@ -954,6 +963,7 @@ class Influences:
             ...
 #################################  COUNTESS   #################################
     def challenge_COUNTESS_3(self,board,player_1,player_2,player_3,list_challenge):
+        A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
                 win_challenge=1
@@ -1167,6 +1177,7 @@ class Influences:
         else:
             ...
     def challenge_COUNTESS_2(self,board,player_1,player_2,list_challenge):
+        cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
                 win_challenge=1
@@ -1304,6 +1315,7 @@ class Influences:
         else:
             ...
     def challenge_COUNTESS(self,board,player_1,player_2,player_3,player_4,list_challenge):
+        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
                 win_challenge=1
@@ -1596,6 +1608,7 @@ class Influences:
             ...
 #################################    DUKE     #################################
     def challenge_DUKE_3(self,board,player_1,player_2,player_3,list_challenge):
+        A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
                 print(A+a.name,""+E+"you didn´t lie, you have the DUKE!")
@@ -1845,6 +1858,7 @@ class Influences:
         else:
             ...
     def challenge_DUKE_2(self,board,player_1,player_2,list_challenge):
+        cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
                 print(A+a.name,""+E+"you didn´t lie, you have the DUKE!")
@@ -2018,6 +2032,7 @@ class Influences:
         else:
             ...
     def challenge_DUKE(self,board,player_1,player_2,player_3,player_4,list_challenge):
+        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
                 print(A+a.name,""+E+"you didn´t lie, you have the DUKE!")
@@ -2345,6 +2360,7 @@ class Influences:
             ...
 #################################   CAPTAIN   #################################
     def challenge_CAPTAIN_3(self,board,player_1,player_2,player_3,list_challenge):
+        A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
@@ -2597,6 +2613,7 @@ class Influences:
         else:
             ...
     def challenge_CAPTAIN_2(self,board,player_1,player_2,list_challenge):
+        cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
@@ -2773,6 +2790,7 @@ class Influences:
         else:
             ...
     def challenge_CAPTAIN(self,board,player_1,player_2,player_3,player_4,list_challenge):
+        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
@@ -3102,6 +3120,7 @@ class Influences:
             ...
 ################################# AMBASSADOR  #################################  
     def challenge_AMBASSADOR_3(self,board,player_1,player_2,player_3,list_challenge):
+        A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
                 win_challenge=1
@@ -3352,6 +3371,7 @@ class Influences:
         else:
             ...
     def challenge_AMBASSADOR_2(self,board,player_1,player_2,list_challenge):
+        cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
                 win_challenge=1
@@ -3526,6 +3546,7 @@ class Influences:
         else:
             ...
     def challenge_AMBASSADOR(self,board,player_1,player_2,player_3,player_4,list_challenge):
+        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
                 win_challenge=1
@@ -3878,7 +3899,7 @@ class Influences:
                 col4 = d.color
             
             elif n_players == 3:
-                A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+                A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
                 nombre1 = a.name[:]
                 nombre2 = b.name[:]
                 nombre3 = c.name[:]
@@ -3896,7 +3917,7 @@ class Influences:
                 col3 = c.color
 
             else:
-                A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+                A,B,E,a,b = cond3(board,player_1,player_2)
                 nombre1 = a.name[:]
                 nombre2 = b.name[:]
 
@@ -4215,25 +4236,25 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
                     elif p_2==1:
                         list_challenge.append(b.name)
                         print(list_challenge[0], ""+E+"you do the challenge, good luck")
@@ -4242,25 +4263,25 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
                     elif p_3==1:
                         list_challenge.append(c.name)
                         print(list_challenge[0], ""+E+"you do the challenge, good luck")
@@ -4269,25 +4290,25 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
                     else:
                         print(""+E+"no challenge") 
                 elif p_1==7 or p_1==2 or p_1==3:
@@ -4437,14 +4458,14 @@ class Influences:
                                     random.shuffle(list_challenge)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     if ask2==1:
-                                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                                     elif ask==1:
-                                        self.challenge_COUNTESS(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
                                     else:
                                         if ask_a==1:
-                                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
                                         else: 
-                                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         after_challenge=2
                                     elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4476,14 +4497,14 @@ class Influences:
                                     list_challenge.append(b.name)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     if ask2==1:
-                                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                                     elif ask==1:
-                                        self.challenge_COUNTESS(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
                                     else:
                                         if ask_a==1:
-                                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
                                         else: 
-                                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         after_challenge=2
                                     elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4515,14 +4536,14 @@ class Influences:
                                     list_challenge.append(d.name)
                                     print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                     if ask2==1:
-                                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                                     elif ask==1:
-                                        self.challenge_COUNTESS(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
                                     else:
                                         if ask_a==1:
-                                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
                                         else: 
-                                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         after_challenge=2
                                     elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4563,9 +4584,7 @@ class Influences:
                                 p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
                                 print(B+b.name)
                                 p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
-                                print(D+d.name)
-                                p_4=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
-                                if p_2==2 and p_3==2 and p_4==2:
+                                if p_2==2 and p_3==2:
                                     print (""+E+"I´m sorry", A+a.name, ""+E+"but you can have the two coins")
                                 else:
                                     print(""+E+"we have a challenge!")
@@ -4582,7 +4601,7 @@ class Influences:
                                         list_challenge.append(c.name)
                                         random.shuffle(list_challenge)
                                         print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                                         if a.vcards[0]==False and a.vcards[1]==False:
                                             after_challenge=2
                                         elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4613,7 +4632,7 @@ class Influences:
                                             before_challenge=1
                                         list_challenge.append(b.name)
                                         print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                                         if a.vcards[0]==False and a.vcards[1]==False:
                                             after_challenge=2
                                         elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
@@ -4644,7 +4663,7 @@ class Influences:
                                             before_challenge=1
                                         list_challenge.append(d.name)
                                         print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                        self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
                                         if a.vcards[0]==False and a.vcards[1]==False:
                                             after_challenge=2
                                         elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
