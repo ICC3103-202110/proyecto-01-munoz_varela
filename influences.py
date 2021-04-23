@@ -1712,30 +1712,6 @@ class Influences:
         else:
             ...
 #################################  PLAY GAME  #################################  
-    def cond1(board,player_1,player_2,player_3):
-        if n_players == 3:
-            if turn == 1:
-                A = player_1.color[1]
-                B = player_2.color[1]
-                C = player_3.color[1]
-                a = player_1
-                b = player_2
-                c = player_3
-            elif turn == 2:
-                A = player_2.color[1]
-                B = player_3.color[1]
-                C = player_1.color[1]
-                a = player_2
-                b = player_3
-                c = player_1
-            elif turn == 3:
-                A = player_3.color[1]
-                B = player_1.color[1]
-                C = player_2.color[1]
-                a = player_3
-                b = player_1
-                c = player_2
-            return A,B,C,E,a,b,c
     def cond(board,player_1,player_2,player_3,player_4):
         turn = board.turn
         n_players = board.n_players
@@ -1799,7 +1775,7 @@ class Influences:
             if n_players==4: 
                 A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
             elif n_players==3:
-                A,B,C,E,a,b,c = cond1(board,player_1,player_2,player_3)
+                A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
             else:
                 A,B,C,D,E,a,b,c,d= cond(board,player_1,player_2,player_3,player_4)
             print(A+a.name)
