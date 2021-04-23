@@ -1,5 +1,4 @@
 import random
-
 def cond(board,player_1,player_2,player_3,player_4):
     turn = board.turn
     n_players = board.n_players
@@ -3866,8 +3865,9 @@ class Influences:
         else:
             ...
 #################################  PLAY GAME  #################################    
-    def play(self,board,player_1,player_2,player_3,player_4):
+    def play(self,board,player_1,player_2,player_3,player_4,log):
         n_players = board.n_players
+    
         list_challenge=[]
         ask2=0
         ask3=0
@@ -3930,6 +3930,13 @@ class Influences:
                 col2 = b.color
 
             print(A+a.name)
+            log_=int(input("Do you whant to see the log? (1=yes; 2=no):"))
+            if log_==1:
+                print(log)
+            else:
+                print("ok, lets play")
+            print(A+a.name)
+            log.append(a.name)
             ##This is use to know if the player win or lose the challenge
             if a.vcards[0]==False and a.vcards[1]==False:
                 before_challenge=2
@@ -3947,6 +3954,10 @@ class Influences:
                     try:
                         p_1=int(input(""+E+"I´m sorry but you need to use your coins... you have to use the Coup(=5) or the Murderer(=2) wich one do you choose?"))
                         if (p_1 == 5) or (p_1 == 2):
+                            if p_1==5:
+                                log.append("Coup")
+                            else:
+                                log.append("Murderer")
                             break
                         else:
                             print("Pls, type ´5´ or ´2´ number")
@@ -3961,9 +3972,11 @@ class Influences:
                 p_1=int(input (""+E+"wich card do you want to play; 1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, 5=Coup, 6=Income, 7=Foreing aid :"))
                 if p_1==1:
                     print (A+a.name, ""+E+"choose to play Duke")  
+                    log.append("Duke")
                 elif p_1==2:
                     if a.coins>=3:
                         print (A+a.name, ""+E+"choose to play Murderer") 
+                        log.append("Murderer")
                     else:
                         while True:
                             try:
@@ -3977,10 +3990,13 @@ class Influences:
                                 print(""+E+"Pls,don´t type ´5´ or ´2´ number")
                 elif p_1==3:
                     print(A+a.name ,""+E+"choose to play Captain")
+                    log.append("Captain")
                 elif p_1==4:
+                    log.append("Ambassador")
                     print(A+a.name, ""+E+"choose to play Ambassador")
                 elif p_1==5:
                     if a.coins>=7:
+                        log.append("Coup")
                         print (A+a.name, ""+E+"choose to play Coup")
                     else:
                         while True:
@@ -4001,8 +4017,10 @@ class Influences:
                                 print(""+E+"Pls,don´t type ´5´")
                 elif p_1==6:
                     print (A+a.name, ""+E+"choose to play Income")
+                    log.append("Income")
                 else:
                     print(A+a.name ,""+E+"choose to play foreign aid")
+                    log.append("Foreign aid")
             if p_1==2 or p_1==3:
                 print (A+a.name)
                 attack=input (""+E+"wich player do you want to attack? :")
@@ -6998,3 +7016,4 @@ class Influences:
                             print ("...")
             else:
                 ...
+    
