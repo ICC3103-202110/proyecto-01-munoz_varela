@@ -86,7 +86,20 @@ def cond(board,player_1,player_2,player_3,player_4):
 class Influences:
 #################################  MURDERER   #################################
     def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge):
-        A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        if n_players == 4:
+            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+        elif n_players == 3:
+            A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+            d = player_4
+            D = "HIIIIIIIIIIIIIIII"
+        else:
+            A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+            c = player_3
+            C = "cyaaaaaaaa"
+            d = player_4
+            D = "HIIIIIIIIIIIIIIII"
+
+        
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
                 win_challenge=1
