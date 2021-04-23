@@ -5364,110 +5364,110 @@ class Influences:
                                 else:
                                     ask_a=0
                                     ask_c=1
-                            list_challenge=[]
-                            print(A+a.name)
-                            p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
-                            if p_2==2:
-                                if ask2==1:
-                                    print ( ""+E+"but you can´t have the two coins")
-                                elif ask==1:
-                                    print(""+E+"None one lose a card")
-                            else:
-                                #a = b
-                                a.cards = ca2
-                                a.vcards = vc2
-                                a.name = nombre2
-                                a.color = col2
-                                A = col2
-                                #b = a
-                                b.cards = ca1
-                                b.vcards = vc1
-                                b.name = nombre1
-                                b.color = col1
-                                B = col1
-                                if a.vcards[0]==False and a.vcards[1]==False:
-                                    before_challenge=2
+                                list_challenge=[]
+                                print(A+a.name)
+                                p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                                if p_2==2:
+                                    if ask2==1:
+                                        print ( ""+E+"but you can´t have the two coins")
+                                    elif ask==1:
+                                        print(""+E+"None one lose a card")
                                 else:
-                                    before_challenge=1
-                                print(""+E+"we have a challenge!")
-                                if p_2==1:
+                                    #a = b
+                                    a.cards = ca2
+                                    a.vcards = vc2
+                                    a.name = nombre2
+                                    a.color = col2
+                                    A = col2
+                                    #b = a
+                                    b.cards = ca1
+                                    b.vcards = vc1
+                                    b.name = nombre1
+                                    b.color = col1
+                                    B = col1
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         before_challenge=2
                                     else:
                                         before_challenge=1
-                                    list_challenge.append(b.name)
-                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    if ask2==1:
-                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
-                                    elif ask==1:
-                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
-                                    else:
-                                        if ask_a==1:
-                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                    print(""+E+"we have a challenge!")
+                                    if p_2==1:
+                                        if a.vcards[0]==False and a.vcards[1]==False:
+                                            before_challenge=2
+                                        else:
+                                            before_challenge=1
+                                        list_challenge.append(b.name)
+                                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                        if ask2==1:
+                                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                                        elif ask==1:
+                                            self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                        else:
+                                            if ask_a==1:
+                                                self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                            else: 
+                                                self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                                        if a.vcards[0]==False and a.vcards[1]==False:
+                                            after_challenge=2
+                                        elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                            after_challenge=1
+                                        else:
+                                            after_challenge=0
+                                        #Back
+                                        a.cards = ca1
+                                        a.vcards = vc1
+                                        a.name = nombre1
+                                        a.color = col1
+                                        A = col1
+                                        #Back
+                                        b.cards = ca2
+                                        b.vcards = vc2
+                                        b.name = nombre2
+                                        b.color = col2
+                                        B = col2
+                                        if after_challenge == before_challenge:
+                                            print(""+E+" you can´t have the two coins")
                                         else: 
-                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
-                                    if a.vcards[0]==False and a.vcards[1]==False:
-                                        after_challenge=2
-                                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
-                                        after_challenge=1
-                                    else:
-                                        after_challenge=0
-                                    #Back
-                                    a.cards = ca1
-                                    a.vcards = vc1
-                                    a.name = nombre1
-                                    a.color = col1
-                                    A = col1
-                                    #Back
-                                    b.cards = ca2
-                                    b.vcards = vc2
-                                    b.name = nombre2
-                                    b.color = col2
-                                    B = col2
-                                    if after_challenge == before_challenge:
-                                        print(""+E+" you can´t have the two coins")
-                                    else: 
-                                        a.coins+=2 
-                                        print(""+E+" you can have the two coins")
-                                elif p_3==1:
-                                    if a.vcards[0]==False and a.vcards[1]==False:
-                                        before_challenge=2
-                                    else:
-                                        before_challenge=1
-                                    list_challenge.append(d.name)
-                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
-                                    if ask2==1:
-                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
-                                    elif ask==1:
-                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
-                                    else:
-                                        if ask_a==1:
-                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                            a.coins+=2 
+                                            print(""+E+" you can have the two coins")
+                                    elif p_3==1:
+                                        if a.vcards[0]==False and a.vcards[1]==False:
+                                            before_challenge=2
+                                        else:
+                                            before_challenge=1
+                                        list_challenge.append(d.name)
+                                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                        if ask2==1:
+                                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                                        elif ask==1:
+                                            self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                        else:
+                                            if ask_a==1:
+                                                self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                            else: 
+                                                self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                                        if a.vcards[0]==False and a.vcards[1]==False:
+                                            after_challenge=2
+                                        elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                            after_challenge=1
+                                        else:
+                                            after_challenge=0
+                                        #Back
+                                        a.cards = ca1
+                                        a.vcards = vc1
+                                        a.name = nombre1
+                                        a.color = col1
+                                        A = col1
+                                        #Back
+                                        b.cards = ca2
+                                        b.vcards = vc2
+                                        b.name = nombre2
+                                        b.color = col2
+                                        B = col2
+                                        if after_challenge == before_challenge:
+                                            print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
                                         else: 
-                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
-                                    if a.vcards[0]==False and a.vcards[1]==False:
-                                        after_challenge=2
-                                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
-                                        after_challenge=1
-                                    else:
-                                        after_challenge=0
-                                    #Back
-                                    a.cards = ca1
-                                    a.vcards = vc1
-                                    a.name = nombre1
-                                    a.color = col1
-                                    A = col1
-                                    #Back
-                                    b.cards = ca2
-                                    b.vcards = vc2
-                                    b.name = nombre2
-                                    b.color = col2
-                                    B = col2
-                                    if after_challenge == before_challenge:
-                                        print (""+E+"I´m sorry", A+a.name, ""+E+"but you can´t have the two coins")
-                                    else: 
-                                        a.coins+=2 
-                                        print( ""+E+" you can have the two coins")   
+                                            a.coins+=2 
+                                            print( ""+E+" you can have the two coins")   
 
                 if p_1==7 and n_players==4:
                     print(""+E+"If someone wants to do a contra attack you will need the Duke")
