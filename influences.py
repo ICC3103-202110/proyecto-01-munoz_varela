@@ -2,44 +2,86 @@ import random
 
 def cond(board,player_1,player_2,player_3,player_4):
     turn = board.turn
+    n_players = board.n_players
     E = "\033[0;37m"
-    if turn == 1:
+    if n_players == 4:
+        if turn == 1:
+            A = player_1.color[1]
+            B = player_2.color[1]
+            C = player_3.color[1]
+            D = player_4.color[1]
+            a = player_1
+            b = player_2
+            c = player_3
+            d = player_4
+        elif turn == 2:
+            A = player_2.color[1]
+            B = player_3.color[1]
+            C = player_4.color[1]
+            D = player_1.color[1]
+            a = player_2
+            b = player_3
+            c = player_4
+            d = player_1
+        elif turn == 3:
+            A = player_3.color[1]
+            B = player_4.color[1]
+            C = player_1.color[1]
+            D = player_2.color[1]
+            a = player_3
+            b = player_4
+            c = player_1
+            d = player_2
+        elif turn == 4:
+            A = player_4.color[1]
+            B = player_1.color[1]
+            C = player_2.color[1]
+            D = player_3.color[1]
+            a = player_4
+            b = player_1
+            c = player_2
+            d = player_3
+        return A,B,C,D,E,a,b,c,d
+    elif n_players == 3:
+        if turn == 1:
+            A = player_1.color[1]
+            B = player_2.color[1]
+            C = player_3.color[1]
+            a = player_1
+            b = player_2
+            c = player_3
+        elif turn == 2:
+            A = player_2.color[1]
+            B = player_3.color[1]
+            C = player_1.color[1]
+            a = player_2
+            b = player_3
+            c = player_1
+        elif turn == 3:
+            A = player_3.color[1]
+            B = player_1.color[1]
+            C = player_2.color[1]
+            a = player_3
+            b = player_1
+            c = player_2
+        return A,B,C,E,a,b,c
+    elif n_players == 2:
+        if turn == 1:
+            A = player_1.color[1]
+            B = player_2.color[1]
+            a = player_1
+            b = player_2
+        elif turn == 2:
+            A = player_2.color[1]
+            B = player_1.color[1]
+            a = player_2
+            b = player_1
+    else:
         A = player_1.color[1]
-        B = player_2.color[1]
-        C = player_3.color[1]
-        D = player_4.color[1]
         a = player_1
-        b = player_2
-        c = player_3
-        d = player_4
-    elif turn == 2:
-        A = player_2.color[1]
-        B = player_3.color[1]
-        C = player_4.color[1]
-        D = player_1.color[1]
-        a = player_2
-        b = player_3
-        c = player_4
-        d = player_1
-    elif turn == 3:
-        A = player_3.color[1]
-        B = player_4.color[1]
-        C = player_1.color[1]
-        D = player_2.color[1]
-        a = player_3
-        b = player_4
-        c = player_1
-        d = player_2
-    elif turn == 4:
-        A = player_4.color[1]
-        B = player_1.color[1]
-        C = player_2.color[1]
-        D = player_3.color[1]
-        a = player_4
-        b = player_1
-        c = player_2
-        d = player_3
-    return A,B,C,D,E,a,b,c,d
+        return A,B,E,a,b
+
+
 
 class Influences:
 #################################  MURDERER   #################################
@@ -1715,27 +1757,60 @@ class Influences:
     def play(self,board,player_1,player_2,player_3,player_4):
         n_players = board.n_players
         if n_players==4 or n_players==3 or n_players==2:
-            A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+            if n_players == 4:
+                A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+                nombre1 = a.name[:]
+                nombre2 = b.name[:]
+                nombre3 = c.name[:]
+                nombre4 = d.name[:]
 
-            nombre1 = a.name[:]
-            nombre2 = b.name[:]
-            nombre3 = c.name[:]
-            nombre4 = d.name[:]
+                ca1 = a.cards[:]
+                ca2 = b.cards[:]
+                ca3 = c.cards[:]
+                ca4 = d.cards[:]
 
-            ca1 = a.cards[:]
-            ca2 = b.cards[:]
-            ca3 = c.cards[:]
-            ca4 = d.cards[:]
+                vc1 = a.vcards[:]
+                vc2 = b.vcards[:]
+                vc3 = c.vcards[:]
+                vc4 = d.vcards[:]
 
-            vc1 = a.vcards[:]
-            vc2 = b.vcards[:]
-            vc3 = c.vcards[:]
-            vc4 = d.vcards[:]
+                col1 = a.color
+                col2 = b.color
+                col3 = c.color
+                col4 = d.color
+            
+            elif n_players == 3:
+                A,B,C,E,a,b,c = cond(board,player_1,player_2,player_3,player_4)
+                nombre1 = a.name[:]
+                nombre2 = b.name[:]
+                nombre3 = c.name[:]
 
-            col1 = a.color
-            col2 = b.color
-            col3 = c.color
-            col4 = d.color
+                ca1 = a.cards[:]
+                ca2 = b.cards[:]
+                ca3 = c.cards[:]
+
+                vc1 = a.vcards[:]
+                vc2 = b.vcards[:]
+                vc3 = c.vcards[:]
+
+                col1 = a.color
+                col2 = b.color
+                col3 = c.color
+
+            else:
+                A,B,E,a,b = cond(board,player_1,player_2,player_3,player_4)
+                nombre1 = a.name[:]
+                nombre2 = b.name[:]
+
+                ca1 = a.cards[:]
+                ca2 = b.cards[:]
+
+                vc1 = a.vcards[:]
+                vc2 = b.vcards[:]
+
+                col1 = a.color
+                col2 = b.color
+
             print(A+a.name)
             ##This is use to know if the player win or lose the challenge
             if a.vcards[0]==False and a.vcards[1]==False:
