@@ -107,7 +107,7 @@ class Board:
         n_players = self.n_players
         print("It's time for players to see their cards")
         print("you have 3 seconds for memorize the cards")
-        print("REMEMBER.. you only have 5 secs for change")
+        print("REMEMBER.. you only have 5 seconds for change")
         print("the place with the other player.")
         if n_players == 4:
             print("so.. the first one will be "+player_1.name+" and the last "+
@@ -115,7 +115,7 @@ class Board:
         else:
             print("so.. the first one will be "+player_1.name+" and the last "+
             player_3.name)
-        time.sleep(8)
+        time.sleep(10)
         name_1 = player_1.name #Name player 1
         x = 17-len(name_1)
         for i in range(x):
@@ -248,7 +248,7 @@ class Board:
         clear()
         print("\n")
         print("\033[1;37m"+"So lets begin the game :D!")
-        time.sleep(2)
+        time.sleep(4)
         clear()
 
     def showboard(self,player_1,player_2,player_3,player_4):
@@ -260,7 +260,7 @@ class Board:
                 if n_players == 1:
                     break
                 show =int(input("\033[1;37m"+
-                "Type ´1´ if you want dont show your cards, or"
+                "Type ´1´ if you don´t want to show your cards, or"
                 " ´0´ if you want see your cards: "))
                 if (show == 1) or (show == 0):
                     break
