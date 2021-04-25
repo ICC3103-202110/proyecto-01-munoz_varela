@@ -260,14 +260,14 @@ class Board:
                 if n_players == 1:
                     break
                 show =int(input("\033[1;37m"+
-                "Type ´1´ if you want dont show your cards, or"
-                " ´0´ if you want see your cards: "))
-                if (show == 1) or (show == 0):
+                "Type ´1´ if you want see your cards, or"
+                " ´2´ if you dont want show your cards: "))
+                if (show == 1) or (show == 2):
                     break
                 else:
-                    print("\033[1;37m"+"Please, type ´0´ or ´1´..")
+                    print("\033[1;37m"+"Please, type ´1´ or ´2´..")
             except: 
-                print("\033[1;37m"+"Please, type ´0´ or ´1´..")
+                print("\033[1;37m"+"Please, type ´1´ or ´2´..")
 
         a = player_1.color[0] #Colors
         b = player_2.color[0]
@@ -438,15 +438,15 @@ class Board:
                 A = player_1.color[2]
                 if v1 == [True,False]:
                     ca1 = A+x1+a+" - "+x2
-                    if show == 1:
+                    if show == 2:
                         ca1 = "           - **********"
                 elif v1 == [False,True]:
                     ca1 = x1+" - "+A+x2+a
-                    if show == 1:
+                    if show == 2:
                         ca1 = "********** -           "
                 else:
                     ca1 = x1+" - "+x2    
-                    if show == 1:
+                    if show == 2:
                         ca1 = "********** - **********"
 
                 print("") 
@@ -488,15 +488,15 @@ class Board:
                 B = player_2.color[2]
                 if v2 == [True,False]:
                     ca2 = B+y1+b+" - "+y2
-                    if show == 1:
+                    if show == 2:
                         ca2 = "           - **********"
                 elif v2 == [False,True]:
                     ca2 = y1+" - "+B+y2+b
-                    if show == 1:
+                    if show == 2:
                         ca2 = "********** -           "
                 else:
                     ca2 = y1+" - "+y2   
-                    if show == 1:
+                    if show == 2:
                         ca2 = "********** - **********" 
                 
                 print("")
@@ -538,15 +538,15 @@ class Board:
                 C = player_3.color[2]
                 if v3 == [True,False]:
                     ca3 = C+z1+c+" - "+z2
-                    if show == 1:
+                    if show == 2:
                         ca3 = "           - **********"
                 elif v3 == [False,True]:
                     ca3 = z1+" - "+C+z2+c
-                    if show == 1:
+                    if show == 2:
                         ca3 = "********** -           "
                 else:
                     ca3 = z1+" - "+z2 
-                    if show == 1:
+                    if show == 2:
                         ca3 = "********** - **********"    
 
                 print("")
@@ -588,15 +588,15 @@ class Board:
                 D = player_4.color[2]
                 if v4 == [True,False]:
                     ca4 = D+w1+d+" - "+w2
-                    if show == 1:
+                    if show == 2:
                         ca4 = "           - **********"
                 elif v4 == [False,True]:
                     ca4 = w1+" - "+D+w2+d
-                    if show == 1:
+                    if show == 2:
                         ca4 = "********** -           "
                 else:
                     ca4 = w1+" - "+w2 
-                    if show == 1:
+                    if show == 2:
                         ca4 = "********** - **********"    
                 print("")
                 print(""+e+"╔═════════════════════════════════════════════════"
@@ -761,15 +761,15 @@ class Board:
                 A = player_1.color[2]
                 if v1 == [True,False]:
                     ca1 = A+x1+a+" -- "+x2
-                    if show == 1:
+                    if show == 2:
                         ca1 = "           -- **********"
                 elif v1 == [False,True]:
                     ca1 = x1+" -- "+A+x2+a
-                    if show == 1:
+                    if show == 2:
                         ca1 = "********** --           "
                 else:
                     ca1 = x1+" -- "+x2  
-                    if show == 1:
+                    if show == 2:
                         ca1 = "********** -- **********"
 
                 print("")
@@ -821,15 +821,15 @@ class Board:
                 B = player_2.color[2]
                 if v2 == [True,False]:
                     ca2 = B+y1+b+" - "+y2
-                    if show == 1:
+                    if show == 2:
                         ca2 = "           - **********"
                 elif v2 == [False,True]:
                     ca2 = y1+" - "+B+y2+b
-                    if show == 1:
+                    if show == 2:
                         ca2 = "********** -           "
                 else:
                     ca2 = y1+" - "+y2  
-                    if show == 1:
+                    if show == 2:
                         ca2 = "********** - **********"
                 print("")
                 print(""+e+"╔═════════════════════════════════════════════════"
@@ -879,15 +879,15 @@ class Board:
                 C = player_3.color[2]
                 if v3 == [True,False]:
                     ca3 = C+z1+c+" - "+z2
-                    if show == 1:
+                    if show == 2:
                         ca3 = "           - **********"
                 elif v3 == [False,True]:
                     ca3 = z1+" - "+C+z2+c
-                    if show == 1:
+                    if show == 2:
                         ca3 = "********** -           "
                 else:
                     ca3 = z1+" - "+z2  
-                    if show == 1:
+                    if show == 2:
                         ca3 = "********** - **********"
                 print("")
                 print(""+e+"╔═════════════════════════════════════════════════"
@@ -1038,16 +1038,16 @@ class Board:
                 A = player_1.color[2]
                 if v1 == [True,False]:
                     ca1 = A+x1+a+" -- "+x2
-                    if show == 1:
+                    if show == 2:
                         ca1 = "           -- **********"
 
                 elif v1 == [False,True]:
                     ca1 = x1+" -- "+A+x2+a
-                    if show == 1:
+                    if show == 2:
                         ca1 = "********** --           "
                 else:
                     ca1 = x1+" -- "+x2  
-                    if show == 1:
+                    if show == 2:
                         ca1 = "********** -- **********"
 
                 print("")
@@ -1105,15 +1105,15 @@ class Board:
                 B = player_2.color[2]
                 if v2 == [True,False]:
                     ca2 = B+y1+b+" -- "+y2
-                    if show == 1:
+                    if show == 2:
                         ca2 = "           -- **********"
                 elif v2 == [False,True]:
                     ca2 = y1+" -- "+B+y2+b
-                    if show == 1:
+                    if show == 2:
                         ca2 = "********** --           "
                 else:
                     ca2 = y1+" -- "+y2  
-                    if show == 1:
+                    if show == 2:
                         ca2 = "********** -- **********"
 
                 print("")

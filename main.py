@@ -78,7 +78,7 @@ def main():
         if n == 1:
             break
         influences.play(board,player_1,player_2,player_3,player_4,log)
-        time.sleep(2)
+        time.sleep(4)
         turn = board.turn 
         n = board.n_players
         if n == 4 and turn == 4:

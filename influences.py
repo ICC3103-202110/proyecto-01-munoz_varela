@@ -3930,9 +3930,14 @@ class Influences:
                 col2 = b.color
 
             print(A+a.name)
-            log_=int(input(""+E+"Do you whant to see the log? (1=yes; 2=no):"))
+            log_=int(input(""+E+"Do you want to see the log? (1=yes; 2=no):"))
             if log_==1:
-                print(log)
+                if log == []:
+                    print("Nothing in the log..")
+                else:  
+                    for i in range(0,len(log),2):
+                        print("Round", str((i//2)+1)+":")
+                        print("The player: "+str(log[i])+", played: "+str(log[i+1]))
             else:
                 print("ok, lets play")
             print(A+a.name)
