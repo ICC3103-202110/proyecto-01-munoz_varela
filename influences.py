@@ -90,7 +90,8 @@ def cond3(board,player_1,player_2):
         return A,B,E,a,b
 class Influences:
 #################################  MURDERER   #################################
-    def challenge_MURDERER_3(self,board,player_1,player_2,player_3,list_challenge,attack):
+    def challenge_MURDERER_3(self,board,player_1,player_2,player_3
+    ,list_challenge,attack):
         A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
@@ -112,20 +113,26 @@ class Influences:
                             b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
-                                print(B+b.cards[0], b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(B+b.cards[0], b.cards[1], ""+E+"this"
+                                " is(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose card"
+                                " 1 or card 2? :"))
                                 if delete==1:
-                                    print(b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                    print(b.cards[0], ""+E+"this is the card that",
+                                    B+b.name,""+E+"just lost")
                                     b.vcards[0]=True
                                 else:
-                                    print(b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                    print(b.cards[1], ""+E+"this is the card that", 
+                                    B+b.name, ""+E+"just lost")
                                     b.vcards[1]=True
                             else:
                                 if b.vcards[0]==True:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", B+b.cards[1]+E)
                                     b.vcards[1]=True
                                 else:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", B+b.cards[0]+E)
                                     b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
@@ -136,20 +143,26 @@ class Influences:
                             c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
-                                print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(C+c.cards[0],c.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose card"
+                                " 1 or card 2? :"))
                                 if delete==1:
-                                    print(c.cards[0], ""+E+"this is the card that", C+c.name,"just lost")
+                                    print(c.cards[0], ""+E+"this is the card that",
+                                    C+c.name,"just lost")
                                     c.vcards[0]=True
                                 else:
-                                    print(c.cards[1], ""+E+"this is the card that", C+c.name, "just lost")
+                                    print(c.cards[1], ""+E+"this is the card that", 
+                                    C+c.name, "just lost")
                                     c.vcards[1]=True
                             else:
                                 if c.vcards[0]==True:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", C+c.cards[1]+E)
                                     c.vcards[1]=True
                                 else:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", C+c.cards[0]+E)
                                     c.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -168,20 +181,26 @@ class Influences:
                             b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
-                                print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(B+b.cards[0],b.cards[1], ""+E+"this is"
+                                " (are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose card"
+                                " 1 or card 2? :"))
                                 if delete==1:
-                                    print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                    print(B+b.cards[0], ""+E+"this is the card"
+                                    " that", B+b.name,""+E+"just lost")
                                     b.vcards[0]=True
                                 else:
-                                    print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                    print(B+b.cards[1], ""+E+"this is the card"
+                                    " that", B+b.name, ""+E+"just lost")
                                     b.vcards[1]=True
                             else:
                                 if b.vcards[0]==True:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", B+b.cards[1]+E)
                                     b.vcards[1]=True
                                 else:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", B+b.cards[0]+E)
                                     b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
@@ -192,37 +211,49 @@ class Influences:
                             c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
-                                print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(C+c.cards[0],c.cards[1], ""+E+"this"
+                                " is(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose"
+                                " card 1 or card 2? :"))
                                 if delete==1:
-                                    print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                    print(C+c.cards[0], ""+E+"this is the "
+                                    "card that", C+c.name,""+E+"just lost")
                                     c.vcards[0]=True
                                 else:
-                                    print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                    print(C+c.cards[1], ""+E+"this is the card"
+                                    " that", C+c.name, ""+E+"just lost")
                                     c.vcards[1]=True
                             else:
                                 if c.vcards[0]==True:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", C+c.cards[1]+E)
                                     c.vcards[1]=True
                                 else:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you"
+                                    " lose, your last card was", C+c.cards[0]+E)
                                     c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( ,"
+                " you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or"
+                    " card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that",
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your"
+                        " last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="MURDERER":
@@ -243,20 +274,26 @@ class Influences:
                         b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are)"
+                            " you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card that",
+                                B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card that",
+                                B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose"
+                                ", your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
@@ -267,38 +304,50 @@ class Influences:
                         c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is"
+                            "(are) you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card "
+                            "1 or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 win_challenge=2
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or card "
+                    "2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that",
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1])
+                        print(A+a.name,""+E+"I´m sorry but you lose, your"
+                        "last card was", A+a.cards[1])
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0])
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0])
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="MURDERER":
@@ -320,20 +369,26 @@ class Influences:
                         b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
@@ -344,41 +399,54 @@ class Influences:
                         c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(c.cards[1], "this is the card that", c.name, "just lost")
+                                print(c.cards[1], "this is the card that",
+                                c.name, "just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
-    def challenge_MURDERER_2(self,board,player_1,player_2,list_challenge,attack):
+    def challenge_MURDERER_2(self,board,player_1,player_2,list_challenge
+    ,attack):
         A,B,E,a,b = cond3(board,player_1,player_2)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
@@ -391,7 +459,7 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="MURDERER"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
@@ -401,20 +469,26 @@ class Influences:
                             b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
-                                print(B+b.cards[0], b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(B+b.cards[0], b.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose card 1 "
+                                "or card 2? :"))
                                 if delete==1:
-                                    print(b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                    print(b.cards[0], ""+E+"this is the card "
+                                    "that", B+b.name,""+E+"just lost")
                                     b.vcards[0]=True
                                 else:
-                                    print(b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                    print(b.cards[1], ""+E+"this is the card "
+                                    "that", B+b.name, ""+E+"just lost")
                                     b.vcards[1]=True
                             else:
                                 if b.vcards[0]==True:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[1]+E)
                                     b.vcards[1]=True
                                 else:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[0]+E)
                                     b.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -433,37 +507,49 @@ class Influences:
                             b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
-                                print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(B+b.cards[0],b.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                    print(B+b.cards[0], ""+E+"this is the "
+                                    "card that", B+b.name,""+E+"just lost")
                                     b.vcards[0]=True
                                 else:
-                                    print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                    print(B+b.cards[1], ""+E+"this is the card"
+                                    " that", B+b.name, ""+E+"just lost")
                                     b.vcards[1]=True
                             else:
                                 if b.vcards[0]==True:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[1]+E)
                                     b.vcards[1]=True
                                 else:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[0]+E)
                                     b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or card "
+                    "2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that",
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="MURDERER":
@@ -484,38 +570,50 @@ class Influences:
                         b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 win_challenge=2
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1])
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1])
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0])
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0])
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="MURDERER":
@@ -537,41 +635,54 @@ class Influences:
                         b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...              
-    def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4,list_challenge,attack):
+    def challenge_MURDERER(self,board,player_1,player_2,player_3,player_4
+    ,list_challenge,attack):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="MURDERER" or a.cards[1]=="MURDERER":
@@ -584,7 +695,7 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="MURDERER"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
@@ -594,20 +705,26 @@ class Influences:
                             b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
-                                print(B+b.cards[0], b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(B+b.cards[0], b.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                    print(b.cards[0], ""+E+"this is the card that", 
+                                    B+b.name,""+E+"just lost")
                                     b.vcards[0]=True
                                 else:
-                                    print(b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                    print(b.cards[1], ""+E+"this is the card that", 
+                                    B+b.name, ""+E+"just lost")
                                     b.vcards[1]=True
                             else:
                                 if b.vcards[0]==True:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[1]+E)
                                     b.vcards[1]=True
                                 else:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you lose"
+                                    ", your last card was", B+b.cards[0]+E)
                                     b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
@@ -618,20 +735,26 @@ class Influences:
                             c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
-                                print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(C+c.cards[0],c.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(c.cards[0], ""+E+"this is the card that", C+c.name,"just lost")
+                                    print(c.cards[0], ""+E+"this is the "
+                                    "card that", C+c.name,"just lost")
                                     c.vcards[0]=True
                                 else:
-                                    print(c.cards[1], ""+E+"this is the card that", C+c.name, "just lost")
+                                    print(c.cards[1], ""+E+"this is the card that",
+                                    C+c.name, "just lost")
                                     c.vcards[1]=True
                             else:
                                 if c.vcards[0]==True:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", C+c.cards[1]+E)
                                     c.vcards[1]=True
                                 else:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", C+c.cards[0]+E)
                                     c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
@@ -642,20 +765,26 @@ class Influences:
                             d.vcards[1]=True
                         else:
                             if d.vcards[0]==False and d.vcards[1]==False:
-                                print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(D+d.cards[0],d.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                    print(D+d.cards[0], ""+E+"this is the "
+                                    "card that", D+d.name,""+E+"just lost")
                                     d.vcards[0]=True
                                 else:
-                                    print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                    print(D+d.cards[1], ""+E+"this is the "
+                                    "card that", D+d.name, ""+E+"just lost")
                                     d.vcards[1]=True
                             else:
                                 if d.vcards[0]==True:
-                                    print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                    print(D+d.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", D+d.cards[1]+E)
                                     d.vcards[1]=True
                                 else:
-                                    print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                    print(D+d.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", D+d.cards[0]+E)
                                     d.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -674,20 +803,26 @@ class Influences:
                             b.vcards[1]=True
                         else:
                             if b.vcards[0]==False and b.vcards[1]==False:
-                                print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(B+b.cards[0],b.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                    print(B+b.cards[0], ""+E+"this is the "
+                                    "card that", B+b.name,""+E+"just lost")
                                     b.vcards[0]=True
                                 else:
-                                    print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                    print(B+b.cards[1], ""+E+"this is the "
+                                    "card that", B+b.name, ""+E+"just lost")
                                     b.vcards[1]=True
                             else:
                                 if b.vcards[0]==True:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[1]+E)
                                     b.vcards[1]=True
                                 else:
-                                    print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                    print(B+b.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", B+b.cards[0]+E)
                                     b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
@@ -698,20 +833,26 @@ class Influences:
                             c.vcards[1]=True
                         else:
                             if c.vcards[0]==False and c.vcards[1]==False:
-                                print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(C+c.cards[0],c.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                    print(C+c.cards[0], ""+E+"this is the card"
+                                    " that", C+c.name,""+E+"just lost")
                                     c.vcards[0]=True
                                 else:
-                                    print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                    print(C+c.cards[1], ""+E+"this is the "
+                                    "card that", C+c.name, ""+E+"just lost")
                                     c.vcards[1]=True
                             else:
                                 if c.vcards[0]==True:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", C+c.cards[1]+E)
                                     c.vcards[1]=True
                                 else:
-                                    print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                    print(C+c.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", C+c.cards[0]+E)
                                     c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
@@ -722,38 +863,50 @@ class Influences:
                             d.vcards[1]=True
                         else:
                             if d.vcards[0]==False and d.vcards[1]==False:
-                                print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                print(D+d.cards[0],d.cards[1], ""+E+"this is"
+                                "(are) you(r) card(s)")
+                                delete=int(input(""+E+"Do you want to lose "
+                                "card 1 or card 2? :"))
                                 if delete==1:
-                                    print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                    print(D+d.cards[0], ""+E+"this is the card"
+                                    " that", D+d.name,""+E+"just lost")
                                     d.vcards[0]=True
                                 else:
-                                    print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                    print(D+d.cards[1], ""+E+"this is the card"
+                                    " that", D+d.name, ""+E+"just lost")
                                     d.vcards[1]=True
                             else:
                                 if d.vcards[0]==True:
-                                    print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                    print(D+d.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", D+d.cards[1]+E)
                                     d.vcards[1]=True
                                 else:
-                                    print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                    print(D+d.name,""+E+"I´m sorry but you "
+                                    "lose, your last card was", D+d.cards[0]+E)
                                     d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you "
+                "lie :( , you lose a card")
                 win_challenge=2 
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that",
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="MURDERER":
@@ -774,20 +927,26 @@ class Influences:
                         b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are)"
+                            " you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card "
+                            "1 or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card that", 
+                                B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card that", 
+                                B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
@@ -798,61 +957,79 @@ class Influences:
                         c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is"
+                            "(are) you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
-                    print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
+                    print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) "
+                    "card(s)")
                     if attack==d.name:
                         print(D+d.name,""+E+"you are out of the game")
                         d.vcards[0]=True
                         d.vcards[1]=True
                     else:
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", E+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", E+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", E+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", E+d.cards[0]+E)
                                 d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1])
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1])
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0])
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0])
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="MURDERER":
@@ -873,20 +1050,26 @@ class Influences:
                         b.vcards[1]=True
                     else:
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are)"
+                            " you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
@@ -897,20 +1080,26 @@ class Influences:
                         c.vcards[1]=True
                     else:
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(c.cards[1], "this is the card that", c.name, "just lost")
+                                print(c.cards[1], "this is the card" 
+                                "that", c.name, "just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
@@ -921,42 +1110,55 @@ class Influences:
                         d.vcards[1]=True
                     else:
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is"
+                            "(are) you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or card "
+                    "2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card that",
+                        A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card that", 
+                        A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
 #################################  COUNTESS   #################################
-    def challenge_COUNTESS_3(self,board,player_1,player_2,player_3,list_challenge):
+    def challenge_COUNTESS_3(self,board,player_1,player_2,player_3
+    ,list_challenge):
         A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
@@ -968,44 +1170,56 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="COUNTESS"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1])
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0])
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                 else:                    
                     a.cards[1]=board.cards[0]
@@ -1014,44 +1228,56 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="COUNTESS"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie :(")
@@ -1073,39 +1299,51 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie")
@@ -1121,44 +1359,56 @@ class Influences:
                     board.cards[i-1]=board.cards[i]
                     i-=1
                 board.cards[6]="COUNTESS"
-                print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                 if list_challenge[0]==b.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie")
@@ -1181,25 +1431,31 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="COUNTESS"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1])
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0])
                                 b.vcards[0]=True
                 else:                    
                     a.cards[1]=board.cards[0]
@@ -1208,25 +1464,31 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="COUNTESS"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie :(")
@@ -1244,25 +1506,31 @@ class Influences:
                     board.cards[i-1]=board.cards[i]
                     i-=1
                 board.cards[6]="COUNTESS"
-                print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                 if list_challenge[0]==b.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 or "
+                        "card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie")
@@ -1283,20 +1551,26 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie")
@@ -1306,7 +1580,8 @@ class Influences:
                 a.vcards[1]=True
         else:
             ...
-    def challenge_COUNTESS(self,board,player_1,player_2,player_3,player_4,list_challenge):
+    def challenge_COUNTESS(self,board,player_1,player_2,player_3,player_4,
+    list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="COUNTESS" or a.cards[1]=="COUNTESS":
@@ -1319,63 +1594,81 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="COUNTESS"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1])
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0])
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], "you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
                 else:                    
                     a.cards[1]=board.cards[0]
@@ -1384,63 +1677,81 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="COUNTESS"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose,"
+                                " your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie :(")
@@ -1463,58 +1774,76 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie")
@@ -1537,58 +1866,76 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 or"
+                        " card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
                 print (A+a.name,""+E+"sorry, but they know that you lie")
@@ -1611,44 +1958,56 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="DUKE"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1])
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1])
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0])
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0])
                                 c.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -1657,61 +2016,79 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="DUKE"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, "I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="DUKE":
@@ -1728,57 +2105,74 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1])
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0])
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( "
+                ", you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="DUKE":
@@ -1795,57 +2189,74 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 or "
+                        "card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
@@ -1861,25 +2272,31 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="DUKE"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -1888,42 +2305,54 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="DUKE"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="DUKE":
@@ -1940,38 +2369,49 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1])
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0])
                             b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or"
+                    " card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="DUKE":
@@ -1988,42 +2428,54 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
-    def challenge_DUKE(self,board,player_1,player_2,player_3,player_4,list_challenge):
+    def challenge_DUKE(self,board,player_1,player_2,player_3,player_4,
+    list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="DUKE" or a.cards[1]=="DUKE":
@@ -2035,63 +2487,81 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="DUKE"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1])
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1])
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0])
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0])
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -2100,81 +2570,105 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="DUKE"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, "I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 win_challenge=2
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="DUKE":
@@ -2186,81 +2680,104 @@ class Influences:
                     board.cards[i-1]=board.cards[i]
                     i-=1
                 board.cards[6]="DUKE"
-                print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                 if list_challenge[0]==b.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1])
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0])
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
-                    print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
+                    print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                    "you(r) card(s)")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, your "
+                            "last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, your "
+                            "last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, your "
+                        "last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="DUKE":
@@ -2277,87 +2794,111 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
 #################################   CAPTAIN   #################################
-    def challenge_CAPTAIN_3(self,board,player_1,player_2,player_3,list_challenge):
+    def challenge_CAPTAIN_3(self,board,player_1,player_2,player_3,
+    list_challenge):
         A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                     win_challenge=1
-                    print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN!")
+                    print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN")
                 if a.cards[0]=="CAPTAIN":
                     a.cards[0]=board.cards[0]
                     i=6
@@ -2365,44 +2906,56 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="CAPTAIN"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -2411,62 +2964,79 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="CAPTAIN"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], "you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input("Do you want to lose card 1 or card 2? :"))
+                    delete=int(input("Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="CAPTAIN":
@@ -2483,57 +3053,73 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 or "
+                        "card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input("Do you want to lose card 1 or card 2? :"))
+                    delete=int(input("Do you want to lose card 1 or card 2?:"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="CAPTAIN":
@@ -2550,57 +3136,74 @@ class Influences:
                     print(list_challenge[0], "you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :("
+                " , you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
@@ -2610,7 +3213,7 @@ class Influences:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                     win_challenge=1
-                    print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN!")
+                    print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN")
                 if a.cards[0]=="CAPTAIN":
                     a.cards[0]=board.cards[0]
                     i=6
@@ -2618,25 +3221,31 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="CAPTAIN"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -2645,43 +3254,53 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="CAPTAIN"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], "you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input("Do you want to lose card 1 or card 2? :"))
+                    delete=int(input("Do you want to lose card 1 or card 2?:"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="CAPTAIN":
@@ -2698,38 +3317,48 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input("Do you want to lose card 1 or card 2? :"))
+                    delete=int(input("Do you want to lose card 1 or card 2?:"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="CAPTAIN":
@@ -2746,48 +3375,60 @@ class Influences:
                     print(list_challenge[0], "you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
-    def challenge_CAPTAIN(self,board,player_1,player_2,player_3,player_4,list_challenge):
+    def challenge_CAPTAIN(self,board,player_1,player_2,player_3,player_4,
+    list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                 if a.cards[0]=="CAPTAIN" or a.cards[1]=="CAPTAIN":
                     win_challenge=1
-                    print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN!")
+                    print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN")
                 if a.cards[0]=="CAPTAIN":
                     a.cards[0]=board.cards[0]
                     i=6
@@ -2795,63 +3436,81 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="CAPTAIN"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -2860,85 +3519,107 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="CAPTAIN"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], "you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input("Do you want to lose card 1 or card 2? :"))
+                    delete=int(input("Do you want to lose card "
+                    "1 or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="CAPTAIN":
-                win_challenge=1
                 print(A+a.name,""+E+"you didn´t lie, you have the CAPTAIN!")
                 a.cards[1]=board.cards[0]
                 i=6
@@ -2951,76 +3632,98 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], "you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose "
+                        "card 1 or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input("Do you want to lose card 1 or card 2? :"))
+                    delete=int(input("Do you want to lose card 1 or card 2?:"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="CAPTAIN":
@@ -3037,81 +3740,105 @@ class Influences:
                     print(list_challenge[0], "you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose "
+                    "card 1 or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
 ################################# AMBASSADOR  #################################  
-    def challenge_AMBASSADOR_3(self,board,player_1,player_2,player_3,list_challenge):
+    def challenge_AMBASSADOR_3(self,board,player_1,player_2,player_3,
+    list_challenge):
         A,B,C,E,a,b,c = cond2(board,player_1,player_2,player_3)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
@@ -3124,44 +3851,56 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="AMBASSADOR"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input("Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input("Do you want to lose card 1 "
+                            "or card 2?:"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -3170,62 +3909,79 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="AMBASSADOR"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="AMBASSADOR":
@@ -3242,56 +3998,74 @@ class Influences:
                     print(list_challenge[0], "you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="AMBASSADOR":
@@ -3308,57 +4082,74 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
@@ -3375,25 +4166,31 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="AMBASSADOR"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input("Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input("Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -3402,43 +4199,54 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="AMBASSADOR"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="AMBASSADOR":
@@ -3455,37 +4263,49 @@ class Influences:
                     print(list_challenge[0], "you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="AMBASSADOR":
@@ -3502,42 +4322,54 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2?:"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
-    def challenge_AMBASSADOR(self,board,player_1,player_2,player_3,player_4,list_challenge):
+    def challenge_AMBASSADOR(self,board,player_1,player_2,player_3,player_4,
+    list_challenge):
         A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
         if a.vcards[0]==False and a.vcards[1]==False:
             if a.cards[0]=="AMBASSADOR" or a.cards[1]=="AMBASSADOR":
@@ -3550,63 +4382,81 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="AMBASSADOR"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[0]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[0]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input("Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input("Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
                 else:
                     a.cards[1]=board.cards[0]
@@ -3615,81 +4465,104 @@ class Influences:
                         board.cards[i-1]=board.cards[i]
                         i-=1
                     board.cards[6]="AMBASSADOR"
-                    print(A+a.name, ""+E+"this is your new card",A+a.cards[1]+E)
+                    print(A+a.name,""+E+"this is your new card",A+a.cards[1]+E)
                     if list_challenge[0]==b.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(B+b.name, ""+E+"I´m sorry but you lose a card")
                         if b.vcards[0]==False and b.vcards[1]==False:
-                            print(B+b.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(B+b.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                print(B+b.cards[0], ""+E+"this is the card "
+                                "that", B+b.name,""+E+"just lost")
                                 b.vcards[0]=True
                             else:
-                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                print(B+b.cards[1], ""+E+"this is the card "
+                                "that", B+b.name, ""+E+"just lost")
                                 b.vcards[1]=True
                         else:
                             if b.vcards[0]==True:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[1]+E)
                                 b.vcards[1]=True
                             else:
-                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                                print(B+b.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", B+b.cards[0]+E)
                                 b.vcards[0]=True
                     elif list_challenge[0]==c.name:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(C+c.name, ""+E+"I´m sorry but you lose a card")
                         if c.vcards[0]==False and c.vcards[1]==False:
-                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                print(C+c.cards[0], ""+E+"this is the card "
+                                "that", C+c.name,""+E+"just lost")
                                 c.vcards[0]=True
                             else:
-                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                print(C+c.cards[1], ""+E+"this is the card "
+                                "that", C+c.name, ""+E+"just lost")
                                 c.vcards[1]=True
                         else:
                             if c.vcards[0]==True:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[1]+E)
                                 c.vcards[1]=True
                             else:
-                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                print(C+c.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", C+c.cards[0]+E)
                                 c.vcards[0]=True
                     else:
                         print(list_challenge[0], ""+E+"you lose the challenge")
                         print(D+d.name, ""+E+"I´m sorry but you lose a card")
                         if d.vcards[0]==False and d.vcards[1]==False:
-                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                            print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                            "you(r) card(s)")
+                            delete=int(input(""+E+"Do you want to lose card 1 "
+                            "or card 2? :"))
                             if delete==1:
-                                print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                                print(D+d.cards[0], ""+E+"this is the card "
+                                "that", D+d.name,""+E+"just lost")
                                 d.vcards[0]=True
                             else:
-                                print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                                print(D+d.cards[1], ""+E+"this is the card "
+                                "that", D+d.name, ""+E+"just lost")
                                 d.vcards[1]=True
                         else:
                             if d.vcards[0]==True:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[1]+E)
                                 d.vcards[1]=True
                             else:
-                                print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                                print(D+d.name,""+E+"I´m sorry but you lose, "
+                                "your last card was", D+d.cards[0]+E)
                                 d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[0]==True and a.vcards[1]==False:
             if a.cards[1]=="AMBASSADOR":
@@ -3706,75 +4579,99 @@ class Influences:
                     print(list_challenge[0], "you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 or "
+                    "card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         elif a.vcards[1]==True and a.vcards[0]==False:
             if a.cards[0]=="AMBASSADOR":
@@ -3791,76 +4688,99 @@ class Influences:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(B+b.name, ""+E+"I´m sorry but you lose a card")
                     if b.vcards[0]==False and b.vcards[1]==False:
-                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                            print(B+b.cards[0], ""+E+"this is the card "
+                            "that", B+b.name,""+E+"just lost")
                             b.vcards[0]=True
                         else:
-                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                            print(B+b.cards[1], ""+E+"this is the card "
+                            "that", B+b.name, ""+E+"just lost")
                             b.vcards[1]=True
                     else:
                         if b.vcards[0]==True:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1]+E)
+                            print(B+b.name,""+E+"I´m sorry but you "
+                            "lose, your last card was", B+b.cards[1]+E)
                             b.vcards[1]=True
                         else:
-                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0]+E)
+                            print(B+b.name,""+E+"I´m sorry but you "
+                            "lose, your last card was", B+b.cards[0]+E)
                             b.vcards[0]=True
                 elif list_challenge[0]==c.name:
                     print(list_challenge[0], ""+E+"you lose the challenge")
                     print(C+c.name, ""+E+"I´m sorry but you lose a card")
                     if c.vcards[0]==False and c.vcards[1]==False:
-                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                            print(C+c.cards[0], ""+E+"this is the card "
+                            "that", C+c.name,""+E+"just lost")
                             c.vcards[0]=True
                         else:
-                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                            print(C+c.cards[1], ""+E+"this is the card "
+                            "that", C+c.name, ""+E+"just lost")
                             c.vcards[1]=True
                     else:
                         if c.vcards[0]==True:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[1]+E)
                             c.vcards[1]=True
                         else:
-                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                            print(C+c.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", C+c.cards[0]+E)
                             c.vcards[0]=True
                 else:
                     print(list_challenge[0], "you lose the challenge")
                     print(D+d.name, ""+E+"I´m sorry but you lose a card")
                     if d.vcards[0]==False and d.vcards[1]==False:
-                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) you(r) card(s)")
-                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                        print(D+d.cards[0],d.cards[1], ""+E+"this is(are) "
+                        "you(r) card(s)")
+                        delete=int(input(""+E+"Do you want to lose card 1 "
+                        "or card 2? :"))
                         if delete==1:
-                            print(D+d.cards[0], ""+E+"this is the card that", D+d.name,""+E+"just lost")
+                            print(D+d.cards[0], ""+E+"this is the card "
+                            "that", D+d.name,""+E+"just lost")
                             d.vcards[0]=True
                         else:
-                            print(D+d.cards[1], ""+E+"this is the card that", D+d.name, ""+E+"just lost")
+                            print(D+d.cards[1], ""+E+"this is the card "
+                            "that", D+d.name, ""+E+"just lost")
                             d.vcards[1]=True
                     else:
                         if d.vcards[0]==True:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[1]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[1]+E)
                             d.vcards[1]=True
                         else:
-                            print(D+d.name,""+E+"I´m sorry but you lose, your last card was", D+d.cards[0]+E)
+                            print(D+d.name,""+E+"I´m sorry but you lose, "
+                            "your last card was", D+d.cards[0]+E)
                             d.vcards[0]=True
             else: 
-                print (A+a.name,""+E+"sorry, but they know that you lie :( , you lose a card")
-                win_challenge=2
+                print (A+a.name,""+E+"sorry, but they know that you lie :( , "
+                "you lose a card")
                 if a.vcards[0]==False and a.vcards[1]==False:
-                    delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                    delete=int(input(""+E+"Do you want to lose card 1 "
+                    "or card 2? :"))
                     if delete==1:
-                        print(A+a.cards[0], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[0], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[0]=True
                     else:
-                        print(A+a.cards[1], ""+E+"this is the card that", A+a.name, ""+E+"just lost")
+                        print(A+a.cards[1], ""+E+"this is the card "
+                        "that", A+a.name, ""+E+"just lost")
                         a.vcards[1]=True
                 else:
                     if a.vcards[0]==True:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[1]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[1]+E)
                         a.vcards[1]=True
                     else:
-                        print(A+a.name,""+E+"I´m sorry but you lose, your last card was", A+a.cards[0]+E)
+                        print(A+a.name,""+E+"I´m sorry but you lose, "
+                        "your last card was", A+a.cards[0]+E)
                         a.vcards[0]=True
         else:
             ...
@@ -3876,7 +4796,8 @@ class Influences:
         ask_a_c=0
         if n_players==4 or n_players==3 or n_players==2:
             if n_players == 4:
-                A,B,C,D,E,a,b,c,d = cond(board,player_1,player_2,player_3,player_4)
+                A,B,C,D,E,a,b,c,d=cond(board,player_1,player_2,player_3,
+                player_4)
                 nombre1 = a.name[:]
                 nombre2 = b.name[:]
                 nombre3 = c.name[:]
@@ -3937,7 +4858,8 @@ class Influences:
                 else:  
                     for i in range(0,len(log),2):
                         print("Round", str((i//2)+1)+":")
-                        print("The player: "+str(log[i])+", played: "+str(log[i+1]))
+                        print("The player: "+str(log[i])+", played: "
+                        ""+str(log[i+1]))
             else:
                 print("ok, lets play")
             print(A+a.name)
@@ -3957,7 +4879,9 @@ class Influences:
             if a.coins>=10:
                 while True:
                     try:
-                        p_1=int(input(""+E+"I´m sorry but you need to use your coins...you have to use the Coup(=5) or the Murderer(=2) wich one do you choose?"))
+                        p_1=int(input(""+E+"I´m sorry but you need to use "
+                        "your coins...you have to use the Coup(=5) or the "
+                        "Murderer(=2) wich one do you choose?"))
                         if (p_1 == 5) or (p_1 == 2):
                             if p_1==5:
                                 log.append("Coup")
@@ -3974,7 +4898,9 @@ class Influences:
                 else:
                     print (A+a.name, ""+E+"choose to play Murderer")
             else:
-                p_1=int(input (""+E+"wich card do you want to play; 1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, 5=Coup, 6=Income, 7=Foreing aid :"))
+                p_1=int(input (""+E+"wich card do you want to play; "
+                "1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, "
+                "5=Coup, 6=Income, 7=Foreing aid :"))
                 if p_1==1:
                     print (A+a.name, ""+E+"choose to play Duke")  
                     log.append("Duke")
@@ -3985,14 +4911,20 @@ class Influences:
                     else:
                         while True:
                             try:
-                                print(""+E+"I´m sorry but you dont have enought coins... pls, chose other number")
-                                p_1=int(input(""+E+"wich card do you want to play; 1=Duke, 2=Murderer, 3=Captain, 4=Ambassador, 5=Coup, 6=Income, 7=Foreing aid :"))
+                                print(""+E+"I´m sorry but you dont have "
+                                "enought coins... pls, chose other number")
+                                p_1=int(input(""+E+"wich card do you want to "
+                                "play; 1=Duke, 2=Murderer, 3=Captain, "
+                                "4=Ambassador, 5=Coup, 6=Income, "
+                                "7=Foreing aid :"))
                                 if p_1 != 2 and p_1 != 5:
                                     break
                                 else:
-                                    print(""+E+"Pls,don´t type ´5´ or ´2´ number")
+                                    print(""+E+"Pls,don´t type ´5´ or ´2´ "
+                                    "number")
                             except:
-                                print(""+E+"Pls,don´t type ´5´ or ´2´ number")
+                                print(""+E+"Pls,don´t type ´5´ or ´2´ "
+                                "number")
                 elif p_1==3:
                     print(A+a.name ,""+E+"choose to play Captain")
                     log.append("Captain")
@@ -4035,239 +4967,284 @@ class Influences:
             if n_players==4:
                 if p_1==1 or p_1==2 or p_1==3 or p_1==4:
                     print(B+b.name)
-                    p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    p_2=int(input(""+E+"Do you want to do a challenge; "
+                    "1 yes 2 no :"))
                     print(C+c.name)
-                    p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    p_3=int(input(""+E+"Do you want to do a challenge; "
+                    "1 yes 2 no :"))
                     print(D+d.name)
-                    p_4=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    p_4=int(input(""+E+"Do you want to do a challenge; "
+                    "1 yes 2 no :"))
                     list_challenge=[]
                     if p_2==1 and p_3==1 and p_4==1:
                         list_challenge.append(b.name)
                         list_challenge.append(c.name)
                         list_challenge.append(d.name)
                         random.shuffle(list_challenge)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     elif p_2==1 and p_3==1:
                         list_challenge.append(b.name)
                         list_challenge.append(c.name)
                         random.shuffle(list_challenge)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     elif p_2==1 and p_4==1:
                         list_challenge.append(b.name)
                         list_challenge.append(d.name)
                         random.shuffle(list_challenge)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     elif p_3==1 and p_4==1:
                         list_challenge.append(c.name)
                         list_challenge.append(d.name)
                         random.shuffle(list_challenge)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     elif p_2==1:
                         list_challenge.append(b.name)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     elif p_3==1:
                         list_challenge.append(c.name)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     elif p_4==1:
                         list_challenge.append(d.name)
-                        print(D+d.name, ""+E+"you do the challenge, good luck")
+                        print(D+d.name, ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_DUKE(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER(board,player_1,player_2,player_3,player_4,list_challenge,attack)
+                            self.challenge_MURDERER(board,player_1,player_2,
+                            player_3,player_4,list_challenge,attack)
                         elif p_1==3:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_CAPTAIN(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            self.challenge_AMBASSADOR(board,player_1,player_2,
+                            player_3,player_4,list_challenge)
                     else:
                         print(""+E+"no challenge")
             if n_players==3:
                 if p_1==1 or p_1==2 or p_1==3 or p_1==4:
                     print(B+b.name)
-                    p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    p_2=int(input(""+E+"Do you want to do a challenge; "
+                    "1 yes 2 no :"))
                     print(C+c.name)
-                    p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    p_3=int(input(""+E+"Do you want to do a challenge; "
+                    "1 yes 2 no :"))
                     list_challenge=[]
                     if p_2==1 and p_3==1:
                         list_challenge.append(b.name)
                         list_challenge.append(c.name)
                         random.shuffle(list_challenge)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_DUKE_3(board,player_1,player_2,
+                            player_3,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge,attack)
+                            self.challenge_MURDERER_3(board,player_1,player_2,
+                            player_3,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
-                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            elif (a.vcards[0]==False and a.vcards[1]==True):
+                                after_challenge=1
+                            elif (a.vcards[0]==True and a.vcards[1]==False):
                                 after_challenge=1
                             else:
                                 after_challenge=0
@@ -4276,31 +5253,38 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_CAPTAIN_3(board,player_1,player_2,
+                            player_3,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_AMBASSADOR_3(board,player_1,player_2,
+                            player_3,list_challenge)
                     elif p_2==1:
                         list_challenge.append(b.name)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_DUKE_3(board,player_1,player_2,
+                            player_3,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge,attack)
+                            self.challenge_MURDERER_3(board,player_1,player_2,
+                            player_3,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
-                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            elif (a.vcards[0]==False and a.vcards[1]==True): 
+                                after_challenge=1
+                            elif (a.vcards[0]==True and a.vcards[1]==False):
                                 after_challenge=1
                             else:
                                 after_challenge=0
@@ -4309,31 +5293,38 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_CAPTAIN_3(board,player_1,player_2,
+                            player_3,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_AMBASSADOR_3(board,player_1,player_2,
+                            player_3,list_challenge)
                     elif p_3==1:
                         list_challenge.append(c.name)
-                        print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                        print(list_challenge[0], ""+E+"you do the challenge, "
+                        "good luck")
                         if p_1==1:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_DUKE_3(board,player_1,player_2,
+                            player_3,list_challenge)
                         elif p_1==2:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_MURDERER_3(board,player_1,player_2,player_3,list_challenge,attack)
+                            self.challenge_MURDERER_3(board,player_1,player_2,
+                            player_3,list_challenge,attack)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
-                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            elif (a.vcards[0]==False and a.vcards[1]==True): 
+                                after_challenge=1
+                            elif (a.vcards[0]==True and a.vcards[1]==False):
                                 after_challenge=1
                             else:
                                 after_challenge=0
@@ -4342,75 +5333,110 @@ class Influences:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_CAPTAIN_3(board,player_1,player_2,
+                            player_3,list_challenge)
                         else:
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 before_challenge=2
                             else:
                                 before_challenge=1
-                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                            self.challenge_AMBASSADOR_3(board,player_1,
+                            player_2,player_3,list_challenge)
                     else:
                         if p_1==2:
                             a.coins -=3
                             if after_challenge != before_challenge:
                                 print (""+E+" you can´t do the attack")
                             else: 
-                                print(""+E+"To defense this attack you will need the Countess")
-                                ask=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
+                                print(""+E+"To defense this attack you will "
+                                "need the Countess")
+                                ask=int(input(""+E+"Do you want to defense? "
+                                "1= yes 2= no :"))
                                 if ask==2:
                                     if attack==b.name:
-                                        print(B+b.name, ""+E+"I´m sorry but you lose a card")
+                                        print(B+b.name, ""+E+"I´m sorry but "
+                                        "you lose a card")
                                         if b.vcards[0]==False and b.vcards[1]==False:
-                                            print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                            print(B+b.cards[0],
+                                            b.cards[1], ""+E+"this "
+                                            "is(are) you(r) card(s)")
+                                            delete=int(input(""+E+"Do you "
+                                            "want to lose card 1 or card 2?:"))
                                             if delete==1:
-                                                print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                                print(B+b.cards[0], ""+E+" "
+                                                "this is the card "
+                                                "that", B+b.name,""+E+"just "
+                                                "lost")
                                                 b.vcards[0]=True
                                             else:
-                                                print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                                print(B+b.cards[1], ""+E+"this" 
+                                                " is the card "
+                                                "that", B+b.name, ""+E+"just "
+                                                "lost")
                                                 b.vcards[1]=True
                                         else:
                                             if b.vcards[0]==True:
-                                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                                                print(B+b.name,""+E+"I´m "
+                                                "sorry but you lose, your "
+                                                "last card was", B+b.cards[1])
                                                 b.vcards[1]=True
                                             else:
-                                                print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                                                print(B+b.name,""+E+"I´m "
+                                                "sorry but you lose, your "
+                                                "last card was", B+b.cards[0])
                                                 b.vcards[0]=True
                                     elif attack==c.name:
-                                        print(C+c.name, ""+E+"I´m sorry but you lose a card")
+                                        print(C+c.name, ""+E+"I´m sorry but "
+                                        "you lose a card")
                                         if c.vcards[0]==False and c.vcards[1]==False:
-                                            print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                            delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                            print(C+c.cards[0],
+                                            c.cards[1], ""+E+"this"
+                                            " is(are) you(r) card(s)")
+                                            delete=int(input(""+E+"Do you "
+                                            "want to lose card 1 or card 2?:"))
                                             if delete==1:
-                                                print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                                print(C+c.cards[0],""+E+"this "
+                                                "is the card that",
+                                                 C+c.name,""+E+"just lost")
                                                 c.vcards[0]=True
                                             else:
-                                                print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                                print(C+c.cards[1],""+E+"this "
+                                                "is the card that", C+c.name,
+                                                ""+E+"just lost")
                                                 c.vcards[1]=True
                                         else:
                                             if c.vcards[0]==True:
-                                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                                print(C+c.name,""+E+"I´m "
+                                                "sorry but you lose, your "
+                                                "last card was",C+c.cards[1]+E)
                                                 c.vcards[1]=True
                                             else:
-                                                print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                                print(C+c.name,""+E+"I´m sorry"
+                                                " but you lose, your last "
+                                                "card was", C+c.cards[0]+E)
                                                 c.vcards[0]=True   
 #################################################################################################################
                         else:
                             print(""+E+"no challenge")
                 elif p_1==7 or p_1==2 or p_1==3:
                     if p_1==7:
-                        print(""+E+"If someone wants to do a contra attack you will need the Duke")
+                        print(""+E+"If someone wants to do a contra attack "
+                        "you will need the Duke")
                         print(B+b.name)
-                        ask2=int(input(""+E+"Do you want to contra attack? 1= yes 2= no :"))
+                        ask2=int(input(""+E+"Do you want to contra attack? "
+                        "1= yes 2= no :"))
                         print(C+c.name)
-                        ask3=int(input(""+E+"Do you want to contra attack? 1= yes 2= no :"))
+                        ask3=int(input(""+E+"Do you want to contra attack? "
+                        "1= yes 2= no :"))
                         if ask2==2 and ask3==2:
                             print(""+E+"you can have the 2 coins")
                             a.coins+=2
                     elif p_1==2:
                         if a.vcards[0]==False and a.vcards[1]==False:
                             after_challenge=2
-                        elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                        elif (a.vcards[0]==False and a.vcards[1]==True): 
+                            after_challenge=1
+                        elif (a.vcards[0]==True and a.vcards[1]==False):
                             after_challenge=1
                         else:
                             after_challenge=0
@@ -4418,45 +5444,71 @@ class Influences:
                         if after_challenge != before_challenge:
                             print (""+E+" you can´t do the attack")
                         else: 
-                            print(""+E+"To defense this attack you will need the Countess")
+                            print(""+E+"To defense this attack you will need "
+                            "the Countess")
                             print(attack)
-                            ask=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
+                            ask=int(input(""+E+"Do you want to defense? "
+                            "1= yes 2= no :"))
                             if ask==2:
                                 if attack==b.name:
-                                    print(B+b.name, ""+E+"I´m sorry but you lose a card")
+                                    print(B+b.name, ""+E+"I´m sorry but you "
+                                    "lose a card")
                                     if b.vcards[0]==False and b.vcards[1]==False:
-                                        print(B+b.cards[0],b.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                        print(B+b.cards[0],
+                                        b.cards[1], ""+E+"this "
+                                        "is(are) you(r) card(s)")
+                                        delete=int(input(""+E+"Do you "
+                                        "want to lose card 1 or card 2? :"))
                                         if delete==1:
-                                            print(B+b.cards[0], ""+E+"this is the card that", B+b.name,""+E+"just lost")
+                                            print(B+b.cards[0], ""+E+"this is "
+                                            "the card that", B+b.name,
+                                            ""+E+"just lost")
                                             b.vcards[0]=True
                                         else:
-                                            print(B+b.cards[1], ""+E+"this is the card that", B+b.name, ""+E+"just lost")
+                                            print(B+b.cards[1], ""+E+"this is "
+                                            "the card that", B+b.name,
+                                            ""+E+"just lost")
                                             b.vcards[1]=True
                                     else:
                                         if b.vcards[0]==True:
-                                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[1])
+                                            print(B+b.name,""+E+"I´m sorry "
+                                            "but you lose, your last "
+                                            "card was", B+b.cards[1])
                                             b.vcards[1]=True
                                         else:
-                                            print(B+b.name,""+E+"I´m sorry but you lose, your last card was", B+b.cards[0])
+                                            print(B+b.name,""+E+"I´m sorry "
+                                            "but you lose, your last card "
+                                            "was", B+b.cards[0])
                                             b.vcards[0]=True
                                 elif attack==c.name:
-                                    print(C+c.name, ""+E+"I´m sorry but you lose a card")
+                                    print(C+c.name, ""+E+"I´m sorry but "
+                                    "you lose a card")
                                     if c.vcards[0]==False and c.vcards[1]==False:
-                                        print(C+c.cards[0],c.cards[1], ""+E+"this is(are) you(r) card(s)")
-                                        delete=int(input(""+E+"Do you want to lose card 1 or card 2? :"))
+                                        print(C+c.cards[0],
+                                        c.cards[1], ""+E+"this is(are) "
+                                        "you(r) card(s)")
+                                        delete=int(input(""+E+"Do you want to "
+                                        "lose card 1 or card 2? :"))
                                         if delete==1:
-                                            print(C+c.cards[0], ""+E+"this is the card that", C+c.name,""+E+"just lost")
+                                            print(C+c.cards[0], ""+E+"this is "
+                                            "the card that", C+c.name,
+                                            ""+E+"just lost")
                                             c.vcards[0]=True
                                         else:
-                                            print(C+c.cards[1], ""+E+"this is the card that", C+c.name, ""+E+"just lost")
+                                            print(C+c.cards[1], ""+E+"this "
+                                            "is the card that",
+                                            C+c.name, ""+E+"just lost")
                                             c.vcards[1]=True
                                     else:
                                         if c.vcards[0]==True:
-                                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[1]+E)
+                                            print(C+c.name,""+E+"I´m sorry "
+                                            "but you lose, your last card "
+                                            "was", C+c.cards[1]+E)
                                             c.vcards[1]=True
                                         else:
-                                            print(C+c.name,""+E+"I´m sorry but you lose, your last card was", C+c.cards[0]+E)
+                                            print(C+c.name,""+E+"I´m sorry "
+                                            "but you lose, your last card "
+                                            "was", C+c.cards[0]+E)
                                             c.vcards[0]=True
                             else:#a = b
                                 a.cards = ca2
@@ -4483,20 +5535,27 @@ class Influences:
                                     list_challenge.append(b.name)
                                     list_challenge.append(c.name)
                                     random.shuffle(list_challenge)
-                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    print(list_challenge[0], ""+E+"you do the "
+                                    "challenge, good luck")
                                     if ask2==1:
-                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,
+                                        player_2,player_3,list_challenge)
                                     elif ask==1:
-                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                        self.challenge_COUNTESS_3(board,
+                                        player_1,player_2,player_3,list_challenge)
                                     else:
                                         if ask_a==1:
-                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                            self.challenge_AMBASSADOR_3(board,
+                                            player_1,player_2,player_3,list_challenge)
                                         else: 
-                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                                            self.challenge_CAPTAIN_3(board,
+                                            player_1,player_2,player_3,list_challenge)
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         after_challenge=2
-                                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    elif (a.vcards[0]==False and a.vcards[1]==True):
                                         after_challenge=1
+                                    elif (a.vcards[0]==True and a.vcards[1]==False):
+                                        after_challenge
                                     else:
                                         after_challenge=0
                                     #Back
@@ -4512,29 +5571,42 @@ class Influences:
                                     b.color = col2
                                     B = col2
                                     if after_challenge == before_challenge:
-                                        print (""+E+" you can´t have the two coins")
+                                        print (""+E+" you can´t have the two "
+                                        "coins")
                                     else: 
                                         a.coins+=2 
-                                        print( ""+E+" you can have the two coins")
+                                        print( ""+E+" you can have the two "
+                                        "coins")
                                 elif p_2==1:
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         before_challenge=2
                                     else:
                                         before_challenge=1
                                     list_challenge.append(b.name)
-                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    print(list_challenge[0], ""+E+"you do the "
+                                    "challenge, good luck")
                                     if ask2==1:
-                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                                        self.challenge_DUKE_3(board,
+                                        player_1,player_2,player_3,
+                                        list_challenge)
                                     elif ask==1:
-                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                        self.challenge_COUNTESS_3(board,
+                                        player_1,player_2,player_3,
+                                        list_challenge)
                                     else:
                                         if ask_a==1:
-                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                            self.challenge_AMBASSADOR_3(board,
+                                            player_1,player_2,player_3,
+                                            list_challenge)
                                         else: 
-                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                                            self.challenge_CAPTAIN_3(board,
+                                            player_1,player_2,
+                                            player_3,list_challenge)
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         after_challenge=2
-                                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    elif (a.vcards[0]==False and a.vcards[1]==True):
+                                        after_challenge=1
+                                    elif (a.vcards[0]==True and a.vcards[1]==False):
                                         after_challenge=1
                                     else:
                                         after_challenge=0
@@ -4551,29 +5623,41 @@ class Influences:
                                     b.color = col2
                                     B = col2
                                     if after_challenge == before_challenge:
-                                        print(""+E+" you can´t have the two coins")
+                                        print(""+E+" you can´t have the two "
+                                        "coins")
                                     else: 
                                         a.coins+=2 
-                                        print(""+E+" you can have the two coins")
+                                        print(""+E+" you can have the two "
+                                        "coins")
                                 elif p_3==1:
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         before_challenge=2
                                     else:
                                         before_challenge=1
                                     list_challenge.append(c.name)
-                                    print(list_challenge[0], ""+E+"you do the challenge, good luck")
+                                    print(list_challenge[0], ""+E+"you do the "
+                                    "challenge, good luck")
                                     if ask_2_3_4[0]==1:
-                                        self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
+                                        self.challenge_DUKE_3(board,player_1,
+                                        player_2,player_3,list_challenge)
                                     elif ask==1:
-                                        self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
+                                        self.challenge_COUNTESS_3(board,
+                                        player_1,player_2,player_3,
+                                        list_challenge)
                                     else:
                                         if ask_a==1:
-                                            self.challenge_AMBASSADOR_3(board,player_1,player_2,player_3,list_challenge)
+                                            self.challenge_AMBASSADOR_3(board,
+                                            player_1,player_2,player_3,
+                                            list_challenge)
                                         else: 
-                                            self.challenge_CAPTAIN_3(board,player_1,player_2,player_3,list_challenge)
+                                            self.challenge_CAPTAIN_3(board,
+                                            player_1,player_2,player_3,
+                                            list_challenge)
                                     if a.vcards[0]==False and a.vcards[1]==False:
                                         after_challenge=2
-                                    elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    elif (a.vcards[0]==False and a.vcards[1]==True):
+                                        after_challenge=1
+                                    elif (a.vcards[0]==True and a.vcards[1]==False):
                                         after_challenge=1
                                     else:
                                         after_challenge=0
