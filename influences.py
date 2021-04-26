@@ -4862,6 +4862,25 @@ class Influences:
                 col2 = b.color
 
             print(A+a.name)
+            a.vcards = vc1
+            a.name = nombre1
+            a.color = col1
+            A = col1
+            b.cards = ca2
+            b.vcards = vc2
+            b.name = nombre2
+            b.color = col2
+            B = col2
+            c.cards = ca3
+            c.vcards = vc3
+            c.name = nombre3
+            c.color = col3
+            C = col3
+            d.cards = ca4
+            d.vcards = vc4
+            d.name = nombre4
+            d.color = col4
+            D = col4
             log_=int(input(""+E+"Do you want to see the log? (1=yes; 2=no):"))
             if log_==1:
                 if log == []:
@@ -4874,25 +4893,6 @@ class Influences:
             else:
                 print("ok, lets play")
             a.cards = ca1
-        a.vcards = vc1
-        a.name = nombre1
-        a.color = col1
-        A = col1
-        b.cards = ca2
-        b.vcards = vc2
-        b.name = nombre2
-        b.color = col2
-        B = col2
-        c.cards = ca3
-        c.vcards = vc3
-        c.name = nombre3
-        c.color = col3
-        C = col3
-        d.cards = ca4
-        d.vcards = vc4
-        d.name = nombre4
-        d.color = col4
-        D = col4
             print(A+a.name)
             log.append(a.name)
             ##This is use to know if the player win or lose the challenge
