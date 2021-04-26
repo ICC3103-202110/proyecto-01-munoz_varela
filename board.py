@@ -376,7 +376,7 @@ class Board:
             #True: the card is reveled; False: the card is censored
             if v2 == [False,False]: 
                 ca2 = "********** - **********"
-            elif v1 == [True,False]: 
+            elif v2 == [True,False]: 
                 ca2 = y1+" - **********"
 
             elif v2 == [False,True]: 
@@ -711,7 +711,7 @@ class Board:
             #True: the card is reveled; False: the card is censored
             if v2 == [False,False]:
                 ca2 = "********** - **********"
-            elif v1 == [True,False]:
+            elif v2 == [True,False]:
                 ca2 = y1+" - **********"
 
             elif v2 == [False,True]:
@@ -1000,7 +1000,7 @@ class Board:
             #True: the card is reveled; False: the card is censored
             if v2 == [False,False]: 
                 ca2 = "********** -- **********"
-            elif v1 == [True,False]: 
+            elif v2 == [True,False]: 
                 ca2 = y1+" -- **********"
 
             elif v2 == [False,True]: 
