@@ -3930,9 +3930,14 @@ class Influences:
                 col2 = b.color
 
             print(A+a.name)
-            log_=int(input(""+E+"Do you whant to see the log? (1=yes; 2=no):"))
+            log_=int(input(""+E+"Do you want to see the log? (1=yes; 2=no):"))
             if log_==1:
-                print(log)
+                if log == []:
+                    print("Nothing in the log..")
+                else:  
+                    for i in range(0,len(log),2):
+                        print("Round", str((i//2)+1)+":")
+                        print("The player: "+str(log[i])+", played: "+str(log[i+1]))
             else:
                 print("ok, lets play")
             print(A+a.name)
@@ -4024,7 +4029,7 @@ class Influences:
             if p_1==2 or p_1==3:
                 print (A+a.name)
                 attack=input (""+E+"wich player do you want to attack? :")
-                print (attack)
+                print (attack, ",", a.name, "decide to attack you")
             else:
                 ...
             if n_players==4:
@@ -4925,6 +4930,10 @@ class Influences:
                             self.challenge_AMBASSADOR_2(board,player_1,player_2,list_challenge)
                     else:
                         print(""+E+"no challenge")    
+                        if p_2==2:
+                            print(""+E+"To defense this attack you will need the Countess")
+                            print(attack)
+                            ask=int(input(""+E+"Do you want to defense? 1= yes 2= no :"))
                 elif p_1==7 or p_1==2 or p_1==3:
                     if p_1==7:
                         print(""+E+"If someone wants to do a contra attack you will need the Duke")
@@ -5383,14 +5392,25 @@ class Influences:
                                     ask_a=0
                                     ask_c=1
                                 list_challenge=[]
-                                print(A+a.name)
-                                p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
-                                if p_2==2:
+                                if n_players==2 or n_players==3:
+                                    print(A+a.name)
+                                    p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                                    p_3=0
+                                    if n_players==3:
+                                        if attack==b.name:
+                                            print(C+c.name)
+                                            p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                                        else:
+                                            print(B+b.name)
+                                            p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                                if p_2==2 and p_3==0:
                                     if ask2==1:
                                         print ( ""+E+"but you can´t have the two coins")
                                     elif ask==1:
                                         print(""+E+"None one lose a card")
-                                else:
+                                    elif ask_a_c==1:
+                                        print(""+E+"the attack can´t be done")
+                                elif p_2==1 or p_3==1:
                                     #a = b
                                     a.cards = ca2
                                     a.vcards = vc2
@@ -5452,7 +5472,7 @@ class Influences:
                                             before_challenge=2
                                         else:
                                             before_challenge=1
-                                        list_challenge.append(d.name)
+                                        list_challenge.append(b.name)
                                         print(list_challenge[0], ""+E+"you do the challenge, good luck")
                                         if ask2==1:
                                             self.challenge_DUKE_3(board,player_1,player_2,player_3,list_challenge)
@@ -6778,7 +6798,7 @@ class Influences:
                         else: 
                             print("sorry, you don´t get the coins")
             if p_1==2:
-                if ask==1:
+                if n_players==2:
                     if n_players==2:
                         print(a.name)
                         p_1=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
@@ -6873,17 +6893,17 @@ class Influences:
                                 print(  ""+E+" you can´t use the defense")
                         elif p_1==2 and p_2==1:
                             print (b.name,"," ,c.name,"don´t belive you, you go to challenge")
-                            a.cards = ca3
-                            a.vcards = vc3
-                            a.name = nombre3
-                            a.color = col3
-                            A = col3
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
                             #b = a
-                            c.cards = ca1
-                            c.vcards = vc1
-                            c.name = nombre1
-                            c.color = col1
-                            C = col1
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
                             list_challenge.append(c.name)
                             self.challenge_COUNTESS_3(board,player_1,player_2,player_3,list_challenge)
                             if a.vcards[0]==False and a.vcards[1]==False:
@@ -6899,11 +6919,11 @@ class Influences:
                             a.color = col1
                             A = col1
                             #Back
-                            c.cards = ca3
-                            c.vcards = vc3
-                            c.name = nombre3
-                            c.color = col3
-                            C = col3
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
                             if after_challenge == before_challenge:
                                 print (""+E+" you can´t do the attack")
                             else:  
@@ -7755,6 +7775,835 @@ class Influences:
                                 d.name = nombre4
                                 d.color = col4
                                 D = col4
+            elif p_1==3 and n_players==4:
+                if ask_a_c==1:
+                    print(a.name)
+                    p_1=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    if attack==c.name:
+                        print(b.name)
+                        p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        print(d.name)
+                        p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    elif attack==d.name: 
+                        print(b.name)
+                        p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        print(c.name)
+                        p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    else:
+                        print(c.name)
+                        p_2=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                        print(d.name)
+                        p_3=int(input(""+E+"Do you want to do a challenge; 1 yes 2 no :"))
+                    if p_1==1 and p_2==2 and p_3==2:
+                        print(a.name,"you do the challenge")
+                        if attack==b.name:
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            list_challenge.append(b.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                        elif attack==d.name:
+                            a.cards = ca4
+                            a.vcards = vc4
+                            a.name = nombre4
+                            a.color = col4
+                            A = col4
+                            #b = a
+                            d.cards = ca1
+                            d.vcards = vc1
+                            d.name = nombre1
+                            d.color = col1
+                            D = col1
+                            list_challenge.append(d.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            d.cards = ca4
+                            d.vcards = vc4
+                            d.name = nombre4
+                            d.color = col4
+                            D = col4
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                        elif attack==c.name:
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #b = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            list_challenge.append(c.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            c.cards = ca3
+                            c.vcards = vc3
+                            c.name = nombre3
+                            c.color = col3
+                            C = col3
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                    elif p_1==1 and p_2==1 and p_3==2:
+                        if attack==b.name:
+                            print(a.name,"you and",c.name,"don´t trust", b.name)
+                        elif attack==c.name:
+                            print(a.name,"you and",b.name,"don´t trust", c.name)
+                        else:
+                            print(a.name,"you and",b.name,"don´t trust", d.name)
+                        print(a.name,"you do the challenge")
+                        if attack==b.name:
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            list_challenge.append(b.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                        elif attack==d.name:
+                            a.cards = ca4
+                            a.vcards = vc4
+                            a.name = nombre4
+                            a.color = col4
+                            A = col4
+                            #b = a
+                            d.cards = ca1
+                            d.vcards = vc1
+                            d.name = nombre1
+                            d.color = col1
+                            D = col1
+                            list_challenge.append(d.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            d.cards = ca4
+                            d.vcards = vc4
+                            d.name = nombre4
+                            d.color = col4
+                            D = col4
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                        elif attack==c.name:
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #b = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            list_challenge.append(c.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            c.cards = ca3
+                            c.vcards = vc3
+                            c.name = nombre3
+                            c.color = col3
+                            C = col3
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                    elif p_1==1 and p_2==1 and p_3==2:
+                        if attack==b.name:
+                            print(a.name,"you and",c.name,"don´t trust", b.name)
+                        elif attack==c.name:
+                            print(a.name,"you and",b.name,"don´t trust", c.name)
+                        else:
+                            print(a.name,"you and",b.name,"don´t trust", d.name)
+                        print(a.name,"you do the challenge")
+                        if attack==b.name:
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            list_challenge.append(b.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                        elif attack==d.name:
+                            a.cards = ca4
+                            a.vcards = vc4
+                            a.name = nombre4
+                            a.color = col4
+                            A = col4
+                            #b = a
+                            d.cards = ca1
+                            d.vcards = vc1
+                            d.name = nombre1
+                            d.color = col1
+                            D = col1
+                            list_challenge.append(d.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            d.cards = ca4
+                            d.vcards = vc4
+                            d.name = nombre4
+                            d.color = col4
+                            D = col4
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                        elif attack==c.name:
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #b = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            list_challenge.append(c.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            #Back
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #Back
+                            c.cards = ca3
+                            c.vcards = vc3
+                            c.name = nombre3
+                            c.color = col3
+                            C = col3
+                            if after_challenge == before_challenge:
+                                print (""+E+" you can´t do the attack")
+                            else:  
+                                print(  ""+E+" you can´t use the defense")
+                    elif p_2==1 and p_3==2:
+                        if attack==b.name:
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            print(c.name,"don´t trust", b.name)
+                            print(c.name,"you go to the challenge")
+                            list_challenge.append(c.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #b = a
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                        elif attack==c.name:
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #b = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            list_challenge.append(b.name)
+                            print(b.name,"don´t trust", c.name)
+                            print(b.name,"you go to the challenge")
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #b = a
+                            c.cards = ca3
+                            c.vcards = vc3
+                            c.name = nombre3
+                            c.color = col3
+                            C = col3
+                        else:
+                            a.cards = ca4
+                            a.vcards = vc4
+                            a.name = nombre4
+                            a.color = col4
+                            A = col4
+                            #b = a
+                            d.cards = ca1
+                            d.vcards = vc1
+                            d.name = nombre1
+                            d.color = col1
+                            D = col1
+                            list_challenge.append(b.name)
+                            print(b.name,"don´t trust", d.name)
+                            print(b.name,"you go to the challenge")
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #b = a
+                            d.cards = ca4
+                            d.vcards = vc4
+                            d.name = nombre4
+                            d.color = col4
+                            D = col4
+                    elif p_2==1 and p_3==1:
+                        li=[]
+                        li.append("p_2")
+                        li.append("p_1")
+                        random.shuffle(li)
+                        if li[0]=="p_2":
+                            if attack==b.name:
+                                a.cards = ca2
+                                a.vcards = vc2
+                                a.name = nombre2
+                                a.color = col2
+                                A = col2
+                                #b = a
+                                b.cards = ca1
+                                b.vcards = vc1
+                                b.name = nombre1
+                                b.color = col1
+                                B = col1
+                                print(c.name,"don´t trust", b.name)
+                                print(c.name,"you go to the challenge")
+                                list_challenge.append(c.name)
+                                if ask_c==1:
+                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                else:
+                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #b = a
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
+                            elif attack==c.name:
+                                a.cards = ca3
+                                a.vcards = vc3
+                                a.name = nombre3
+                                a.color = col3
+                                A = col3
+                                #b = a
+                                c.cards = ca1
+                                c.vcards = vc1
+                                c.name = nombre1
+                                c.color = col1
+                                C = col1
+                                list_challenge.append(b.name)
+                                print(b.name,"don´t trust", c.name)
+                                print(b.name,"you go to the challenge")
+                                if ask_c==1:
+                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                else:
+                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #b = a
+                                c.cards = ca3
+                                c.vcards = vc3
+                                c.name = nombre3
+                                c.color = col3
+                                C = col3
+                            else:
+                                a.cards = ca4
+                                a.vcards = vc4
+                                a.name = nombre4
+                                a.color = col4
+                                A = col4
+                                #b = a
+                                d.cards = ca1
+                                d.vcards = vc1
+                                d.name = nombre1
+                                d.color = col1
+                                D = col1
+                                list_challenge.append(b.name)
+                                print(b.name,"don´t trust", d.name)
+                                print(b.name,"you go to the challenge")
+                                if ask_c==1:
+                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                else:
+                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #b = a
+                                d.cards = ca4
+                                d.vcards = vc4
+                                d.name = nombre4
+                                d.color = col4
+                                D = col4
+                        else: 
+                            if attack==b.name:
+                                a.cards = ca2
+                                a.vcards = vc2
+                                a.name = nombre2
+                                a.color = col2
+                                A = col2
+                                #b = a
+                                b.cards = ca1
+                                b.vcards = vc1
+                                b.name = nombre1
+                                b.color = col1
+                                B = col1
+                                print(d.name,"don´t trust", b.name)
+                                print(d.name,"you go to the challenge")
+                                list_challenge.append(d.name)
+                                if ask_c==1:
+                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                else:
+                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #b = a
+                                b.cards = ca2
+                                b.vcards = vc2
+                                b.name = nombre2
+                                b.color = col2
+                                B = col2
+                            elif attack==c.name:
+                                a.cards = ca3
+                                a.vcards = vc3
+                                a.name = nombre3
+                                a.color = col3
+                                A = col3
+                                #b = a
+                                c.cards = ca1
+                                c.vcards = vc1
+                                c.name = nombre1
+                                c.color = col1
+                                C = col1
+                                list_challenge.append(d.name)
+                                print(d.name,"don´t trust", c.name)
+                                print(d.name,"you go to the challenge")
+                                if ask_c==1:
+                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                else:
+                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #b = a
+                                c.cards = ca3
+                                c.vcards = vc3
+                                c.name = nombre3
+                                c.color = col3
+                                C = col3
+                            else:
+                                a.cards = ca4
+                                a.vcards = vc4
+                                a.name = nombre4
+                                a.color = col4
+                                A = col4
+                                #b = a
+                                d.cards = ca1
+                                d.vcards = vc1
+                                d.name = nombre1
+                                d.color = col1
+                                D = col1
+                                list_challenge.append(c.name)
+                                print(c.name,"don´t trust", d.name)
+                                print(c.name,"you go to the challenge")
+                                if ask_c==1:
+                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                else:
+                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                if a.vcards[0]==False and a.vcards[1]==False:
+                                    after_challenge=2
+                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                    after_challenge=1
+                                else:
+                                    after_challenge=0
+                                a.cards = ca1
+                                a.vcards = vc1
+                                a.name = nombre1
+                                a.color = col1
+                                A = col1
+                                #b = a
+                                d.cards = ca4
+                                d.vcards = vc4
+                                d.name = nombre4
+                                d.color = col4
+                                D = col4
+                    elif p_3==1:
+                        if attack==b.name:
+                            a.cards = ca2
+                            a.vcards = vc2
+                            a.name = nombre2
+                            a.color = col2
+                            A = col2
+                            #b = a
+                            b.cards = ca1
+                            b.vcards = vc1
+                            b.name = nombre1
+                            b.color = col1
+                            B = col1
+                            print(d.name,"don´t trust", b.name)
+                            print(d.name,"you go to the challenge")
+                            list_challenge.append(d.name)
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #b = a
+                            b.cards = ca2
+                            b.vcards = vc2
+                            b.name = nombre2
+                            b.color = col2
+                            B = col2
+                        elif attack==c.name:
+                            a.cards = ca3
+                            a.vcards = vc3
+                            a.name = nombre3
+                            a.color = col3
+                            A = col3
+                            #b = a
+                            c.cards = ca1
+                            c.vcards = vc1
+                            c.name = nombre1
+                            c.color = col1
+                            C = col1
+                            list_challenge.append(d.name)
+                            print(d.name,"don´t trust", c.name)
+                            print(d.name,"you go to the challenge")
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #b = a
+                            c.cards = ca3
+                            c.vcards = vc3
+                            c.name = nombre3
+                            c.color = col3
+                            C = col3
+                        else:
+                            a.cards = ca4
+                            a.vcards = vc4
+                            a.name = nombre4
+                            a.color = col4
+                            A = col4
+                            #b = a
+                            d.cards = ca1
+                            d.vcards = vc1
+                            d.name = nombre1
+                            d.color = col1
+                            D = col1
+                            list_challenge.append(c.name)
+                            print(c.name,"don´t trust", d.name)
+                            print(c.name,"you go to the challenge")
+                            if ask_c==1:
+                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                            else:
+                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                            if a.vcards[0]==False and a.vcards[1]==False:
+                                after_challenge=2
+                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                after_challenge=1
+                            else:
+                                after_challenge=0
+                            a.cards = ca1
+                            a.vcards = vc1
+                            a.name = nombre1
+                            a.color = col1
+                            A = col1
+                            #b = a
+                            d.cards = ca4
+                            d.vcards = vc4
+                            d.name = nombre4
+                            d.color = col4
+                            D = col4
             else:
                 ...
     
