@@ -9471,7 +9471,7 @@ class Influences:
                                     elif a.vcards[0]==False and a.vcards[1]==True: 
                                         after_challenge=1 
                                     elif a.vcards[0]==True and a.vcards[1]==False:
-                                    after_challenge=1
+                                        after_challenge=1
                                     else:
                                         after_challenge=0
                                     a.cards = ca1
