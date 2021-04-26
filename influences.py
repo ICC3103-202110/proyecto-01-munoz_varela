@@ -4893,7 +4893,6 @@ class Influences:
             else:
                 print("ok, lets play")
             a.cards = ca1
-            print(A+a.name)
             log.append(a.name)
             ##This is use to know if the player win or lose the challenge
             if a.vcards[0]==False and a.vcards[1]==False:
