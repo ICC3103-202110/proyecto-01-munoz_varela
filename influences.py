@@ -4805,6 +4805,26 @@ class Influences:
         ask_a=0
         ask_c=0
         ask_a_c=0
+        a.cards = ca1
+        a.vcards = vc1
+        a.name = nombre1
+        a.color = col1
+        A = col1
+        b.cards = ca2
+        b.vcards = vc2
+        b.name = nombre2
+        b.color = col2
+        B = col2
+        c.cards = ca3
+        c.vcards = vc3
+        c.name = nombre3
+        c.color = col3
+        C = col3
+        d.cards = ca4
+        d.vcards = vc4
+        d.name = nombre4
+        d.color = col4
+        D = col4
         if n_players==4 or n_players==3 or n_players==2:
             if n_players == 4:
                 A,B,C,D,E,a,b,c,d=cond(board,player_1,player_2,player_3,
