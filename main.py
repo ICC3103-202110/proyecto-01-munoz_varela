@@ -68,12 +68,12 @@ def main():
     board = Board(n_players,desk_cards,0,"\033[1;37m")
     influences = Influences()
     log=[]
-    #board.welcome(player_1,player_2,player_3,player_4)
+    board.welcome(player_1,player_2,player_3,player_4)
     turn = 0
     n = board.n_players
     while True:
         clear()
-        #board.waiter(ref[turn]) #Fix index for board.players_n
+        board.waiter(ref[turn]) #Fix index for board.players_n
         board.evaluator(player_1,player_2,player_3,player_4)
         if n == 1:
             break
