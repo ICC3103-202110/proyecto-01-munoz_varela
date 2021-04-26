@@ -7214,7 +7214,7 @@ class Influences:
                                         ,list_challenge)
                                     else: 
                                         self.challenge_CAPTAIN(board,
-                                        player_1,player_2,player_3,player_4
+                                        player_1,player_2,player_3,player_4,
                                         list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
