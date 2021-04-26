@@ -10253,12 +10253,16 @@ class Influences:
                                 print(c.name,"you go to the challenge")
                                 list_challenge.append(c.name)
                                 if ask_c==1:
-                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_CAPTAIN(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 else:
-                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_AMBASSADOR(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
-                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                elif a.vcards[0]==False and a.vcards[1]==True: 
+                                    after_challenge=1 
+                                elif a.vcards[0]==True and a.vcards[1]==False:
                                     after_challenge=1
                                 else:
                                     after_challenge=0
@@ -10289,12 +10293,16 @@ class Influences:
                                 print(b.name,"don´t trust", c.name)
                                 print(b.name,"you go to the challenge")
                                 if ask_c==1:
-                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_CAPTAIN(board,player_1,
+                                    player_2,player_3,player_4,list_challenge)
                                 else:
-                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_AMBASSADOR(board,player_1,
+                                    player_2,player_3,player_4,list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
-                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                elif a.vcards[0]==False and a.vcards[1]==True: 
+                                    after_challenge=1 
+                                elif a.vcards[0]==True and a.vcards[1]==False:
                                     after_challenge=1
                                 else:
                                     after_challenge=0
@@ -10325,12 +10333,16 @@ class Influences:
                                 print(b.name,"don´t trust", d.name)
                                 print(b.name,"you go to the challenge")
                                 if ask_c==1:
-                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_CAPTAIN(board,player_1,
+                                    player_2,player_3,player_4,list_challenge)
                                 else:
-                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_AMBASSADOR(board,player_1,
+                                    player_2,player_3,player_4,list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
-                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                elif a.vcards[0]==False and a.vcards[1]==True: 
+                                    after_challenge=1 
+                                elif a.vcards[0]==True and a.vcards[1]==False:
                                     after_challenge=1
                                 else:
                                     after_challenge=0
@@ -10362,12 +10374,16 @@ class Influences:
                                 print(d.name,"you go to the challenge")
                                 list_challenge.append(d.name)
                                 if ask_c==1:
-                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_CAPTAIN(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 else:
-                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_AMBASSADOR(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
-                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                elif a.vcards[0]==False and a.vcards[1]==True: 
+                                    after_challenge=1 
+                                elif a.vcards[0]==True and a.vcards[1]==False:
                                     after_challenge=1
                                 else:
                                     after_challenge=0
@@ -10398,12 +10414,16 @@ class Influences:
                                 print(d.name,"don´t trust", c.name)
                                 print(d.name,"you go to the challenge")
                                 if ask_c==1:
-                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_CAPTAIN(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 else:
-                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_AMBASSADOR(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
-                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                elif a.vcards[0]==False and a.vcards[1]==True: 
+                                    after_challenge=1 
+                                elif a.vcards[0]==True and a.vcards[1]==False:
                                     after_challenge=1
                                 else:
                                     after_challenge=0
@@ -10434,12 +10454,16 @@ class Influences:
                                 print(c.name,"don´t trust", d.name)
                                 print(c.name,"you go to the challenge")
                                 if ask_c==1:
-                                    self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_CAPTAIN(board,player_1,
+                                    player_2,player_3,player_4,list_challenge)
                                 else:
-                                    self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                    self.challenge_AMBASSADOR(board,
+                                    player_1,player_2,player_3,player_4,list_challenge)
                                 if a.vcards[0]==False and a.vcards[1]==False:
                                     after_challenge=2
-                                elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                                elif a.vcards[0]==False and a.vcards[1]==True: 
+                                    after_challenge=1 
+                                elif a.vcards[0]==True and a.vcards[1]==False:
                                     after_challenge=1
                                 else:
                                     after_challenge=0
@@ -10471,12 +10495,16 @@ class Influences:
                             print(d.name,"you go to the challenge")
                             list_challenge.append(d.name)
                             if ask_c==1:
-                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                self.challenge_CAPTAIN(board,
+                                player_1,player_2,player_3,player_4,list_challenge)
                             else:
-                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                self.challenge_AMBASSADOR(board,
+                                player_1,player_2,player_3,player_4,list_challenge)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
-                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            elif a.vcards[0]==False and a.vcards[1]==True: 
+                                after_challenge=1 
+                            elif a.vcards[0]==True and a.vcards[1]==False:
                                 after_challenge=1
                             else:
                                 after_challenge=0
@@ -10507,12 +10535,16 @@ class Influences:
                             print(d.name,"don´t trust", c.name)
                             print(d.name,"you go to the challenge")
                             if ask_c==1:
-                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                self.challenge_CAPTAIN(board,player_1,
+                                player_2,player_3,player_4,list_challenge)
                             else:
-                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                self.challenge_AMBASSADOR(board,
+                                player_1,player_2,player_3,player_4,list_challenge)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
-                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            elif a.vcards[0]==False and a.vcards[1]==True: 
+                                after_challenge=1 
+                            elif a.vcards[0]==True and a.vcards[1]==False:
                                 after_challenge=1
                             else:
                                 after_challenge=0
@@ -10543,12 +10575,16 @@ class Influences:
                             print(c.name,"don´t trust", d.name)
                             print(c.name,"you go to the challenge")
                             if ask_c==1:
-                                self.challenge_CAPTAIN(board,player_1,player_2,player_3,player_4,list_challenge)
+                                self.challenge_CAPTAIN(board,
+                                player_1,player_2,player_3,player_4,list_challenge)
                             else:
-                                self.challenge_AMBASSADOR(board,player_1,player_2,player_3,player_4,list_challenge)
+                                self.challenge_AMBASSADOR(board,
+                                player_1,player_2,player_3,player_4,list_challenge)
                             if a.vcards[0]==False and a.vcards[1]==False:
                                 after_challenge=2
-                            elif (a.vcards[0]==False and a.vcards[1]==True) or (a.vcards[0]==True and a.vcards[1]==False):
+                            elif a.vcards[0]==False and a.vcards[1]==True: 
+                                after_challenge=1 
+                            elif a.vcards[0]==True and a.vcards[1]==False:
                                 after_challenge=1
                             else:
                                 after_challenge=0
